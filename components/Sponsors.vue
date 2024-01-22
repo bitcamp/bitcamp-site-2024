@@ -1,16 +1,36 @@
 <template>
   <div id="sponsors" class="section">
-    <h1 class="section-title">Sponsors</h1>
+    <!-- <h1 class="section-title">Sponsors</h1> -->
+    <img class="sponsor-image" src="~/assets/images/background/sponsors.png" />
     <div class="sponsor-container">
       <template v-for="sponsor in sponsors" :key="sponsor.name">
         <SponsorCard :name="sponsor.name" :url="sponsor.url" />
       </template>
     </div>
-    <div class="call-to-action">
+    <!-- <div class="call-to-action">
       Interested in sponsoring us?<br />
       Email us at
       <a href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a> or
       <a href="./sponsor">view our prospectus</a>.
+    </div> -->
+
+    <div class="footer-text">
+      <div class="links">
+        <span class="links-1">
+          <a href="http://mlh.io/code-of-conduct" target="_blank"
+            >MLH Code of Conduct</a
+          >
+          | <a href="/sponsor" target="_blank">Sponsor Us</a></span
+        >
+        <span class="links-separator"> | </span>
+        <span class="links-2">
+          <a href="/brand.pdf" target="_blank">Brand Guidelines</a> |
+          <a href="mailto:hello@bit.camp">Contact Us</a>
+        </span>
+      </div>
+      <div class="copyright">
+        Copyright &copy; 2019 - 2023 Bitcamp. All Rights Reserved.
+      </div>
     </div>
   </div>
 </template>
@@ -169,6 +189,21 @@ const sponsors: Sponsor[] = [
   margin: 0 auto;
   padding: 0 2rem;
   text-align: center;
+}
+
+.sponsor-image {
+  margin-left: 750px;
+  margin-bottom: 65px;
+}
+
+.footer-text {
+  margin-top: 50px;
+  color: black;
+}
+
+.footer-text a {
+  color: black;
+  text-decoration: underline black;
 }
 
 .section-title {
