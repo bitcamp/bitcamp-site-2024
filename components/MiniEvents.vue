@@ -1,6 +1,16 @@
 <template>
   <div id="mini-events" class="section">
-    <h1 id="mini-events-title">Mini-Events</h1>
+    <div class="mini-events-header">
+      <img
+        src="~/assets/images/mini-events/mini-events-banner.svg"
+        alt="Mini Events Banner with Bus"
+      />
+    </div>
+    <img
+      class="img-overlay"
+      src="~/assets/images/mini-events/mini-events.svg"
+      alt="Mini Events Text"
+    />
 
     <div class="mini-events-container">
       <article class="card">
@@ -11,10 +21,10 @@
         <div class="text">
           <h1>Colorwar</h1>
           <p>
-            Colorwar is a rapid-fire live-design competition and one of the
-            highlights of Bitcamp. Compete in our online design challenge for a
-            chance to draw in front of a live audience at Bitcamp for some cool
-            prizes!
+            <span class="colorwar-word"><b>Colorwar</b></span> is a rapid-fire
+            live-design competition and one of the highlights of Bitcamp.
+            Compete in our online design challenge for a chance to draw in front
+            of a live audience at Bitcamp for some cool prizes!
           </p>
         </div>
         <span class="button-wrap">
@@ -22,7 +32,7 @@
             text="Learn More"
             link="https://bitcmp.medium.com/calling-all-creatives-for-colorwar-443f19759cc2"
             size="xl"
-            color="#10274f"
+            color="#5EB9BA"
           />
         </span>
       </article>
@@ -45,7 +55,7 @@
             text="Watch on YouTube"
             link="https://www.youtube.com/watch?v=jjP1iaQka9Y&ab_channel=Bitcamp"
             size="xl"
-            color="#10274f"
+            color="#5EB9BA"
           />
         </span>
       </article>
@@ -59,27 +69,39 @@
 #mini-events {
   text-align: center;
   box-sizing: border-box;
-  background-color: #21498e80;
+  background-color: #f6ebcc;
   backdrop-filter: blur(35px);
-  border-radius: 10px;
-  color: white;
-  box-shadow: 0 0.5rem 1rem rgba(black, 0.3);
-  width: 70%;
+  color: black;
   margin: auto auto;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-
-  @media (min-width: 576px) and (max-width: 767.8px) {
-    width: 90%;
-  }
-
-  @media (max-width: 576px) {
-    width: 90%;
-  }
 }
 
 #mini-events-title {
   margin-bottom: 1rem;
+  color: black;
+}
+
+.mini-events-header {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.mini-events-header img {
+  width: 100vw;
+  height: auto;
+}
+
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 485px;
+}
+
+.colorwar-word {
+  color: #ff7040;
 }
 
 .mini-events-container {
@@ -99,7 +121,8 @@
   text-align: center;
   width: calc(33.33% - 30px);
   margin: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  padding-top: 70px;
 
   img {
     max-width: 100%;
@@ -117,6 +140,7 @@
 
   .text h1 {
     margin-bottom: 15px;
+    color: black;
   }
 
   Button {
