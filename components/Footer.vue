@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <img class="footer-image" src="~/assets/images/background/newFooter.png" />
+    <img class="footer-image" src="~/assets/images/background/footer.png" />
     <!-- <div class="footer-text">
       <div class="links">
         <span class="links-1">

@@ -192,10 +192,11 @@ const sponsors: Sponsor[] = [
 }
 
 .sponsor-image {
-  margin-left: 750px;
   margin-bottom: 65px;
+  position: relative;
+  left: 27%;
 }
-
+  
 .footer-text {
   margin-top: 50px;
   color: black;
@@ -223,7 +224,6 @@ const sponsors: Sponsor[] = [
   max-width: 60rem;
   border-radius: 20px;
   padding: 4rem;
-  background-color: rgba(#ffffff, 0.2);
 }
 
 @media only screen and (min-width: 992px) {
