@@ -98,10 +98,12 @@ onMounted(() => {
     bigScreen.value = false;
   }
   window.addEventListener('resize', onresize);
+  window.addEventListener('scroll', setColorAndOpacity);
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', onresize);
+  window.removeEventListener('scroll', setColorAndOpacity);
 });
 
 function onresize() {
@@ -113,10 +115,26 @@ function onresize() {
     bigScreen.value = true;
     showDropdown.value = false;
   }
+
+  setColorAndOpacity();
+}
+
+function setColorAndOpacity() {
+  var header = document.getElementsByTagName('header')[0];
+  if (bigScreen.value) {
+    const navbarHeight = header.offsetHeight;
+    const scrollPosition = window.scrollY;
+    // roughly scaled so it is opaque after registration section
+    const opacity = Math.min(scrollPosition / (6*navbarHeight), 1);
+    header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
+  } else {
+    header.style.backgroundColor = showDropdown.value ? '#521B1D' : 'transparent';
+  }
 }
 
 function toggleDropdown() {
   showDropdown.value = !showDropdown.value;
+  setColorAndOpacity();
 }
 </script>
 
@@ -126,7 +144,7 @@ $mango: var(--color-mango);
 
 header {
   margin: 0;
-  z-index: 1;
+  z-index: 1000; // should be higher than everything else
   position: fixed;
   padding: 0.5% 1.5%;
   border: 0;
@@ -325,7 +343,7 @@ nav {
     margin-left: 1vw;
     width: 100%;
     font-size: 32px;
-    background-color: #10274f;
+    background-color: #521B1D;
     position: relative;
     flex-direction: column;
     align-self: flex-start;
@@ -392,7 +410,7 @@ nav {
     font: inherit;
     color: inherit;
     text-transform: none;
-    background-color: transparent;
+    background-color: transparent; 
     border: 0;
     margin: 0;
     overflow: visible;
