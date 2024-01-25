@@ -5,12 +5,12 @@
         src="~/assets/images/mini-events/mini-events-banner.svg"
         alt="Mini Events Banner with Bus"
       />
+      <img
+        class="img-overlay"
+        src="~/assets/images/mini-events/mini-events.svg"
+        alt="Mini Events Text"
+      />
     </div>
-    <img
-      class="img-overlay"
-      src="~/assets/images/mini-events/mini-events.svg"
-      alt="Mini Events Text"
-    />
 
     <div class="mini-events-container">
       <article class="card">
@@ -81,14 +81,15 @@
 }
 
 .mini-events-header {
+  position: relative;
   width: 100%;
   max-width: 100%;
   height: auto;
-  overflow: hidden;
+  overflow: show;
 }
 
 .mini-events-header img {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
@@ -96,8 +97,28 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  padding-bottom: 485px;
+  transform: translateX(-50%) translateY(50%);
+  /*width: 30%;
+  max-width: 30%;*/
+  height: auto;
+
+  @media (max-width: 767.8px) {
+    width: 50%;
+    max-width: 50%;
+    bottom: 20px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    width: 30%;
+    max-width: 30%;
+    bottom: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 30%;
+    max-width: 30%;
+    bottom: 35px;
+  }
 }
 
 .colorwar-word {
@@ -160,6 +181,14 @@
 
     .text {
       margin: 5px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 100px;
+
+    .text {
+      width: 405px;
     }
   }
 
