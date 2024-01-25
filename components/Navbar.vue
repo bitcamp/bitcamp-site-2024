@@ -8,6 +8,10 @@
               id="logo-with-text"
               src="~/public/bitcamp-brand/logos/logotype.png"
             />
+            <img
+              id="logo-image"
+              src="~/public/bitcamp-brand/logos/bitcamp.png"
+            />
           </a>
         </div>
         <div class="hamburgerContainer">
@@ -128,7 +132,7 @@ function setColorAndOpacity() {
     const opacity = Math.min(scrollPosition / (6*navbarHeight), 1);
     header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
   } else {
-    header.style.backgroundColor = showDropdown.value ? '#521B1D' : 'transparent';
+    header.style.backgroundColor = '#521B1D';
   }
 }
 
@@ -145,7 +149,8 @@ $mango: var(--color-mango);
 header {
   margin: 0;
   z-index: 1000; // should be higher than everything else
-  position: fixed;
+  // position: fixed;
+  position: relative;
   padding: 0.5% 1.5%;
   border: 0;
   width: 100%;
@@ -160,7 +165,7 @@ nav {
 
 #logo-container {
   position: absolute;
-  margin-top: -2px;
+  margin-top: 2px;
   margin-left: 1%;
   height: 100%;
   width: 100%;
@@ -335,8 +340,11 @@ nav {
     position: relative;
   }
 
-  #logo-container {
-    margin-top: 200px;
+  #logo-image {
+    display: flex;
+    max-width: 100%;
+    width: 48px;
+    height: 48px;
   }
 
   .nav-pages {
