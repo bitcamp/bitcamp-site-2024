@@ -1,19 +1,11 @@
 <template>
   <div id="sponsors" class="section">
-    <!-- <h1 class="section-title">Sponsors</h1> -->
     <img class="sponsor-image" src="~/assets/images/background/sponsors.png" />
     <div class="sponsor-container">
       <template v-for="sponsor in sponsors" :key="sponsor.name">
         <SponsorCard :name="sponsor.name" :url="sponsor.url" />
       </template>
     </div>
-    <!-- <div class="call-to-action">
-      Interested in sponsoring us?<br />
-      Email us at
-      <a href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a> or
-      <a href="./sponsor">view our prospectus</a>.
-    </div> -->
-
     <div class="footer-text">
       <div class="links">
         <span class="links-1">
@@ -195,6 +187,8 @@ const sponsors: Sponsor[] = [
   margin-bottom: 65px;
   position: relative;
   left: 27%;
+  width: 35%;
+  max-width: 100%;
 }
   
 .footer-text {
