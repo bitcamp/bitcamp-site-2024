@@ -1,18 +1,9 @@
 <template>
-  <div id="mission" class="section">
-    <div class="years">
-      <div class="big">9</div>
-      <div class="description">years of Bitcamp</div>
-    </div>
-    <div class="sponsors">
-      <div class="big">20+</div>
-      <div class="description">sponsors each year</div>
-    </div>
-    <div class="hackers">
-      <div class="big">1000+</div>
-      <div class="description">hackers and counting</div>
-    </div>
-  </div>
+  <img
+    class="slideshowframe"
+    src="~/assets/images/tracks/slideshowframe.svg"
+    alt="Slideshow Frame Photo"
+  />
 </template>
 
 <script lang="ts">
@@ -22,104 +13,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#mission {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  min-width: 200px;
-  position: relative;
-  gap: 1rem;
-  margin: 0 8rem;
-}
+.slideshowframe {
+  position: absolute;
+  z-index: 99999;
+  bottom: 10;
+  right: 60%;
+  transform: translateX(120%) translateY(-50%);
+  flex-shrink: 0;
+  width: calc(40% - 10px);
+  min-width: 430px;
 
-.years {
-  display: flex;
-  flex-direction: column;
-  float: left;
-  width: 33%;
-  text-align: center;
-  // background-color: lightcoral;
-  justify-content: center;
-  margin: 2%;
-}
-
-.hackers {
-  display: flex;
-  flex-direction: column;
-  float: left;
-  text-align: center;
-  width: 33%;
-  // background-color: lightgray;
-  justify-content: center;
-  margin: 2%;
-}
-
-.sponsors {
-  display: flex;
-  flex-direction: column;
-  float: right;
-  text-align: center;
-  width: 33%;
-  // background-color: lightcoral;
-  justify-content: center;
-  margin: 2%;
-}
-
-.big {
-  // background-color: lightgreen;
-  font-size: 4rem;
-  align-self: center;
-  color: white;
-  opacity: 0.5;
-  // font-weight: bold;
-}
-
-.description {
-  // background-color: lightblue;
-  font-size: 1rem;
-  align-self: center;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .big {
-    font-size: 3rem;
-    align-self: center;
-    color: white;
-    opacity: 0.5;
+  @media (min-width: 576px) and (max-width: 767.8px) {
+    width: 50%;
+    transform: translateX(calc(65% - 5px)) translateY(-40%);
   }
 
-  .description {
-    font-size: 0.8rem;
-    align-self: center;
-    color: white;
-  }
-}
-
-@media (max-width: 576px) {
-  #mission {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5%;
-    // background-color: rgba(53, 88, 148, 255)
-    // min-width: 200px;
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    width: calc(45% - 2px);
+    top: 10;
+    transform: translateX(72%) translateY(-40%);
   }
 
-  .big {
-    // background-color: lightgreen;
-    font-size: 3rem;
-    align-self: center;
-    color: white;
-    opacity: 0.5;
-  }
-
-  .description {
-    // background-color: lightblue;
-    font-size: 0.8rem;
-    align-self: center;
-    color: white;
-    width: 100%;
+  @media (max-width: 576px) {
+    width: calc(80% - 10px);
+    top: 10;
+    transform: translateX(61.5%) translateY(-40%);
   }
 }
 </style>
