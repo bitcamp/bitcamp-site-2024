@@ -4,11 +4,8 @@
     <div class="footer-text">
       <div class="links">
         <span class="links-1">
-          <a href="http://mlh.io/code-of-conduct" target="_blank"
-            >MLH Code of Conduct</a
-          >
-          | <a href="/sponsor" target="_blank">Sponsor Us</a></span
-        >
+          <a href="http://mlh.io/code-of-conduct" target="_blank">MLH Code of Conduct</a>
+          | <a href="/sponsor" target="_blank">Sponsor Us</a></span>
         <span class="links-separator"> | </span>
         <span class="links-2">
           <a href="/brand.pdf" target="_blank">Brand Guidelines</a> |
@@ -16,7 +13,7 @@
         </span>
       </div>
       <div class="copyright">
-        Copyright &copy; 2019 - 2023 Bitcamp. All Rights Reserved.
+        Copyright &copy; 2019 - 2024 Bitcamp. All Rights Reserved.
       </div>
     </div>
   </footer>
@@ -66,10 +63,12 @@ a {
   .footer-text {
     font-size: min(3vw, 1.125rem);
   }
+
   .links-1,
   .links-2 {
     display: block;
   }
+
   .links-separator {
     display: none;
   }

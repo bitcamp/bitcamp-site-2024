@@ -26,11 +26,11 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'og:site_name',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'og:url',
@@ -55,7 +55,7 @@ useHead({
     },
     {
       property: 'twitter:title',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'twitter:description',
@@ -116,7 +116,7 @@ export default {
   position: relative;
   background-color: #345793;
 
-  & > .section {
+  &>.section {
     margin-bottom: 5rem !important;
   }
 }

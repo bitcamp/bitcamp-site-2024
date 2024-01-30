@@ -7,7 +7,7 @@
       <img src="/bitcamp-brand/logos/bitcamp.png" />
       <div class="header-content">
         <h1>Find Your Frontier!</h1>
-        <h3>April 7-9, 2023 @ XFINITY Center</h3>
+        <h3>April 7-9, 2024 @ XFINITY Center</h3>
         <!-- <h2>Applications are now open!</h2> -->
         <h2>Registrations are now closed. Click below to join our waitlist!</h2>
         <div class="header-button-container">

@@ -9,24 +9,16 @@
           <div no-body class="card h-100">
             <div class="column-card">
               <div class="schedule-header">
-                <div
-                  v-for="day in days"
-                  :key="getDayOfTheWeek(day)"
-                  class="schedule-header-day"
-                  @click="selectTitleItem(day)"
-                >
+                <div v-for="day in days" :key="getDayOfTheWeek(day)" class="schedule-header-day"
+                  @click="selectTitleItem(day)">
                   <div>
                     <div class="schedule-day">
-                      <span class="day"
-                        >{{ getDayOfTheWeek(day).substring(0, 3) }},
+                      <span class="day">{{ getDayOfTheWeek(day).substring(0, 3) }},
                         {{ '' }}
                       </span>
                       <span class="date">April {{ day.getDate() }}</span>
                     </div>
-                    <div
-                      class="schedule-header-day-bar"
-                      :class="{ active: day === selectedDay }"
-                    />
+                    <div class="schedule-header-day-bar" :class="{ active: day === selectedDay }" />
                   </div>
                 </div>
               </div>
@@ -35,11 +27,7 @@
               <div class="list-wrapper">
                 <div id="schedule-body" class="schedule-body">
                   <div class="schedule-time">
-                    <div
-                      v-for="timeWindow in displayTimeWindows"
-                      :key="timeWindow"
-                      class="timewindow"
-                    >
+                    <div v-for="timeWindow in displayTimeWindows" :key="timeWindow" class="timewindow">
                       <span v-if="timeWindow.startsWith('0')">
                         {{ timeWindow.slice(1) }}
                       </span>
@@ -48,48 +36,28 @@
                       </span>
                     </div>
                   </div>
-                  <div
-                    class="schedule-content"
-                    :style="{
-                      gridTemplateColumns: `repeat(${scheduleColumns[selectedDay as any]}, minmax(0, 1fr))`,
-                    }"
-                  >
-                    <div
-                      v-for="scheduleColumn in scheduleColumns[selectedDay as any]"
-                      :key="scheduleColumn"
-                      Schedule
-                      class="schedule-column"
-                    >
-                      <div
-                        v-for="timeWindow in displayTimeWindows"
-                        :key="timeWindow"
-                        class="timewindow"
-                      >
-                        <div
-                          v-if="
-                            formattedEvents[selectedDay as any][timeWindow].find(
-                              (event: any) =>
-                                event.column === scheduleColumn &&
-                                event.display &&
-                                event.displayMode
-                            )
-                          "
-                          class="schedule-content-item"
-                          :class="
-                            formattedEvents[selectedDay as any][timeWindow].find(
-                              (event: any) => event.column === scheduleColumn
-                            ).class
-                          "
-                          data-toggle="modal"
-                          data-target="#scheduleEventModal"
-                          @click="
-                            openEventModal(
-                              selectedDay as Date,
-                              timeWindow,
-                              scheduleColumn
-                            )
-                          "
-                        >
+                  <div class="schedule-content" :style="{
+                    gridTemplateColumns: `repeat(${scheduleColumns[selectedDay as any]}, minmax(0, 1fr))`,
+                  }">
+                    <div v-for="scheduleColumn in scheduleColumns[selectedDay as any]" :key="scheduleColumn" Schedule
+                      class="schedule-column">
+                      <div v-for="timeWindow in displayTimeWindows" :key="timeWindow" class="timewindow">
+                        <div v-if="formattedEvents[selectedDay as any][timeWindow].find(
+                          (event: any) =>
+                            event.column === scheduleColumn &&
+                            event.display &&
+                            event.displayMode
+                        )
+                          " class="schedule-content-item" :class="formattedEvents[selectedDay as any][timeWindow].find(
+    (event: any) => event.column === scheduleColumn
+  ).class
+    " data-toggle="modal" data-target="#scheduleEventModal" @click="
+    openEventModal(
+      selectedDay as Date,
+      timeWindow,
+      scheduleColumn
+    )
+    ">
                           <div class="schedule-content-item-title">
                             {{
                               formattedEvents[selectedDay as any][
@@ -115,11 +83,7 @@
     </div>
   </div>
   <ModalsContainer />
-  <EventModal
-    v-model="showEventModal"
-    :event="selectedEvent"
-    @close="() => closeEventModal()"
-  />
+  <EventModal v-model="showEventModal" :event="selectedEvent" @close="() => closeEventModal()" />
 </template>
 
 <script setup lang="ts">
@@ -135,8 +99,8 @@ const timeWindowColumns = ref<any>({});
 const scheduleColumns = ref<any>({});
 const dataLoaded = ref(false);
 const selectedEvent = ref<Event>();
-const startDate = ref(new Date('2023-04-07T15:00:00-04:00'));
-const endDate = ref(new Date('2023-04-09T16:00:00-04:00'));
+const startDate = ref(new Date('2024-04-07T15:00:00-04:00'));
+const endDate = ref(new Date('2024-04-09T16:00:00-04:00'));
 const showEventModal = ref(false);
 
 const displayTimeWindows = computed(() => {
@@ -405,23 +369,27 @@ export default {
   width: 100%;
   z-index: 10;
 }
+
 .section-title {
   text-align: center;
   font-weight: bold;
   font-size: 2em;
 }
+
 .card {
   border: 0;
   overflow: hidden;
   background-color: $COLOR_FOREGROUND;
   border-radius: $BORDER_RADIUS;
 }
+
 .schedule-header {
   font-family: Aleo;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #10274f;
 }
+
 .schedule-header-day {
   display: flex;
   justify-content: center;
@@ -439,6 +407,7 @@ export default {
     column-gap: 0.25rem;
   }
 }
+
 .schedule-header-day-bar {
   margin-top: 0.2rem;
   height: 0.3rem;
@@ -449,6 +418,7 @@ export default {
     background-color: $COLOR_LIGHT_TEXT;
   }
 }
+
 .list-wrapper {
   display: flex;
   flex-direction: column;
@@ -458,15 +428,18 @@ export default {
   overflow-y: auto;
   backdrop-filter: blur(35px);
 }
+
 .column-card {
   display: flex;
   height: 100%;
   flex-direction: column;
   min-height: 0;
 }
+
 .schedule-page {
   align-items: center;
 }
+
 .schedule-list {
   display: flex;
   flex-flow: column nowrap;
@@ -477,11 +450,13 @@ export default {
   padding: 0 1rem;
   width: 100%;
 }
+
 .schedule-legend {
   display: flex;
   flex-flow: row wrap;
   column-gap: 3rem;
 }
+
 .schedule-body {
   background: $COLOR_FOREGROUND;
   border-radius: 8px;
@@ -490,15 +465,18 @@ export default {
   display: flex;
   justify-content: flex-start;
 }
+
 .schedule-time {
   display: flex;
   flex-flow: column;
   width: 15%;
 }
+
 .schedule-content {
   display: grid;
   width: 100%;
 }
+
 .timewindow {
   font-size: 1.25rem;
   height: 7.5vh;
@@ -506,8 +484,9 @@ export default {
   text-align: center;
   color: $COLOR_LIGHT_TEXT;
 }
-.schedule-column {
-}
+
+.schedule-column {}
+
 .schedule-content-item {
   height: 4.5vh;
   border-radius: 8px;
@@ -528,10 +507,12 @@ export default {
   color: $COLOR_LIGHT_TEXT;
   cursor: pointer;
 }
+
 .length-30-min,
 .length-45-min {
   font-size: 16px;
 }
+
 .schedule-content-item-title {
   font-family: Avenir;
   flex-grow: 1;
@@ -544,6 +525,7 @@ export default {
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+
 .schedule-time-line {
   width: 60vw;
   position: absolute;
@@ -554,186 +536,237 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .schedule-time-line-inner {
   width: 100%;
   border: 1px solid rgba($COLOR_PRIMARY, 0.8);
 }
+
 .schedule-time-line-header {
   border-radius: 50%;
   padding: 8px;
   background-color: rgba($COLOR_PRIMARY, 0.8);
   border: 1px solid rgba($COLOR_PRIMARY, 0.8);
 }
+
 .event-passed {
   opacity: 0.5;
 }
+
 .offset-15-min {
   margin-top: 3.5vh !important;
 }
+
 .length-0-min {
   margin-top: -3.5vh !important;
   height: 7vh !important;
 }
+
 .length-30-min {
   height: 7vh !important;
 }
+
 .length-45-min {
   height: 11.5vh !important;
 }
+
 .length-60-min {
   height: 14.5vh !important;
 }
+
 .length-75-min {
   height: 11vh !important;
 }
+
 .length-90-min {
   height: 22vh !important;
 }
+
 .length-120-min {
   height: 29.5vh !important;
 }
+
 .length-150-min {
   height: 37vh !important;
 }
+
 .length-180-min {
   height: 44.5vh !important;
 }
+
 .length-210-min {
   height: 52vh !important;
 }
+
 .length-240-min {
   height: 59.5vh !important;
 }
+
 .length-270-min {
   height: 67vh !important;
 }
+
 .length-300-min {
   height: 74.5vh !important;
 }
+
 .length-330-min {
   height: 82vh !important;
 }
+
 .length-360-min {
   height: 89.5vh !important;
 }
+
 .length-390-min {
   height: 97vh !important;
 }
+
 .length-420-min {
   height: 104.5vh !important;
 }
+
 .length-450-min {
   height: 112vh !important;
 }
+
 .length-480-min {
   height: 119.5vh !important;
 }
+
 /* Coloring by Category */
 .main-event-text {
   color: $COLOR_MAIN_EVENT;
 }
+
 .workshop-text {
   color: $COLOR_WORKSHOP;
 }
+
 .mini-event-text {
   color: $COLOR_MINI_EVENT;
 }
+
 .sponsor-text {
   color: $COLOR_SPONSOR;
 }
+
 .food-text {
   color: $COLOR_FOOD;
 }
+
 .main-event {
   background-color: $COLOR_MAIN_EVENT;
   border-color: $COLOR_MAIN_EVENT_BORDER;
 }
+
 .workshop-event {
   background-color: $COLOR_WORKSHOP;
   border-color: $COLOR_WORKSHOP_BORDER;
 }
+
 .mini-event {
   background-color: $COLOR_MINI_EVENT;
   border-color: $COLOR_MINI_EVENT_BORDER;
 }
+
 .sponsor-event {
   background-color: $COLOR_SPONSOR;
   border-color: $COLOR_SPONSOR_BORDER;
 }
+
 .food-event {
   background-color: $COLOR_FOOD;
   border-color: $COLOR_FOOD_BORDER;
 }
+
 @media only screen and (min-width: 1101px) {
   #schedule {
     padding: 0 5rem;
   }
+
   .schedule-content-item {
     font-size: 14px !important;
     line-height: 17px !important;
   }
+
   .length-30-min,
   .length-45-min {
+
     /* font-size: 12px !important; */
     /* line-height: 15px !important; */
-    & > .schedule-content-item-title {
+    &>.schedule-content-item-title {
       -webkit-line-clamp: 2;
     }
   }
+
   .timewindow,
   .btn {
     font-size: 17px !important;
   }
 }
+
 @media only screen and (min-width: 851px) and (max-width: 1100px) {
   #schedule {
     padding: 0 3rem;
   }
+
   .schedule-list-title-item {
     font-size: 16px !important;
   }
+
   .schedule-content-item {
     font-size: 11px !important;
     line-height: 13px !important;
   }
+
   .length-30-min,
   .length-45-min {
+
     /* font-size: 8px !important; */
     /* line-height: 10px !important; */
-    & > .schedule-content-item-title {
+    &>.schedule-content-item-title {
       -webkit-line-clamp: 3;
     }
   }
+
   .timewindow,
   .btn {
     font-size: 14px !important;
   }
 }
+
 @media only screen and (max-width: 850px) {
   .schedule-list {
     margin-left: 1vw;
     margin-right: 1vw;
   }
+
   .schedule-list-title-item {
     font-size: 14px !important;
   }
+
   .schedule-content-item {
     font-size: 8px !important;
     line-height: 10px !important;
   }
+
   .length-30-min,
   .length-45-min {
+
     /* font-size: 6px !important; */
     /* line-height: 8px !important; */
-    & > .schedule-content-item-title {
+    &>.schedule-content-item-title {
       -webkit-line-clamp: 4;
     }
   }
+
   .timewindow,
   .btn {
     font-size: 10px !important;
   }
 }
+
 .loading-spinner-wrapper {
   display: flex;
   justify-content: center;
