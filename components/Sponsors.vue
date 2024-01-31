@@ -1,16 +1,28 @@
 <template>
   <div id="sponsors" class="section">
-    <h1 class="section-title">Sponsors</h1>
+    <img class="sponsor-image" src="~/assets/images/background/sponsors.svg" />
     <div class="sponsor-container">
       <template v-for="sponsor in sponsors" :key="sponsor.name">
         <SponsorCard :name="sponsor.name" :url="sponsor.url" />
       </template>
     </div>
-    <div class="call-to-action">
-      Interested in sponsoring us?<br />
-      Email us at
-      <a href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a> or
-      <a href="./sponsor">view our prospectus</a>.
+    <div class="footer-text">
+      <div class="links">
+        <span class="links-1">
+          <a href="http://mlh.io/code-of-conduct" target="_blank"
+            >MLH Code of Conduct</a
+          >
+          | <a href="/sponsor" target="_blank">Sponsor Us</a></span
+        >
+        <span class="links-separator"> | </span>
+        <span class="links-2">
+          <a href="/brand.pdf" target="_blank">Brand Guidelines</a> |
+          <a href="mailto:hello@bit.camp">Contact Us</a>
+        </span>
+      </div>
+      <div class="copyright">
+        Copyright &copy; 2019 - 2023 Bitcamp. All Rights Reserved.
+      </div>
     </div>
   </div>
 </template>
@@ -171,6 +183,22 @@ const sponsors: Sponsor[] = [
   text-align: center;
 }
 
+.sponsor-image {
+  margin-bottom: 65px;
+  position: relative;
+  left: 27%;
+}
+  
+.footer-text {
+  margin-top: 50px;
+  color: black;
+}
+
+.footer-text a {
+  color: black;
+  text-decoration: underline black;
+}
+
 .section-title {
   width: 100%;
   margin-bottom: 1rem;
@@ -188,7 +216,6 @@ const sponsors: Sponsor[] = [
   max-width: 60rem;
   border-radius: 20px;
   padding: 4rem;
-  background-color: rgba(#ffffff, 0.2);
 }
 
 @media only screen and (min-width: 992px) {
@@ -209,6 +236,30 @@ const sponsors: Sponsor[] = [
       }
     }
   }
+
+  .sponsor-image{
+    width: 43vw;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 992px) {
+  .sponsor-image{
+    width: 50vw;
+    left: 20%;
+    max-width: 100%;
+    margin-bottom: -30px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 850px) {
+  .sponsor-image{
+    width: 48vw;
+    left: 15%;
+    max-width: 100%;
+    margin-bottom: -30px;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 992px) {
@@ -226,6 +277,13 @@ const sponsors: Sponsor[] = [
   .sponsor-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+  }
+
+  .sponsor-image{
+    width: 70vw;
+    max-width: 100%;
+    left: 8%;
+    margin-bottom: 20px;
   }
 }
 

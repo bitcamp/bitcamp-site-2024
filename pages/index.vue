@@ -114,7 +114,7 @@ export default {
 <style scoped lang="scss">
 .app-container {
   position: relative;
-  background-color: #345793;
+  background-color: #f6ebcc;
 
   & > .section {
     margin-bottom: 5rem !important;
