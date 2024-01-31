@@ -1,22 +1,15 @@
 <template>
-  <div
-    class="Rtable-cell Rtable-category-cell"
-    :class="'Rtable-misc-category-cell-' + type"
-  >
+  <div class="Rtable-cell Rtable-category-cell" :class="'Rtable-misc-category-cell-' + type">
     <a class="tooltips direction" :title="perk" :description="description">
-      <img
-        src="../assets/images/icons/question-mark-black.svg"
-        alt="Question Mark"
-      />
+      <img src="../assets/images/icons/question-mark-black.svg" alt="Question Mark" />
     </a>
-    {{ perk }}
+    <span v-if="bolded"><b>{{ perk }}</b></span>
+    <span v-else>{{ perk }}</span>
   </div>
 
   <div class="Rtable-cell Rtable-cell-misc" :class="'Rtable-misc-cell-' + type">
     {{ price }}
   </div>
-  <div class="Rtable-cell Rtable-cell-blank"></div>
-  <div class="Rtable-cell Rtable-cell-blank"></div>
   <div class="Rtable-cell Rtable-cell-blank"></div>
   <div class="Rtable-cell Rtable-cell-blank"></div>
   <div class="Rtable-cell Rtable-cell-blank"></div>
@@ -30,6 +23,10 @@ export default {
     perk: {
       type: String,
       required: true,
+    },
+    bolded: {
+      type: Boolean,
+      required: true
     },
     price: {
       type: String,
@@ -48,6 +45,9 @@ export default {
 </script>
 
 <style scoped>
-.Rtable-cell {
+.Rtable-cell {}
+
+.boldClass {
+  font-weight: bold;
 }
 </style>

@@ -1,25 +1,16 @@
 <template>
   <div class="Rtable-cell Rtable-category-cell" :class="header">
-    <a
-      v-if="header !== 'first-row Rtable-category-cell-full'"
-      class="tooltips direction"
-      :description="description"
-      :title="categoryName"
-    >
-      <img
-        src="../assets/images/icons/question-mark-black.svg"
-        alt="Question Mark"
-      />
+    <a v-if="header !== 'first-row Rtable-category-cell-full'" class="tooltips direction" :description="description"
+      :title="categoryName">
+      <img src="../assets/images/icons/question-mark-black.svg" alt="Question Mark" />
     </a>
-    {{ categoryName }}
+    <div style="display: flex; flex-direction: column;">
+      <span>{{ categoryName }}</span>
+      <span v-if="subText" style="font-size: 0.75rem;">{{ subText }}</span>
+    </div>
   </div>
 
-  <div
-    v-for="(arg, index) in args"
-    :key="index"
-    class="Rtable-cell"
-    :class="'Rtable-cell-' + tierNames[index]"
-  >
+  <div v-for="(arg, index) in args" :key="index" class="Rtable-cell" :class="'Rtable-cell-' + tierNames[index]">
     <p v-if="arg === 'check-b'">
       <img src="../assets/images/icons/check-black.svg" alt="Checkmark" />
     </p>
@@ -46,6 +37,10 @@ export default {
       type: String,
       required: true,
     },
+    subText: {
+      type: String,
+      required: false,
+    },
     header: {
       type: String,
       required: false,
@@ -59,6 +54,5 @@ export default {
 </script>
 
 <style scoped>
-.Rtable-cell {
-}
+.Rtable-cell {}
 </style>
