@@ -1,6 +1,6 @@
 <template>
   <div id="sponsors" class="section">
-    <img class="sponsor-image" src="~/assets/images/background/sponsors.png" />
+    <img class="sponsor-image" src="~/assets/images/background/sponsors.svg" />
     <div class="sponsor-container">
       <template v-for="sponsor in sponsors" :key="sponsor.name">
         <SponsorCard :name="sponsor.name" :url="sponsor.url" />
@@ -187,8 +187,6 @@ const sponsors: Sponsor[] = [
   margin-bottom: 65px;
   position: relative;
   left: 27%;
-  width: 35%;
-  max-width: 100%;
 }
   
 .footer-text {
@@ -238,6 +236,30 @@ const sponsors: Sponsor[] = [
       }
     }
   }
+
+  .sponsor-image{
+    width: 43vw;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 992px) {
+  .sponsor-image{
+    width: 50vw;
+    left: 20%;
+    max-width: 100%;
+    margin-bottom: -30px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 850px) {
+  .sponsor-image{
+    width: 48vw;
+    left: 15%;
+    max-width: 100%;
+    margin-bottom: -30px;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 992px) {
@@ -255,6 +277,13 @@ const sponsors: Sponsor[] = [
   .sponsor-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+  }
+
+  .sponsor-image{
+    width: 70vw;
+    max-width: 100%;
+    left: 8%;
+    margin-bottom: 20px;
   }
 }
 
