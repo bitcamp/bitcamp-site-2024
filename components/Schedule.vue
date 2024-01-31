@@ -1,7 +1,7 @@
 <!-- An events calendar that pulls events from DynamoDB -->
 <template>
   <div id="schedule" class="section">
-    <h1 class="section-title">Schedule</h1>
+    <img src="~/assets/images/signs/schedule.svg" alt="" />
     <div class="schedule-page" style="height: 85vh">
       <div class="row schedule-list" style="height: 80vh">
         <!-- FULL SCHEDULE -->
@@ -9,16 +9,24 @@
           <div no-body class="card h-100">
             <div class="column-card">
               <div class="schedule-header">
-                <div v-for="day in days" :key="getDayOfTheWeek(day)" class="schedule-header-day"
-                  @click="selectTitleItem(day)">
+                <div
+                  v-for="day in days"
+                  :key="getDayOfTheWeek(day)"
+                  class="schedule-header-day"
+                  @click="selectTitleItem(day)"
+                >
                   <div>
                     <div class="schedule-day">
-                      <span class="day">{{ getDayOfTheWeek(day).substring(0, 3) }},
+                      <span class="day"
+                        >{{ getDayOfTheWeek(day).substring(0, 3) }},
                         {{ '' }}
                       </span>
                       <span class="date">April {{ day.getDate() }}</span>
                     </div>
-                    <div class="schedule-header-day-bar" :class="{ active: day === selectedDay }" />
+                    <div
+                      class="schedule-header-day-bar"
+                      :class="{ active: day === selectedDay }"
+                    />
                   </div>
                 </div>
               </div>
@@ -27,7 +35,11 @@
               <div class="list-wrapper">
                 <div id="schedule-body" class="schedule-body">
                   <div class="schedule-time">
-                    <div v-for="timeWindow in displayTimeWindows" :key="timeWindow" class="timewindow">
+                    <div
+                      v-for="timeWindow in displayTimeWindows"
+                      :key="timeWindow"
+                      class="timewindow"
+                    >
                       <span v-if="timeWindow.startsWith('0')">
                         {{ timeWindow.slice(1) }}
                       </span>
@@ -36,28 +48,46 @@
                       </span>
                     </div>
                   </div>
-                  <div class="schedule-content" :style="{
+                  <div
+                    class="schedule-content"
+                    :style="{
                     gridTemplateColumns: `repeat(${scheduleColumns[selectedDay as any]}, minmax(0, 1fr))`,
-                  }">
-                    <div v-for="scheduleColumn in scheduleColumns[selectedDay as any]" :key="scheduleColumn" Schedule
-                      class="schedule-column">
-                      <div v-for="timeWindow in displayTimeWindows" :key="timeWindow" class="timewindow">
-                        <div v-if="formattedEvents[selectedDay as any][timeWindow].find(
+                  }"
+                  >
+                    <div
+                      v-for="scheduleColumn in scheduleColumns[selectedDay as any]"
+                      :key="scheduleColumn"
+                      Schedule
+                      class="schedule-column"
+                    >
+                      <div
+                        v-for="timeWindow in displayTimeWindows"
+                        :key="timeWindow"
+                        class="timewindow"
+                      >
+                        <div
+                          v-if="formattedEvents[selectedDay as any][timeWindow].find(
                           (event: any) =>
                             event.column === scheduleColumn &&
                             event.display &&
                             event.displayMode
                         )
-                          " class="schedule-content-item" :class="formattedEvents[selectedDay as any][timeWindow].find(
+                          "
+                          class="schedule-content-item"
+                          :class="formattedEvents[selectedDay as any][timeWindow].find(
     (event: any) => event.column === scheduleColumn
   ).class
-    " data-toggle="modal" data-target="#scheduleEventModal" @click="
-    openEventModal(
-      selectedDay as Date,
-      timeWindow,
-      scheduleColumn
-    )
-    ">
+    "
+                          data-toggle="modal"
+                          data-target="#scheduleEventModal"
+                          @click="
+                            openEventModal(
+                              selectedDay as Date,
+                              timeWindow,
+                              scheduleColumn
+                            )
+                          "
+                        >
                           <div class="schedule-content-item-title">
                             {{
                               formattedEvents[selectedDay as any][
@@ -83,7 +113,11 @@
     </div>
   </div>
   <ModalsContainer />
-  <EventModal v-model="showEventModal" :event="selectedEvent" @close="() => closeEventModal()" />
+  <EventModal
+    v-model="showEventModal"
+    :event="selectedEvent"
+    @close="() => closeEventModal()"
+  />
 </template>
 
 <script setup lang="ts">
@@ -387,7 +421,7 @@ export default {
   font-family: Aleo;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: #10274f;
+  background-color: #75b7b9;
 }
 
 .schedule-header-day {
@@ -426,7 +460,7 @@ export default {
   min-height: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  backdrop-filter: blur(35px);
+  background-color: #c7c0ac;
 }
 
 .column-card {
@@ -485,7 +519,8 @@ export default {
   color: $COLOR_LIGHT_TEXT;
 }
 
-.schedule-column {}
+.schedule-column {
+}
 
 .schedule-content-item {
   height: 4.5vh;
@@ -657,7 +692,6 @@ export default {
 
 .main-event {
   background-color: $COLOR_MAIN_EVENT;
-  border-color: $COLOR_MAIN_EVENT_BORDER;
 }
 
 .workshop-event {
@@ -692,10 +726,9 @@ export default {
 
   .length-30-min,
   .length-45-min {
-
     /* font-size: 12px !important; */
     /* line-height: 15px !important; */
-    &>.schedule-content-item-title {
+    & > .schedule-content-item-title {
       -webkit-line-clamp: 2;
     }
   }
@@ -722,10 +755,9 @@ export default {
 
   .length-30-min,
   .length-45-min {
-
     /* font-size: 8px !important; */
     /* line-height: 10px !important; */
-    &>.schedule-content-item-title {
+    & > .schedule-content-item-title {
       -webkit-line-clamp: 3;
     }
   }
@@ -753,10 +785,9 @@ export default {
 
   .length-30-min,
   .length-45-min {
-
     /* font-size: 6px !important; */
     /* line-height: 8px !important; */
-    &>.schedule-content-item-title {
+    & > .schedule-content-item-title {
       -webkit-line-clamp: 4;
     }
   }
