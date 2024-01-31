@@ -106,7 +106,7 @@ export default {
 
 <style scoped lang="scss">
 #tracks {
-  padding-top: 25%;
+  padding-top: 20%;
   padding-bottom: 5%;
   background-color: #f6ebcc;
   position: relative;
@@ -203,8 +203,8 @@ export default {
     }
 
     .tracks-sign {
-      margin-top: 50px;
       width: 300px;
+      transform: translateX(0) translateY(-20%);
     }
   }
 }
