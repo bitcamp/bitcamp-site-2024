@@ -159,7 +159,7 @@
               'Tera',
             ]" :args="['', '', '', '5 min', '15 min']"
               :description="'This is a great opportunity for a company to give an inspiring and motivating talk to our hackers. This could be about an experience, something related to our hackathon’s theme, or anything realistically.'" />
-            <ProspectusRow :categoryName="'Sponsored Side Event'" :tierNames="[
+            <ProspectusRow :categoryName="'Sponsored Side Event'" :subText="'(Limited Slots)'" :tierNames="[
               'Byte',
               'Kilo',
               'Mega',
@@ -175,14 +175,14 @@
               'Tera',
             ]" :args="['', '', '', '', 'check-w']"
               :description="'This is a great way to engage with our hackers in a fun, informal way over activity of choice (example: mini capture the flag, cup stacking, etc). A mini-challenge usually involves an activity like a game or a short event with prizes. We will work with you to arrange the logistics, and will also be sure to advertise and announce this mini-challenge during the event itself.'" />
-            <ProspectusRow :categoryName="'Provide Additional Prize'" :tierNames="[
+            <ProspectusBottomRow :categoryName="'Provide Additional Prize'" :tierNames="[
               'Byte',
               'Kilo',
               'Mega',
               'Giga',
               'Tera',
             ]" :args="['', '', '', '', 'check-w']"
-              :description="'Providing prizes is a powerful perk that can help companies reach out to their target hacker population, be it those interested in a specific field or those that have a specific skillset. This year, our Peta-level sponsor can provide 2 prizes to ensure they get as much outreach as possible and are successful in identifying talent at the hackathon.'" />
+              :description="'Providing prizes is a powerful perk that can help companies reach out to their target hacker population, be it those interested in a specific field or those that have a specific skillset. This year, our Giga and -level sponsor can provide 2 prizes to ensure they get as much outreach as possible and are successful in identifying talent at the hackathon.'" />
             <ProspectusEmptyRow :categoryName="'Recruiting'" />
             <ProspectusRow :categoryName="'Reserved Table'" :tierNames="[
               'Byte',
@@ -223,7 +223,7 @@
   'check-w',
   'check-w',
 ]" :description="'With this perk, we provide a database of all of our registrants’ resumes to our sponsors following the event (before if we are able to do so logistically). This will [ideally be in a Google Drive format but can be changed due to certain company restrictions.'" />
-            <ProspectusRow :categoryName="'Recruiters Present/Active Recruitment'" :tierNames="[
+            <ProspectusRow :categoryName="'Recruiters Present'" :subText="'(active recruitment)'" :tierNames="[
               'Byte',
               'Kilo',
               'Mega',
@@ -244,7 +244,7 @@
               'Tera',
             ]" :args="['', '', '', 'check-w', 'check-w']"
               :description="'We’ve started a new tradition of a hype event before Bitcamp takes place, where hackers can come together, meet each other, and get a glimpse of what Bitcamp is and for the first time ever, we will be including a sponsorship fair as part of the event! This is a unique opportunity for you to be one of the first sponsors to interact with prospective hackers even before the hackathon takes place and gives you a chance to have a personalized interaction with hackers and begin recruiting early!'" />
-            <ProspectusRow :categoryName="'Recruitment Event Shoutout on Social Media'" :tierNames="[
+            <ProspectusRow :categoryName="'Recruitment Event Shoutout'" :subText="'(on social media)'" :tierNames="[
               'Byte',
               'Kilo',
               'Mega',
@@ -324,7 +324,7 @@
               'Giga',
               'Tera',
             ]" :args="['', '', '', '$1,500', '$1,000']"
-              :description="'Peta-level sponsors will be given special recognition in our marketing materials as a co-host. '" />
+              :description="'This add-on is open to Giga and Tera sponsors, who will be given special recognition in our marketing materials as a co-host. '" />
 
 
             <div class="Rtable-cell Rtable-cell-blank"></div>
@@ -344,7 +344,7 @@
             <ProspectusMisc :perk="'Additional Add-Ons'" :type="'head'" :bolded="true"
               :description="'If you’re already sponsoring a tier that allows you to provide a prize, then you have the opportunity to sponsor an additional prize through this perk. Sponsoring prizes is an excellent chance to interact with hackers and attract talent with the specific skillset or interests that you’re looking for and sponsoring an additional prize is a great way to expand your search.'" />
             <ProspectusMisc :perk="'Sponsoring Additional Prizes'" :price="'$1,000'" :type="'bottom'" :bolded="false"
-              :description="'This add-on is open to Giga and Tera sponsors and is the perfect chance for your company to get exposure among past and prospective hackers. Hop on the Bitcamp Podcast, share what you love about your company, and get students interested!'" />
+              :description="'This add-on is open to all sponsors and is the perfect chance for your company to get exposure among past and prospective hackers. Hop on the Bitcamp Podcast, share what you love about your company, and get students interested!'" />
           </div>
           <hr class="divider" />
           <section class="ConnectSection">
