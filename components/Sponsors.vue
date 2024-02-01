@@ -42,134 +42,14 @@ interface Sponsor {
 
 const sponsors: Sponsor[] = [
   {
-    name: '1517',
-    amount: 1000,
-    url: 'https://www.1517fund.com/',
+    name: '355 Code',
+    amount: 3000,
+    url: 'https://www.355code.com/',
   },
   {
-    name: 'ACES',
-    amount: 1000,
-    url: 'https://aces.umd.edu/',
-  },
-  {
-    name: 'Bloomberg',
-    amount: 7000,
-    url: 'https://www.bloomberg.com/',
-  },
-  {
-    name: 'Bloomberg Industry Group',
-    amount: 4000,
-    url: 'https://www.bloombergindustry.com/careers/',
-  },
-  {
-    name: 'BSOS',
-    amount: 1000,
-    url: 'https://bsos.umd.edu/',
-  },
-  {
-    name: 'Capital One',
-    amount: 4000,
-    url: 'https://www.capitalone.com/',
-  },
-  {
-    name: 'Cipher Tech',
-    amount: 7000,
-    url: 'https://www.ciphertechsolutions.com/',
-  },
-  {
-    name: 'Clark School of Engineering',
-    amount: 15000,
-    url: 'https://eng.umd.edu/',
-  },
-  {
-    name: 'Cockroach Labs',
-    amount: 8000,
-    url: 'https://www.cockroachlabs.com/',
-  },
-  {
-    name: 'Dingman Center',
-    amount: 1000,
-    url: 'https://www.rhsmith.umd.edu/centers-initiatives/dingman-center',
-  },
-  {
-    name: 'Fannie Mae',
-    amount: 7000,
-    url: 'https://www.fanniemae.com/',
-  },
-  {
-    name: 'Geico',
-    amount: 4000,
-    url: 'https://www.geico.com',
-  },
-  {
-    name: 'IonQ',
-    amount: 6000,
-    url: 'https://ionq.com/',
-  },
-  {
-    name: 'iSchool',
-    amount: 1000,
-    url: 'https://ischool.umd.edu/',
-  },
-  {
-    name: 'JHU APL',
-    amount: 4000,
-    url: 'https://www.jhuapl.edu/',
-  },
-  {
-    name: 'LTS',
-    amount: 4000,
-    url: 'https://www.ltsnet.net/',
-  },
-  {
-    name: 'M&T Bank',
-    amount: 4000,
-    url: 'https://www3.mtb.com/careers/technology-careers',
-  },
-  {
-    name: 'SEE',
-    amount: 8045.55,
-    url: 'https://www.see.umd.edu/',
-  },
-  {
-    name: 'Smith School of Business',
-    amount: 2500,
-    url: 'https://www.rhsmith.umd.edu/',
-  },
-  {
-    name: 'Textron',
-    amount: 1000,
-    url: 'https://www.textron.com/',
-  },
-  {
-    name: 'UMD CS Department',
-    amount: 39900,
-    url: 'https://www.cs.umd.edu/',
-  },
-  {
-    name: 'UMD CMNS',
-    amount: 39900,
-    url: 'https://cmns.umd.edu/',
-  },
-  {
-    name: 'UMIACS',
-    amount: 39900,
-    url: 'https://www.umiacs.umd.edu/',
-  },
-  {
-    name: 'UMD Physics Department',
-    amount: 1000,
-    url: 'https://umdphysics.umd.edu/',
-  },
-  {
-    name: 'Visionist',
-    amount: 1000,
-    url: 'https://www.visionistinc.com/',
-  },
-  {
-    name: 'StandOut Stickers',
-    amount: 100,
-    url: 'https://hackp.ac/mlh-standoutstickers-hackathons',
+    name: 'Pepsi',
+    amount: 1500,
+    url: 'https://www.pepsi.com/',
   },
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 </script>
