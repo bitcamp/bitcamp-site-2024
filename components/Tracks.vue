@@ -26,24 +26,6 @@
       <article class="card">
         <img
           class="tracks-image"
-          src="~/assets/images/tracks/quantum.svg"
-          alt="Quantum Track Photo"
-        />
-        <div class="text">
-          <h1>Quantum Track</h1>
-          <p>
-            Hackers will delve into the field of quantum computing with
-            exclusive mentors, sponsors, and workshops! Hackers will use their
-            knowledge of Python and other computing skills on educational and
-            interactive Quantum Track activities. If you've been a previous
-            participant of the Quantum track, there will be new, challenging
-            prompts for you to tackle!
-          </p>
-        </div>
-      </article>
-      <article class="card">
-        <img
-          class="tracks-image"
           src="~/assets/images/tracks/ml.svg"
           alt="Machine Learning Track Photo"
         />
@@ -65,23 +47,22 @@
           alt="Quantum Track Photo"
         />
         <div class="text">
-          <h1>App Dev Track</h1>
+          <h1>Quantum Track</h1>
           <p>
-            Ever wondered how to turn your innovative app idea into a reality?
-            Ready to turn your concepts into cutting-edge applications? One of
-            our new tracks - we'll introduce you to different aspects of
-            development including the software development life cycle,
-            development tools such as Flutter, and full-stack development
-            through access to exclusive workshops and mentors as you work on
-            your hack!
+            Hackers will delve into the field of quantum computing with
+            exclusive mentors, sponsors, and workshops! Hackers will use their
+            knowledge of Python and other computing skills on educational and
+            interactive Quantum Track activities. If you've been a previous
+            participant of the Quantum track, there will be new, challenging
+            prompts for you to tackle!
           </p>
         </div>
       </article>
       <article class="card">
         <img
           class="tracks-image"
-          src="~/assets/images/tracks/ml.svg"
-          alt="Machine Learning Track Photo"
+          src="~/assets/images/tracks/cybersecurity.svg"
+          alt="Cybersecurity Track Photo"
         />
         <div class="text">
           <h1>Cybersecurity Track</h1>
@@ -91,6 +72,25 @@
             workshops that include discussions of web vulnerabilities,
             real-world applications of combating security weaknesses, and
             ethical decision-making.
+          </p>
+        </div>
+      </article>
+      <article class="card">
+        <img
+          class="tracks-image"
+          src="~/assets/images/tracks/app_dev.svg"
+          alt="App Dev Track Photo"
+        />
+        <div class="text">
+          <h1>App Development Track</h1>
+          <p>
+            Ever wondered how to turn your innovative app idea into a reality?
+            Ready to turn your concepts into cutting-edge applications? Join the
+            App Dev track - we'll introduce you to different aspects of
+            development including the software development life cycle,
+            development tools such as Flutter, and full-stack development
+            through access to exclusive workshops and mentors as you work on
+            your hack!
           </p>
         </div>
       </article>
