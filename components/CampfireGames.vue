@@ -130,18 +130,29 @@ img {
 
 .team-title {
   padding-top: 15px;
+  font-size: 1.5rem;
 }
 
 .team-picture {
   max-width: 400px;
 }
 .team-picture.red-marshie {
-  width: 80%;
+  width: 65%;
 }
 
 .team-blurb {
   color: black;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .team-picture {
+    width: 25vw;
+  }
+  .team-picture.red-marshie {
+    width: 19vw;
+  }
+}
+
 @media (min-width: 1900px) {
   #cfg-blurb {
     padding-right: 10vw;
@@ -169,11 +180,26 @@ img {
   }
 
   .team-picture {
-    width: 50%;
+    width: 60vw;
   }
 
   .team-picture.red-marshie {
-    width: 40%;
+    width: 35vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team-picture.red-marshie {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .team-picture {
+    width: 70vw;
+  }
+  .team-picture.red-marshie {
+    width: 60vw;
   }
 }
 
