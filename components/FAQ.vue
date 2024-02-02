@@ -1,7 +1,7 @@
 <template>
   <div id="faq" class="section">
     <div class="FAQ_Section">
-      <h1 class="Header">FAQ</h1>
+      <!-- <h1 class="Header">FAQ</h1> -->
       <div class="Question_Wrapper">
         <div
           v-for="(questions, i) in [questions_left, questions_right]"
@@ -144,12 +144,12 @@ function toggleButton(question: string) {
 </script>
 
 <style scoped lang="scss">
-.Header {
-  font-family: Aleo;
-  font-weight: bold;
-  color: white;
-  padding-bottom: 2vw;
-}
+// .Header {
+//   font-family: Aleo;
+//   font-weight: bold;
+//   color: white;
+//   padding-bottom: 2vw;
+// }
 
 .FAQ_Section {
   position: relative;
@@ -165,7 +165,7 @@ function toggleButton(question: string) {
   box-shadow: 0, 0, 20px, 0 rgba(24, 22, 81, 0.2);
   z-index: 10;
   text-align: center;
-  background-color: #10274f80;
+  background-color: #5eb8ba;
   backdrop-filter: blur(35px);
   margin: 8vw;
   margin-bottom: 0;
