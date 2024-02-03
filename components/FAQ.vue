@@ -206,29 +206,29 @@ function toggleButton(question: string) {
   @media (min-width: 768px) and (max-width: 1199.98px) {
     width: 30%;
     max-width: 30%;
-    margin-top: 7.5vh;
+    margin-top: 10vh;
   }
 
   @media (min-width: 1200px) {
     width: 30%;
     max-width: 30%;
-    margin-top: 20vh;
+    margin-top: 16vh;
   }
 }
 
 .banner-container {
-  padding-top: 10vh;
+  padding-top: 11vh;
 
   @media (max-width: 767.8px) {
-    padding-top: 11vh;
-  }
-
-  @media (min-width: 768px) and (max-width: 1199.98px) {
     padding-top: 12vh;
   }
 
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    padding-top: 17vh;
+  }
+
   @media (min-width: 1200px) {
-    padding-top: 18vh;
+    padding-top: 20vh;
   }
 }
 
