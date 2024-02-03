@@ -321,6 +321,10 @@ const toTop = () => {
       grid-column-end: 4;
     }
   }
+
+  #pagetop{
+    transform: scale(0.8); 
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -334,6 +338,12 @@ const toTop = () => {
     max-width: 100%;
     left: 8%;
     margin-bottom: 20px;
+  }
+
+  #pagetop{
+    transform: scale(0.65); 
+    bottom: 0.5rem !important;
+    right: 0.5rem !important;
   }
 }
 
