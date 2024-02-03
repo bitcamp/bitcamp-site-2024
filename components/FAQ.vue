@@ -158,6 +158,10 @@ function toggleButton(question: string) {
 </script>
 
 <style scoped lang="scss">
+.section {
+  background-color: #F6EBCC;
+  padding-bottom: 10vh;
+}
 // .Header {
 //   font-family: Aleo;
 //   font-weight: bold;
