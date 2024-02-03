@@ -4,7 +4,9 @@
       <img class="hero-image" src="~/assets/images/background/hero.png" />
     </div>
     <div class="header">
-      <img src="/bitcamp-brand/logos/bitcamp.png" />
+      <!-- <img src="/bitcamp-brand/logos/bitcamp.png" /> -->
+      <img :src="signSrc" />
+      <!-- <img class="hero-image" src="~/assets/images/bitcamp-sign/sign_1.svg" /> -->
       <div class="header-content">
         <h1>Find Your Frontier!</h1>
         <h3>April 7-9, 2023 @ XFINITY Center</h3>
@@ -32,6 +34,73 @@ export default {
 defineProps<{
   link?: string;
 }>();
+
+import sign_empty from '../assets/images/bitcamp-sign/sign_empty.svg';
+import sign_full from '../assets/images/bitcamp-sign/sign_full.svg';
+import sign_1 from '../assets/images/bitcamp-sign/sign_1.svg';
+import sign_2 from '../assets/images/bitcamp-sign/sign_2.svg';
+import sign_3 from '../assets/images/bitcamp-sign/sign_3.svg';
+import sign_4 from '../assets/images/bitcamp-sign/sign_4.svg';
+import sign_5 from '../assets/images/bitcamp-sign/sign_5.svg';
+import sign_6 from '../assets/images/bitcamp-sign/sign_6.svg';
+import sign_7 from '../assets/images/bitcamp-sign/sign_7.svg';
+import sign_8 from '../assets/images/bitcamp-sign/sign_8.svg';
+import sign_9 from '../assets/images/bitcamp-sign/sign_9.svg';
+import sign_10 from '../assets/images/bitcamp-sign/sign_10.svg';
+import sign_11 from '../assets/images/bitcamp-sign/sign_11.svg';
+import sign_12 from '../assets/images/bitcamp-sign/sign_12.svg';
+import sign_13 from '../assets/images/bitcamp-sign/sign_13.svg';
+import sign_14 from '../assets/images/bitcamp-sign/sign_14.svg';
+import sign_15 from '../assets/images/bitcamp-sign/sign_15.svg';
+import sign_16 from '../assets/images/bitcamp-sign/sign_16.svg';
+import sign_17 from '../assets/images/bitcamp-sign/sign_17.svg';
+
+import { ref } from 'vue';
+
+const counter = ref(0);
+function incrementCounter() {
+  counter.value++;
+}
+setInterval(incrementCounter, 250);
+
+// let imagesList: string[] = [];
+// for (let m = 0; m < 17+8; m++) {
+//   // if (m < 17) {
+//   //   imagesList.push(require(`~/assets/images/bitcamp-sign/sign_${m+1}.svg`))
+//   // } else if ([17, 18, 21, 22].includes(m)) {
+//   //   imagesList.push(require(`~/assets/images/bitcamp-sign/sign_full.svg`))
+//   // } else {
+//   //   imagesList.push(require(`~/assets/images/bitcamp-sign/sign_empty.svg`))
+//   // }
+//   imagesList.push(sign_full);
+// }
+let imagesList = [
+  sign_1,
+  sign_2,
+  sign_3,
+  sign_4,
+  sign_5,
+  sign_6,
+  sign_7,
+  sign_8,
+  sign_9,
+  sign_10,
+  sign_11,
+  sign_12,
+  sign_13,
+  sign_14,
+  sign_15,
+  sign_16,
+  sign_17,
+  sign_full,
+  sign_full,
+  sign_empty,
+  sign_empty,
+  sign_full,
+  sign_full,
+]
+
+const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 </script>
 
 <style scoped lang="scss">
