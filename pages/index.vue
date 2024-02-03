@@ -8,7 +8,7 @@
     <MiniEvents />
     <CampfireGames />
     <Schedule />
-    <img class="cloud-2" src="~/assets/images/background/cloud2.png" />
+    <!-- <img class="cloud-2" src="~/assets/images/background/cloud2.png" /> -->
     <FAQ />
     <Sponsors />
     <Footer />
@@ -116,7 +116,7 @@ export default {
   position: relative;
   background-color: #345793;
 
-  &>.section {
+  & > .section {
     margin-bottom: 5rem !important;
   }
 }
