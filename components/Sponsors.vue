@@ -24,15 +24,13 @@
         Copyright &copy; 2019 - 2023 Bitcamp. All Rights Reserved.
       </div>
     </div>
-    <transition name="fade">
-      <div id="pagetop" class="fixed right-0 bottom-0" @click="toTop">
-        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
-             stroke="#2f3136"
-             stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
-          <path d="M18 15l-6-6-6 6"/>
-        </svg>
-      </div>
-    </transition>
+    <div id="pagetop" class="fixed right-0 bottom-0" @click="toTop">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
+            stroke="#2f3136"
+            stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -185,7 +183,6 @@ const sponsors: Sponsor[] = [
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
-const scY = ref(0);
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
@@ -194,7 +191,10 @@ onMounted(() => {
 const handleScroll = () => {
   if (scTimer.value) return;
   scTimer.value = setTimeout(() => {
-    scY.value = window.scrollY;
+    const pagetopButton = document.getElementById('pagetop');
+    if (pagetopButton) {
+      pagetopButton.style.display = window.scrollY > 100 ? 'block' : 'none';
+    }
     clearTimeout(scTimer.value);
     scTimer.value = 0;
   }, 100) as any;
@@ -225,9 +225,18 @@ const toTop = () => {
 }
 
 #pagetop{
-  margin-top: 2rem;
-  margin-bottom: -2.5rem;
-  width: 190%;
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  z-index: 99;
+  pointer-events: auto;
+  border-radius: 10px;
+}
+
+#pagetop:hover {
+  background-color: #e0e0e0;
+  opacity: 0.5;
+  cursor: pointer;
 }
   
 .footer-text {
