@@ -2,7 +2,7 @@
   <div class="app-container">
     <div id="privacy-policy">
       <h1 style="font-size: 40px;padding-bottom: 2vw">Privacy Policy</h1>
-    
+
       <p>
         Bitcamp Inc. built the Bitcamp app as a Free app. This SERVICE is
         provided by Bitcamp Hacks Inc. at no cost and is intended for use as
@@ -134,8 +134,8 @@
         If you have any questions or suggestions about our Privacy Policy, do
         not hesitate to contact us at <a href="mailto:hello@bit.camp">hello@bit.camp</a>.
       </p>
-      
-      
+
+
     </div>
     <Footer />
   </div>
@@ -152,11 +152,11 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'og:site_name',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'og:url',
@@ -181,7 +181,7 @@ useHead({
     },
     {
       property: 'twitter:title',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'twitter:description',
@@ -244,7 +244,7 @@ export default {
   padding-top: 50px;
   z-index: 5;
 
-  & > .section {
+  &>.section {
     margin-bottom: 5rem !important;
   }
 }
@@ -324,16 +324,16 @@ img {
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    width: 80%; 
+    width: 80%;
     padding-left: 6rem;
     padding-right: 6rem;
   }
 
   @media (min-width: 576px) and (max-width: 767.8px) {
-    width: 80%; 
+    width: 80%;
     padding-left: 4rem;
     padding-right: 4rem;
-  
+
   }
 
   @media (max-width: 576px) {
@@ -343,5 +343,4 @@ img {
   }
 
 }
-
 </style>

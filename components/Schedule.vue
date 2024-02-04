@@ -1,118 +1,92 @@
 <!-- An events calendar that pulls events from DynamoDB -->
 <template>
   <div id="schedule" class="section">
-    <h1 class="section-title">Schedule</h1>
-    <div class="schedule-page" style="height: 85vh">
-      <div class="row schedule-list" style="height: 80vh">
-        <!-- FULL SCHEDULE -->
-        <div v-if="dataLoaded" class="col pl-5" style="min-height: 0">
-          <div no-body class="card h-100">
-            <div class="column-card">
-              <div class="schedule-header">
-                <div
-                  v-for="day in days"
-                  :key="getDayOfTheWeek(day)"
-                  class="schedule-header-day"
-                  @click="selectTitleItem(day)"
-                >
-                  <div>
-                    <div class="schedule-day">
-                      <span class="day"
-                        >{{ getDayOfTheWeek(day).substring(0, 3) }},
-                        {{ '' }}
-                      </span>
-                      <span class="date">April {{ day.getDate() }}</span>
-                    </div>
-                    <div
-                      class="schedule-header-day-bar"
-                      :class="{ active: day === selectedDay }"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <!-- SCHEDULE SCROLL -->
-              <div class="list-wrapper">
-                <div id="schedule-body" class="schedule-body">
-                  <div class="schedule-time">
-                    <div
-                      v-for="timeWindow in displayTimeWindows"
-                      :key="timeWindow"
-                      class="timewindow"
-                    >
-                      <span v-if="timeWindow.startsWith('0')">
-                        {{ timeWindow.slice(1) }}
-                      </span>
-                      <span v-else>
-                        {{ timeWindow }}
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="schedule-content"
-                    :style="{
-                      gridTemplateColumns: `repeat(${scheduleColumns[selectedDay as any]}, minmax(0, 1fr))`,
-                    }"
-                  >
-                    <div
-                      v-for="scheduleColumn in scheduleColumns[selectedDay as any]"
-                      :key="scheduleColumn"
-                      Schedule
-                      class="schedule-column"
-                    >
-                      <div
-                        v-for="timeWindow in displayTimeWindows"
-                        :key="timeWindow"
-                        class="timewindow"
-                      >
-                        <div
-                          v-if="
-                            formattedEvents[selectedDay as any][timeWindow].find(
-                              (event: any) =>
-                                event.column === scheduleColumn &&
-                                event.display &&
-                                event.displayMode
-                            )
-                          "
-                          class="schedule-content-item"
-                          :class="
-                            formattedEvents[selectedDay as any][timeWindow].find(
-                              (event: any) => event.column === scheduleColumn
-                            ).class
-                          "
-                          data-toggle="modal"
-                          data-target="#scheduleEventModal"
-                          @click="
-                            openEventModal(
-                              selectedDay as Date,
-                              timeWindow,
-                              scheduleColumn
-                            )
-                          "
-                        >
-                          <div class="schedule-content-item-title">
-                            {{
-                              formattedEvents[selectedDay as any][
-                                timeWindow
-                              ].find(
-                                (event: any) => event.column === scheduleColumn
-                              ).event_name
-                            }}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <img
+      src="~/assets/images/signs/schedule.svg"
+      alt=""
+      class="schedule-icon"
+    />
+    <!-- FULL SCHEDULE -->
+    <div class="schedule-container">
+      <div class="dates">
+        <button
+          v-for="date in Object.keys(schedule)"
+          :key="date"
+          :class="date === selectedDay.day ? 'active' : 'fff'"
+          @click="setDaySelection(date)"
+        >
+          {{
+            new Date(parseInt(date)).toLocaleDateString('en-US', {
+              weekday: 'short',
+              month: 'long',
+              day: 'numeric',
+            })
+          }}
+        </button>
+      </div>
+      <!-- this event list is implemented with a css grid
+      each row is a 15 minute increment. the start and end times are parsed
+      to determine a proper starting rows and row spans for the event elements-->
+      <!-- because of how the times are centered, they don't cover everything on scroll 
+      and hence need an additional element to act as the background cover over the event elements -->
+      <span class="left-cover"></span>
+      <div class="event-list-container">
+        <div class="event-list" :style="{}">
+          <span
+            v-for="(_, idx) in selectedDay.times"
+            :key="idx"
+            class="bar"
+            :style="{
+              // add top padding (1rem) and 1.2rem for each 15 minute interval
+              // subtract 1px to align bar in middle of grid row
+              top: `calc(1rem + ${idx * (60 / INTERVAL_M) * 1.6}rem - 1px)`,
+            }"
+          ></span>
+          <div
+            v-for="(time, idx) in selectedDay.times"
+            :key="time"
+            class="time-container"
+            :style="{
+              gridRow: `${idx * (60 / INTERVAL_M) + 1} / span ${
+                60 / INTERVAL_M
+              }`,
+            }"
+          >
+            <p>{{ time }}</p>
           </div>
-        </div>
-        <div v-else>
-          <p style="text-align: center">Schedule loading...</p>
+          <div
+            v-for="event in selectedDay.events"
+            :key="event.id"
+            :style="{
+              gridRow: `${event.startRow} / span ${event.rowSpan}`,
+            }"
+            class="event-container"
+            :class="event.category"
+            @click="
+              () => {
+                selectedEvent = event;
+                showEventModal = true;
+              }
+            "
+          >
+            <div>
+              <p class="name">{{ event.event_name }}</p>
+              <p>
+                {{ formatAMPM(new Date(event.start_time)) }} -
+                {{ formatAMPM(new Date(event.end_time)) }}
+              </p>
+              <p>{{ event.location }}</p>
+            </div>
+            <span>{{ event.displayCategory }}</span>
+          </div>
         </div>
       </div>
     </div>
+    <img
+      src="~/assets/images/icons/register-now.svg"
+      alt=""
+      class="register-icon"
+    />
   </div>
   <ModalsContainer />
   <EventModal
@@ -126,216 +100,227 @@
 import { ModalsContainer } from 'vue-final-modal';
 import type { Event } from '../types/event';
 
-const rawEvents = ref<Event[]>([]);
-const formattedEvents = ref<any>({});
-const selectedDay = ref<Date>();
-const days = ref<Date[]>([]);
-const timeWindows = ref<any[]>([]);
-const timeWindowColumns = ref<any>({});
-const scheduleColumns = ref<any>({});
+// omit to replace string with number
+interface ParsedEvent extends Omit<Event, 'start_time' | 'end_time'> {
+  start_time: number;
+  end_time: number;
+  roundedStart: number;
+  roundedEnd: number;
+  displayCategory: string;
+}
+
+type AllSchedules = {
+  [key: string]: DaySchedule;
+};
+
+interface CalculatedEvent extends ParsedEvent {
+  startRow: number;
+  rowSpan: number;
+  colSpan: number;
+}
+
+type DaySchedule = {
+  events: CalculatedEvent[];
+  concurrence: number;
+};
+
+interface SelectionData extends DaySchedule {
+  times: string[];
+  day: string;
+}
+
+// conversion values
+const MINUTES_TO_MS = 60000;
+const INTERVAL_M = 15;
+const INTERVAL_MS = INTERVAL_M * MINUTES_TO_MS;
+
 const dataLoaded = ref(false);
-const selectedEvent = ref<Event>();
-const startDate = ref(new Date('2023-04-07T15:00:00-04:00'));
-const endDate = ref(new Date('2023-04-09T16:00:00-04:00'));
+const schedule = ref<AllSchedules>({});
+const selectedDay = ref<SelectionData>({} as SelectionData);
+const selectedEvent = ref<ParsedEvent>();
 const showEventModal = ref(false);
 
-const displayTimeWindows = computed(() => {
-  const timeWindowCols = timeWindowColumns.value[selectedDay.value as any];
-  const keys = Object.keys(timeWindowCols);
-  const topExtraRows = 1;
-  const bottomExtraRows = 1;
-  let startCutoff = 0;
-  let endCutoff = -1;
-  // 1. trim at the top
-  for (let i = 0; i < keys.length; i += 1) {
-    if (timeWindowCols[keys[i]].length > 0) {
-      startCutoff = Math.max(i - topExtraRows, 0);
-      break;
-    }
-  }
-  // 2. trim at the bottom
-  const newTimes = [];
-  for (let i = keys.length - 1; i >= 0; i -= 1) {
-    if (timeWindowCols[keys[i]].length > 0) {
-      /* Check for events that overflow the end of the time windows */
-      endCutoff = i + bottomExtraRows + 1;
-      if (endCutoff >= timeWindows.value.length) {
-        // Add additional time windows to the end to support long events (up to 1 hour over)
-        const midnight = new Date();
-        midnight.setHours(0, 0, 0, 0);
-        const currentTime = new Date(midnight);
-        // Go through every possible 30 minute increment in a day
-        while (endCutoff >= keys.length + newTimes.length) {
-          newTimes.push(formatAMPM(currentTime));
-          currentTime.setMinutes(currentTime.getMinutes() + 30);
-        }
-      }
-      break;
-    }
-  }
-
-  // Hacky fix to prevent events starting at 12am from starting at the schedule bottom
-  endCutoff -= 1;
-  if (selectedDay.value == days.value[days.value.length - 1]) {
-    endCutoff = 32; // 4PM
-  }
-  return timeWindows.value.concat(newTimes).slice(startCutoff, endCutoff);
-});
-
 onMounted(async () => {
-  populateDays();
-  prepareTimeWindows();
-  await fetchRawEvents();
-  processRawEvents();
+  const rawEvents = await fetchRawEvents();
+  const formattedEvents = mapEvents(rawEvents);
+  schedule.value = formattedEvents;
+  setDaySelection(Object.keys(formattedEvents)[0]);
   dataLoaded.value = true;
+  console.log(
+    schedule.value[Object.keys(schedule.value)[1]].events.map(
+      (event) => event.event_name
+    )
+  );
 });
 
-function populateDays() {
-  const currentDate = new Date(startDate.value);
+/**
+ *
+ * @param day milliseconds since epoch as string
+ */
+function setDaySelection(day: string) {
+  const daySchedule = schedule.value[day];
 
-  // This code might not work at the end of the month
-  while (currentDate.getDate() <= endDate.value.getDate()) {
-    days.value.push(new Date(currentDate));
-    currentDate.setDate(currentDate.getDate() + 1);
-  }
+  // get starting time of first event and ending time of last event
+  const start = daySchedule.events[0].start_time;
+  const end = daySchedule.events[daySchedule.events.length - 1].end_time;
+  // find out how many 15 minute sections there are
+  const elapsed = end - start;
+  const sections = elapsed / (60 * MINUTES_TO_MS);
 
-  // Make schedule start on the current day
-  const nowString = new Date().toDateString();
-  const today = days.value.find((day) => day.toDateString() === nowString);
-  selectedDay.value = today || days.value[0];
-}
+  // create array of times for those 15 minute sections
+  const times = Array.from({ length: sections + 1 }, (_, i) => {
+    const ms = start + i * (60 * MINUTES_TO_MS);
 
-function prepareTimeWindows() {
-  const midnight = new Date();
-  midnight.setHours(0, 0, 0, 0);
-  const currentTime = new Date(midnight);
-
-  days.value.forEach((day) => {
-    timeWindowColumns.value[day as any] = {};
-  });
-
-  // Go through every possible 30 minute increment in a day
-  do {
-    timeWindows.value.push(formatAMPM(currentTime));
-    days.value.forEach((day) => {
-      timeWindowColumns.value[day as any][formatAMPM(currentTime)] = [];
+    const time = new Date(ms).toLocaleTimeString([], {
+      hour: 'numeric',
+      hour12: true,
     });
-    currentTime.setMinutes(currentTime.getMinutes() + 30);
-  } while (formatAMPM(currentTime) !== formatAMPM(midnight));
+
+    return time;
+  });
+
+  console.log(day);
+
+  selectedDay.value = { ...daySchedule, times, day };
 }
 
-async function fetchRawEvents() {
-  try {
-    // fetch events from DynamoDB
-    const eventsRes = await fetch('https://api.bit.camp/schedule');
-    const events = await eventsRes.json();
-    rawEvents.value = events;
-  } catch (error) {
-    rawEvents.value = [];
+/**
+ * Fetch events from DynamoDB
+ *
+ * calculates a rounded start and end time for each event
+ * formats category for display
+ *
+ * @returns list of events in sorted order by start time
+ */
+async function fetchRawEvents(): Promise<ParsedEvent[]> {
+  const eventsRes = await fetch('https://api.bit.camp/schedule');
+  const events = (await eventsRes.json()) as Event[];
+
+  const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
+  const parsedTimes = events.map((event) => {
+    const parsedEvent = {
+      ...event,
+      start_time: new Date(event.start_time).getTime(),
+      end_time: new Date(event.end_time).getTime(),
+    } as ParsedEvent;
+
+    const roundedStart =
+      parsedEvent.start_time - (parsedEvent.start_time % INTERVAL_MS);
+    const roundedEnd =
+      parsedEvent.end_time - (parsedEvent.end_time % INTERVAL_MS);
+
+    return {
+      ...parsedEvent,
+      roundedStart: roundedStart,
+      roundedEnd: roundedEnd,
+      displayCategory: event.category.split('-').map(capitalize).join(' '),
+    };
+  });
+
+  return parsedTimes.sort((a, b) => {
+    return a.start_time - b.start_time;
+  });
+}
+
+/** Split raw events into days and calculate concurrence
+ * as well as startRow and span for each event for grid layout
+ *
+ * @param events list of events in sorted order
+ * @returns object with events split by day
+ */
+function mapEvents(events: ParsedEvent[]): AllSchedules {
+  interface BareDaySchedule
+    extends Omit<DaySchedule, 'concurrence' | 'events'> {
+    concurrence?: number;
+    events: ParsedEvent[];
   }
-}
+  type BareAllSchedule = {
+    [key: number]: BareDaySchedule;
+  };
 
-function processRawEvents() {
-  for (let i = 0; i < rawEvents.value.length; i += 1) {
-    // deep clone object
-    rawEvents.value[i].class = rawEvents.value[i].category;
-    const start = new Date(rawEvents.value[i].start_time);
-    const end = new Date(rawEvents.value[i].end_time);
-    rawEvents.value[i].class += ` length-${getDurationOfEvent(start, end)}-min`;
+  // holds the number of events in each time window
+  // map uses numbers instead of dates because of how JS handles Map keys (no hashing)
+  const allTimeWindows = new Map<number, Map<number, number>>();
 
-    // handle events starting/ending at xx:15 or xx:45
-    if (start.getMinutes() === 15 || start.getMinutes() === 45) {
-      rawEvents.value[i].class += ' offset-15-min';
-    }
-  }
-  days.value.forEach((day) => {
-    formattedEvents.value[day as any] = {};
-    timeWindows.value.forEach((timeWindow) => {
-      formattedEvents.value[day as any][timeWindow] = getEventsForTimeWindow(
-        timeWindow,
-        day
-      );
-    });
-  });
+  const schedule = events.reduce((acc, event) => {
+    // get day of event
+    const date = new Date(event.start_time);
+    date.setHours(0, 0, 0, 0);
+    const dayTime = date.getTime();
 
-  // set number of columns to display in schedule
-  days.value.forEach((day) => {
-    console.log(scheduleColumns.value);
-    scheduleColumns.value[day as any] = Math.max(
-      ...[].concat(
-        ...(Object.values(timeWindowColumns.value[day as any]) as any[])
-      )
-    );
-  });
-}
-
-function getEventsForTimeWindow(timeWindow: any, day: Date) {
-  const eventsForWindow = rawEvents.value.filter((rawEvent: any) => {
-    const rawEventStart = new Date(rawEvent.start_time);
-    const rawEventStartMinus15 = new Date(rawEventStart.getTime());
-    rawEventStartMinus15.setMinutes(rawEventStartMinus15.getMinutes() - 15);
-    return (
-      (formatAMPM(rawEventStart) === timeWindow ||
-        formatAMPM(rawEventStartMinus15) === timeWindow) &&
-      rawEventStart.getDate() === day.getDate()
-    );
-  });
-
-  eventsForWindow.forEach((event: any) => {
-    event.display = true;
-    event.displayMode = true;
-
-    const midnight = new Date();
-    midnight.setHours(0, 0, 0, 0);
-
-    const eventStart = new Date(event.start_time);
-    const eventEnd = new Date(event.end_time);
-    let column = 1;
-
-    // handle events starting/ending at xx:15 or xx:45
-    if (eventStart.getMinutes() === 15 || eventStart.getMinutes() === 45) {
-      eventStart.setMinutes(eventStart.getMinutes() - 15);
-    }
-    if (eventEnd.getMinutes() === 15 || eventEnd.getMinutes() === 45) {
-      eventEnd.setMinutes(eventEnd.getMinutes() + 15);
+    // get time windows for the day
+    let timeWindows = allTimeWindows.get(dayTime);
+    if (!timeWindows) {
+      timeWindows = new Map();
+      allTimeWindows.set(dayTime, timeWindows);
     }
 
-    // find the first column that the event fits into the schedule
-    while (column < 20) {
-      const currentTime = new Date(eventStart);
-      let validColumn = true;
-      do {
-        if (
-          timeWindowColumns.value[day as any][formatAMPM(currentTime)].includes(
-            column
-          )
-        ) {
-          validColumn = false;
-        }
-        currentTime.setMinutes(currentTime.getMinutes() + 30);
-      } while (
-        formatAMPM(currentTime) !== formatAMPM(eventEnd) &&
-        formatAMPM(currentTime) !== formatAMPM(midnight) &&
-        validColumn
-      );
-      if (validColumn) {
-        break;
+    // iterate through entire event time window with 15 minute increments
+    // and increment those times to show that an event will take up the space
+    for (
+      let timeWindow = event.roundedStart;
+      timeWindow < event.roundedEnd;
+      timeWindow += INTERVAL_MS
+    ) {
+      if (timeWindows.has(timeWindow)) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        timeWindows.set(timeWindow, timeWindows.get(timeWindow)! + 1);
+      } else {
+        timeWindows.set(timeWindow, 1);
       }
-      column++;
     }
-    event.column = column;
 
-    // update occupied columns
-    const currentTime = new Date(eventStart);
-    do {
-      timeWindowColumns.value[day as any][formatAMPM(currentTime)].push(column);
-      currentTime.setMinutes(currentTime.getMinutes() + 30);
-    } while (
-      formatAMPM(currentTime) !== formatAMPM(eventEnd) &&
-      formatAMPM(currentTime) !== formatAMPM(midnight)
+    const existingDate = acc[dayTime];
+    if (existingDate) {
+      const existingDayEvents = existingDate.events;
+      existingDayEvents.push(event);
+    } else {
+      acc[dayTime] = { events: [event] };
+    }
+    return acc;
+  }, {} as BareAllSchedule);
+
+  // get max concurrence for each day
+  for (const [dateTime, data] of Object.entries(schedule) as unknown as [
+    number,
+    BareDaySchedule
+  ][]) {
+    const timeWindows = allTimeWindows.get(dateTime);
+    if (timeWindows) {
+      data.concurrence = Math.max(...Array.from(timeWindows.values()));
+    }
+  }
+
+  // get max concurrence for each day
+  for (const [dateTime, data] of Object.entries(schedule) as unknown as [
+    string,
+    BareDaySchedule
+  ][]) {
+    const timeWindows = allTimeWindows.get(parseInt(dateTime));
+
+    const concurrence = (data.concurrence = Math.max(
+      ...Array.from(timeWindows?.values() ?? [])
+    ));
+
+    const firstEntry = timeWindows?.entries().next().value ?? 0;
+
+    const dayStart = new Date(parseInt(firstEntry)).getTime();
+
+    (data.events as CalculatedEvent[]) = data.events.map(
+      (event): CalculatedEvent => {
+        // timeWindows.
+        return {
+          ...event,
+          colSpan: 1,
+          startRow: (event.start_time - dayStart) / INTERVAL_MS + 1,
+          rowSpan: (event.end_time - event.start_time) / INTERVAL_MS,
+        };
+      }
     );
-  });
-  return eventsForWindow;
+  }
+
+  return schedule as AllSchedules;
 }
 
 function formatAMPM(date: Date) {
@@ -345,44 +330,6 @@ function formatAMPM(date: Date) {
     minute: '2-digit',
     hour12: true,
   });
-}
-
-function getDayOfTheWeek(date: Date) {
-  const weekday = new Array(7);
-  weekday[0] = 'Sunday';
-  weekday[1] = 'Monday';
-  weekday[2] = 'Tuesday';
-  weekday[3] = 'Wednesday';
-  weekday[4] = 'Thursday';
-  weekday[5] = 'Friday';
-  weekday[6] = 'Saturday';
-  return weekday[date.getDay()];
-}
-
-function getDurationOfEvent(start: Date, end: Date) {
-  const diff = end.getTime() - start.getTime();
-  return diff / 60000;
-}
-
-function selectTitleItem(day: Date) {
-  selectedDay.value = day;
-}
-
-function openEventModal(
-  selectedDay: Date,
-  timeWindow: any,
-  scheduleColumn: any
-) {
-  selectedEvent.value = formattedEvents.value[selectedDay as any][
-    timeWindow
-  ].find((event: any) => event.column === scheduleColumn);
-  if (selectedEvent.value) {
-    selectedEvent.value.selectedDay = selectedDay;
-    selectedEvent.value.timeWindow = timeWindow;
-    selectedEvent.value.scheduleColumn = scheduleColumn;
-  }
-  showEventModal.value = true;
-  console.log('selectedEvent', selectedEvent);
 }
 
 function closeEventModal() {
@@ -400,344 +347,224 @@ export default {
 @import 'bootstrap/dist/css/bootstrap.css';
 @import '../assets/css/schedule.scss';
 
-.section {
+#schedule {
   position: relative;
+  min-height: 10rem;
   width: 100%;
-  z-index: 10;
-}
-.section-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2em;
-}
-.card {
-  border: 0;
-  overflow: hidden;
-  background-color: $COLOR_FOREGROUND;
-  border-radius: $BORDER_RADIUS;
-}
-.schedule-header {
-  font-family: Aleo;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: #10274f;
-}
-.schedule-header-day {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  padding-bottom: 0.75rem;
-  cursor: pointer;
+  max-width: 90rem;
+  margin: 0 auto;
 
-  & .schedule-day {
-    text-align: center;
-    font-size: 1.25rem;
+  // remove default padding and margin
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 767.8px) {
+    padding: 2.5rem;
+  }
+  .schedule-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .schedule-icon {
+    width: 30rem;
+    height: 100%;
+    margin: 0 auto -2rem auto;
+    display: block;
+    position: relative;
+    z-index: 4;
+
+    @media screen and (max-width: 767.8px) {
+      width: 18rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .register-icon {
+    width: 10rem;
+    margin: -0.2rem auto;
+    z-index: 4;
+    position: relative;
+    display: block;
+  }
+
+  .event-list-container {
+    background: #c7c0ac;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 80vh;
+    height: calc(100vh - 10rem);
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .left-cover {
+    position: absolute;
+    background: #c7c0ac;
+    border-right: 2px solid white;
+    width: 8em;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 2;
+
+    @media screen and (max-width: 767.8px) {
+      width: 4em;
+    }
+  }
+  .event-list {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: [time] 10rem repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 0.2rem;
+    position: relative;
+    // change grid-row height with the white hour-line bar layout
+    grid-auto-rows: 1.6rem;
+    min-width: 100%;
+    width: fit-content;
+
+    @media screen and (max-width: 767.8px) {
+      grid-template-columns: [time] 4rem repeat(auto-fit, minmax(15rem, 1fr));
+    }
+
+    .bar {
+      position: absolute;
+      background: white;
+      height: 2px;
+      width: 100%;
+      z-index: 0;
+    }
+    .time-container {
+      position: sticky;
+      left: 0;
+      grid-column: time;
+      font-family: 'Aleo';
+      z-index: 2;
+
+      p {
+        max-width: 8rem;
+        width: 100%;
+        padding: 0 1rem 0 1rem;
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+    }
+    .event-container {
+      min-width: 15rem;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.1rem;
+      overflow: hidden;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      cursor: pointer;
+
+      @media screen and (max-width: 767.8px) {
+        padding: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 0.2rem;
+      }
+
+      span {
+        background: hsla(0, 0%, 0%, 0.25);
+        padding: 0.4rem 0.8rem;
+        border-radius: 10px;
+        flex-grow: 0;
+      }
+      .name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        font-family: 'Aleo';
+        font-weight: bold;
+      }
+    }
+
+    .main-event {
+      background-color: $COLOR_MAIN_EVENT;
+    }
+
+    .workshop-event {
+      background-color: $COLOR_WORKSHOP;
+      border-color: $COLOR_WORKSHOP_BORDER;
+    }
+
+    .mini-event {
+      background-color: $COLOR_MINI_EVENT;
+      border-color: $COLOR_MINI_EVENT_BORDER;
+    }
+
+    .sponsor-event {
+      background-color: $COLOR_SPONSOR;
+      border-color: $COLOR_SPONSOR_BORDER;
+    }
+
+    .food-event {
+      background-color: $COLOR_FOOD;
+      border-color: $COLOR_FOOD_BORDER;
+    }
+  }
+
+  .dates {
+    background: #5eb9ba;
+    font-family: 'Aleo';
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 0.25rem;
-  }
-}
-.schedule-header-day-bar {
-  margin-top: 0.2rem;
-  height: 0.3rem;
-  background-color: transparent;
-  border-radius: 2rem;
+    justify-content: stretch;
+    position: sticky;
+    z-index: 3;
+    left: 0;
+    top: 0;
 
-  &.active {
-    background-color: $COLOR_LIGHT_TEXT;
-  }
-}
-.list-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  backdrop-filter: blur(35px);
-}
-.column-card {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  min-height: 0;
-}
-.schedule-page {
-  align-items: center;
-}
-.schedule-list {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  margin-top: 1rem;
-  padding: 0 1rem;
-  width: 100%;
-}
-.schedule-legend {
-  display: flex;
-  flex-flow: row wrap;
-  column-gap: 3rem;
-}
-.schedule-body {
-  background: $COLOR_FOREGROUND;
-  border-radius: 8px;
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-.schedule-time {
-  display: flex;
-  flex-flow: column;
-  width: 15%;
-}
-.schedule-content {
-  display: grid;
-  width: 100%;
-}
-.timewindow {
-  font-size: 1.25rem;
-  height: 7.5vh;
-  border-top: 2px solid $COLOR_BORDER;
-  text-align: center;
-  color: $COLOR_LIGHT_TEXT;
-}
-.schedule-column {
-}
-.schedule-content-item {
-  height: 4.5vh;
-  border-radius: 8px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  width: 90%;
-  padding: 4%;
-  font-size: 18px;
-  position: relative;
-  line-height: 20px;
-  border: 2px solid $COLOR_BORDER;
-  border-radius: 8px;
-  color: $COLOR_LIGHT_TEXT;
-  cursor: pointer;
-}
-.length-30-min,
-.length-45-min {
-  font-size: 16px;
-}
-.schedule-content-item-title {
-  font-family: Avenir;
-  flex-grow: 1;
-  text-align: center;
-  max-width: 80%;
-  min-width: 80%;
-  max-height: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-.schedule-time-line {
-  width: 60vw;
-  position: absolute;
-  height: 2px;
-  margin-left: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.schedule-time-line-inner {
-  width: 100%;
-  border: 1px solid rgba($COLOR_PRIMARY, 0.8);
-}
-.schedule-time-line-header {
-  border-radius: 50%;
-  padding: 8px;
-  background-color: rgba($COLOR_PRIMARY, 0.8);
-  border: 1px solid rgba($COLOR_PRIMARY, 0.8);
-}
-.event-passed {
-  opacity: 0.5;
-}
-.offset-15-min {
-  margin-top: 3.5vh !important;
-}
-.length-0-min {
-  margin-top: -3.5vh !important;
-  height: 7vh !important;
-}
-.length-30-min {
-  height: 7vh !important;
-}
-.length-45-min {
-  height: 11.5vh !important;
-}
-.length-60-min {
-  height: 14.5vh !important;
-}
-.length-75-min {
-  height: 11vh !important;
-}
-.length-90-min {
-  height: 22vh !important;
-}
-.length-120-min {
-  height: 29.5vh !important;
-}
-.length-150-min {
-  height: 37vh !important;
-}
-.length-180-min {
-  height: 44.5vh !important;
-}
-.length-210-min {
-  height: 52vh !important;
-}
-.length-240-min {
-  height: 59.5vh !important;
-}
-.length-270-min {
-  height: 67vh !important;
-}
-.length-300-min {
-  height: 74.5vh !important;
-}
-.length-330-min {
-  height: 82vh !important;
-}
-.length-360-min {
-  height: 89.5vh !important;
-}
-.length-390-min {
-  height: 97vh !important;
-}
-.length-420-min {
-  height: 104.5vh !important;
-}
-.length-450-min {
-  height: 112vh !important;
-}
-.length-480-min {
-  height: 119.5vh !important;
-}
-/* Coloring by Category */
-.main-event-text {
-  color: $COLOR_MAIN_EVENT;
-}
-.workshop-text {
-  color: $COLOR_WORKSHOP;
-}
-.mini-event-text {
-  color: $COLOR_MINI_EVENT;
-}
-.sponsor-text {
-  color: $COLOR_SPONSOR;
-}
-.food-text {
-  color: $COLOR_FOOD;
-}
-.main-event {
-  background-color: $COLOR_MAIN_EVENT;
-  border-color: $COLOR_MAIN_EVENT_BORDER;
-}
-.workshop-event {
-  background-color: $COLOR_WORKSHOP;
-  border-color: $COLOR_WORKSHOP_BORDER;
-}
-.mini-event {
-  background-color: $COLOR_MINI_EVENT;
-  border-color: $COLOR_MINI_EVENT_BORDER;
-}
-.sponsor-event {
-  background-color: $COLOR_SPONSOR;
-  border-color: $COLOR_SPONSOR_BORDER;
-}
-.food-event {
-  background-color: $COLOR_FOOD;
-  border-color: $COLOR_FOOD_BORDER;
-}
-@media only screen and (min-width: 1101px) {
-  #schedule {
-    padding: 0 5rem;
-  }
-  .schedule-content-item {
-    font-size: 14px !important;
-    line-height: 17px !important;
-  }
-  .length-30-min,
-  .length-45-min {
-    /* font-size: 12px !important; */
-    /* line-height: 15px !important; */
-    & > .schedule-content-item-title {
-      -webkit-line-clamp: 2;
+    @media screen and (max-width: 767.8px) {
+      background: none;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-weight: bold;
+      padding: 2rem;
+      height: 100%;
+      width: 100%;
+      transition: background 0.1s;
+      &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 0.2rem;
+        text-underline-offset: 0.2rem;
+
+        @media screen and (max-width: 767.8px) {
+          background: hsl(181, 40%, 40%);
+        }
+      }
+
+      &:hover {
+        background: hsl(181, 40%, 45%);
+      }
+
+      @media screen and (max-width: 767.8px) {
+        background: #5eb9ba;
+        border-radius: 10px 10px 0 0;
+        padding: 1rem;
+        padding-top: 1.5rem;
+      }
     }
   }
-  .timewindow,
-  .btn {
-    font-size: 17px !important;
-  }
-}
-@media only screen and (min-width: 851px) and (max-width: 1100px) {
-  #schedule {
-    padding: 0 3rem;
-  }
-  .schedule-list-title-item {
-    font-size: 16px !important;
-  }
-  .schedule-content-item {
-    font-size: 11px !important;
-    line-height: 13px !important;
-  }
-  .length-30-min,
-  .length-45-min {
-    /* font-size: 8px !important; */
-    /* line-height: 10px !important; */
-    & > .schedule-content-item-title {
-      -webkit-line-clamp: 3;
-    }
-  }
-  .timewindow,
-  .btn {
-    font-size: 14px !important;
-  }
-}
-@media only screen and (max-width: 850px) {
-  .schedule-list {
-    margin-left: 1vw;
-    margin-right: 1vw;
-  }
-  .schedule-list-title-item {
-    font-size: 14px !important;
-  }
-  .schedule-content-item {
-    font-size: 8px !important;
-    line-height: 10px !important;
-  }
-  .length-30-min,
-  .length-45-min {
-    /* font-size: 6px !important; */
-    /* line-height: 8px !important; */
-    & > .schedule-content-item-title {
-      -webkit-line-clamp: 4;
-    }
-  }
-  .timewindow,
-  .btn {
-    font-size: 10px !important;
-  }
-}
-.loading-spinner-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 </style>
