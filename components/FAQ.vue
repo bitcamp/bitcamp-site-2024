@@ -1,7 +1,21 @@
 <template>
   <div id="faq" class="section">
+    <div class="FAQ-header">
+      <div class="banner-container">
+        <img
+          class="img-banner"
+          src="~/assets/images/FAQ/bitsite2-11.svg"
+          alt="FAQ Banner scenery"
+        />
+      </div>
+      <img
+        class="img-overlay"
+        src="~/assets/images/FAQ/faq.svg"
+        alt="FAQ Sign"
+      />
+    </div>
     <div class="FAQ_Section">
-      <h1 class="Header">FAQ</h1>
+      <!-- <h1 class="Header">FAQ</h1> -->
       <div class="Question_Wrapper">
         <div
           v-for="(questions, i) in [questions_left, questions_right]"
@@ -144,12 +158,16 @@ function toggleButton(question: string) {
 </script>
 
 <style scoped lang="scss">
-.Header {
-  font-family: Aleo;
-  font-weight: bold;
-  color: white;
-  padding-bottom: 2vw;
+.section {
+  background-color: #F6EBCC;
+  padding-bottom: 10vh;
 }
+// .Header {
+//   font-family: Aleo;
+//   font-weight: bold;
+//   color: white;
+//   padding-bottom: 2vw;
+// }
 
 .FAQ_Section {
   position: relative;
@@ -165,10 +183,64 @@ function toggleButton(question: string) {
   box-shadow: 0, 0, 20px, 0 rgba(24, 22, 81, 0.2);
   z-index: 10;
   text-align: center;
-  background-color: #10274f80;
+  background-color: #5eb8ba;
   backdrop-filter: blur(35px);
   margin: 8vw;
   margin-bottom: 0;
+}
+
+.FAQ-header img {
+  width: 100%;
+  height: auto;
+}
+
+.img-overlay {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(15%) translateY(35%);
+  /*width: 30%;
+  max-width: 30%;*/
+  height: auto;
+
+  @media (max-width: 767.8px) {
+    width: 50%;
+    max-width: 50%;
+    margin-top: -5vh !important;
+    margin-left: -7vw !important;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    width: 40%;
+    max-width: 40%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 30%;
+    max-width: 30%;
+    margin-top: 12vh;
+  }
+}
+
+.banner-container {
+  padding-top: 11vh;
+
+  @media (max-width: 767.8px) {
+    padding-top: 12vh;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    padding-top: 17vh;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 20vh;
+  }
+}
+
+.img-banner {
+  position: absolute;
+  z-index: 0;
+  margin-top: -3.5vh;
 }
 
 .Question_Wrapper {
