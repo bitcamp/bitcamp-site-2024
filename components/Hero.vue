@@ -1,22 +1,45 @@
 <template>
   <div id="hero" class="section">
     <div class="hero-image-wrapper">
-      <img class="hero-image" src="~/assets/images/background/hero.png" />
+      <img src="../assets/images/background/bgElements.svg" />
     </div>
+
     <div class="header">
-      <img src="/bitcamp-brand/logos/bitcamp.png" />
       <div class="header-content">
-        <h1>Find Your Frontier!</h1>
-        <h3>April 7-9, 2023 @ XFINITY Center</h3>
-        <!-- <h2>Applications are now open!</h2> -->
-        <h2>Registrations are now closed. Click below to join our waitlist!</h2>
+        <img
+          src="../assets/images/background/registerSign.svg"
+          alt="Register Now"
+        />
+        <h2>
+          Bitcamp is a place for exploration. <br /><br />
+          You will have 36 hours to delve into your curiosities, learn something
+          new, and make something awesome. With world-class mentors and 1,000+
+          fellow campers, you're in for an amazing time. Whether you’re a
+          seasoned hacker or completely new to the world of hacking, we’ll have
+          something for you.
+          <br /><br />
+          If you're ready for an adventure, we'll see you by the campfire!
+        </h2>
         <div class="header-button-container">
-          <Button text="Click Here!" link="https://forms.gle/C31xLjHLnLkBNRSXA" size="large" />
-          <!-- <Button text="Hacker" link="https://register.bit.camp" size="medium" />
-          <Button text="Volunteer" link="https://forms.gle/kyQwDzX7UKDEwa7b9" size="medium" color="#10274f" />
-          <Button text="Mentor" link="https://forms.gle/kP2nrzPzwd6PD8nLA" size="medium" color="#324A79" />
-          <Button text="Workshop" link="https://forms.gle/wXKe5ZyiJ1f14tDs6" size="medium" color="#8F9EBC" /> -->
+          <Button
+            class="neon-button"
+            text="REGISTER"
+            link="https://register.bit.camp/"
+            size="medium"
+            neon="true"
+            color="#d8a84a"
+          />
         </div>
+        <h2 class="mobile">
+          Bitcamp is a place for exploration. <br /><br />
+          You will have 36 hours to delve into your curiosities, learn something
+          new, and make something awesome. With world-class mentors and 1,000+
+          fellow campers, you're in for an amazing time. Whether you’re a
+          seasoned hacker or completely new to the world of hacking, we’ll have
+          something for you.
+          <br /><br />
+          If you're ready for an adventure, we'll see you by the campfire!
+        </h2>
       </div>
     </div>
   </div>
@@ -38,7 +61,7 @@ defineProps<{
 #hero {
   display: flex;
   justify-content: center;
-  padding: 10% 0;
+  padding: 9% 0;
 
   @media (max-width: 576px) {
     margin-bottom: 0rem !important;
@@ -51,65 +74,102 @@ defineProps<{
   width: 100%;
   height: 100vh;
   overflow: hidden;
-}
-
-.hero-image {
-  position: absolute;
-  top: -15vw;
-  width: 100%;
-  background-position: center;
+  background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 
   @media (max-width: 576px) {
     top: 0;
     width: 200%;
   }
+  img {
+    width: 100%;
+    position: absolute;
+    bottom: calc(-7% - 30px);
+  }
 }
 
 .header {
-  width: 760px;
-  height: 300px;
+  width: 660px;
+  height: 500px;
   box-sizing: border-box;
-  background-color: #21498e80;
-  backdrop-filter: blur(35px);
+  backdrop-filter: blur(0px);
   border-radius: 10px;
-  padding: 4.8rem;
+  padding: 2.8rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: 100px;
   color: white;
-  box-shadow: 0 0.5rem 1rem rgba(black, 0.3);
 
   img {
     max-height: 100%;
   }
 
   .header-content {
-    width: 410px;
+    width: 550px;
 
-    h1 {
-      font-size: 32px;
-    }
-
-    h3 {
-      font-size: 18px;
-      opacity: 0.5;
-      font-weight: normal;
-      padding-bottom: 0.8rem;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
     }
 
     h2 {
-      font-size: 20px;
+      padding: 2.4rem 0;
+      font-size: 18px;
       font-weight: normal;
-      padding-bottom: 1.2rem;
+      font-weight: 700;
+    }
+
+    .mobile {
+      display: none;
     }
 
     .header-button-container {
       width: 100%;
       display: flex;
       justify-content: space-between;
+
+      .neon-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-image-wrapper {
+    img {
+      width: 100%;
+      position: absolute;
+      bottom: calc(8% - 30px);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-image-wrapper {
+    img {
+      width: 100%;
+      position: absolute;
+      bottom: calc(13% - 30px);
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .hero-image-wrapper {
+    img {
+      width: 100%;
+      position: absolute;
+      bottom: calc(7% - 30px);
     }
   }
 }
@@ -147,8 +207,49 @@ defineProps<{
 }
 
 @media only screen and (max-width: 480px) {
+  .hero-image-wrapper {
+    top: 0;
+    width: 100%;
+    height: 150vh;
+    background-size: 150% 113% !important;
+    background-image: url('../assets/images/background/mobilebg.svg'),
+      linear-gradient(180deg, #943f33, #b86242, #ffaf52) !important;
+  }
+
   .header {
-    width: 80%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      max-width: 80%;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .header-content {
+      margin: 140% auto 0;
+      .neon-button {
+        transform: scale(0.7);
+      }
+      img {
+        width: 80% !important;
+        transform: scale(0.7);
+      }
+    }
+    h2 {
+      display: none;
+    }
+
+    .mobile {
+      text-align: left;
+      font-size: 12px !important;
+      padding-top: 50% !important;
+      font-weight: 400 !important;
+      display: block !important;
+    }
   }
 }
 </style>
