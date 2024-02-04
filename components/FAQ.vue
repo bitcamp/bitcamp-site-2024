@@ -203,20 +203,21 @@ function toggleButton(question: string) {
   height: auto;
 
   @media (max-width: 767.8px) {
-    width: 40%;
-    max-width: 40%;
+    width: 50%;
+    max-width: 50%;
+    margin-top: -5vh !important;
+    margin-left: -7vw !important;
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    width: 30%;
-    max-width: 30%;
-    margin-top: 10vh;
+    width: 40%;
+    max-width: 40%;
   }
 
   @media (min-width: 1200px) {
     width: 30%;
     max-width: 30%;
-    margin-top: 16vh;
+    margin-top: 12vh;
   }
 }
 
