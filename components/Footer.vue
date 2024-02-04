@@ -31,7 +31,6 @@ export default {
 footer {
   position: relative;
   box-sizing: border-box;
-  margin-top: -40vw;
   width: 100vw;
   color: white;
   font-size: 1.125rem;

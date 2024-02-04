@@ -1,7 +1,5 @@
 <template>
   <div class="app-container">
-    <img class="cloud-1" src="~/assets/images/background/cloud1.png" />
-    <img class="cloud-2" src="~/assets/images/background/cloud2.png" />
     <div id="privacy-policy">
       <h1 style="font-size: 40px;padding-bottom: 2vw">Privacy Policy</h1>
 
@@ -242,7 +240,7 @@ export default {
 <style scoped lang="scss">
 .app-container {
   position: relative;
-  background-color: #345793;
+  background-color: #FFF4E4;
   padding-top: 50px;
   z-index: 5;
 

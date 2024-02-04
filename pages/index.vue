@@ -2,9 +2,7 @@
   <div class="app-container">
     <Navbar />
     <Hero />
-    <Accomplishments />
     <Tracks />
-    <img class="cloud-1" src="~/assets/images/background/cloud1.png" />
     <MiniEvents />
     <CampfireGames />
     <!-- <Schedule /> -->
@@ -114,7 +112,7 @@ export default {
 <style scoped lang="scss">
 .app-container {
   position: relative;
-  background-color: #345793;
+  background-color: #f6ebcc;
 
   & > .section {
     margin-bottom: 5rem !important;
