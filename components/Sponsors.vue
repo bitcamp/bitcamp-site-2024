@@ -343,7 +343,7 @@ const toTop = () => {
   #pagetop{
     transform: scale(0.65); 
     bottom: 0.5rem !important;
-    right: 0.5rem !important;
+    right: -0.75rem !important;
   }
 }
 
