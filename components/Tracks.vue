@@ -106,7 +106,7 @@ export default {
 
 <style scoped lang="scss">
 #tracks {
-  padding-top: 20%;
+  margin-top: 16%;
   padding-bottom: 5%;
   background-color: #f6ebcc;
   position: relative;
@@ -122,12 +122,12 @@ export default {
   margin: 0 auto;
 
   @media (min-width: 576px) and (max-width: 767.8px) {
-    padding-top: 90px;
+    margin-top: 10%;
     width: 90%;
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    padding-top: 100px;
+    margin-top: 15%;
   }
 
   @media (max-width: 576px) {
@@ -146,7 +146,7 @@ export default {
 
   .tracks-sign {
     width: calc(140% - 5px);
-    margin-top: -150px;
+    margin-top: -100px;
     margin-right: 40px;
   }
   .tracks-image {
@@ -180,10 +180,16 @@ export default {
       width: calc(120% - 5px);
       margin-right: 0px;
     }
+
+    #tracks {
+      padding-top: 0px;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
+    margin-top: calc(10% - 20px);
     width: calc(50% - 30px);
+
     .text {
       margin: 5px;
     }
@@ -191,6 +197,9 @@ export default {
     .tracks-sign {
       width: calc(130% - 5px);
       min-width: 350px;
+    }
+    #tracks {
+      padding-top: 0px;
     }
   }
 
@@ -204,7 +213,10 @@ export default {
 
     .tracks-sign {
       width: 300px;
-      transform: translateX(0) translateY(-20%);
+      transform: translateY(-60px);
+    }
+    #tracks {
+      margin-top: -10px;
     }
   }
 }
