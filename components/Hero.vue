@@ -1,11 +1,7 @@
 <template>
   <div id="hero" class="section">
     <div class="hero-image-wrapper">
-      <img
-        class="background"
-        src="../assets/images/background/bgElements.svg"
-        alt="Background image"
-      />
+      <img class="background" alt="Background image" />
     </div>
 
     <div class="header">
@@ -78,7 +74,7 @@ defineProps<{
   position: absolute;
   top: 0;
   width: 100%;
-  height: 135vh;
+  height: 100vh;
   overflow: hidden;
   background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
   background-position: center bottom;
@@ -90,6 +86,7 @@ defineProps<{
     width: 100%;
   }
   .background {
+    content: url('../assets/images/background/bgElements.svg');
     width: 100%;
     position: absolute;
     bottom: calc(-15% - 20px);
@@ -108,7 +105,7 @@ defineProps<{
   align-items: center;
   justify-content: space-between;
   margin-left: auto;
-  margin-right: 10%;
+  margin-right: 12%;
   color: white;
 
   .register {
@@ -142,9 +139,9 @@ defineProps<{
 
     .slideshowframe {
       position: absolute;
-      margin-top: 110px;
-      width: calc(90% - 10%);
-      min-width: 350px;
+      bottom: -110%;
+      width: calc(100% + 50%);
+      max-width: calc(100% + 10%);
     }
   }
 }
@@ -159,11 +156,15 @@ defineProps<{
 .header-button-container {
   order: 2;
 }
+.slideshowframe {
+  order: 3;
+}
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   #hero {
     height: 200vh;
   }
+
   .hero-image-wrapper {
     width: 100%;
     position: absolute;
@@ -172,14 +173,23 @@ defineProps<{
 
 @media (min-width: 768px) and (max-width: 1024px) {
   #hero {
-    height: 170vh;
+    height: 110vh;
   }
+
   .hero-image-wrapper {
-    height: 150vh;
+    height: 100vh;
     .background {
-      width: 100%;
+      width: fit-content;
       position: absolute;
-      bottom: calc(30% + 10px);
+      bottom: calc(0% - 14%);
+    }
+  }
+  .header {
+    .header-content {
+      .slideshowframe {
+        bottom: -100% !important;
+        max-width: fit-content !important;
+      }
     }
   }
 }
@@ -192,15 +202,13 @@ defineProps<{
     padding: 3rem;
     margin-left: 10%;
 
-    .background {
-      max-width: 150px;
-      width: 100%;
-      margin: 0 auto;
-    }
     .header-content {
       width: 130%;
       margin-top: 2rem;
       text-align: center;
+      .slideshowframe {
+        bottom: -70% !important;
+      }
       .header-button-container {
         width: fit-content;
         margin: 0 auto;
@@ -213,37 +221,70 @@ defineProps<{
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (max-width: 500px) {
   #hero {
-    height: 200vh;
+    height: 190vh;
+  }
+  .header {
+    .register {
+      margin-top: calc(180% + 30px) !important;
+    }
   }
   .header-text-container {
-    order: 2;
-    padding-top: min(110%, 360px);
+    order: 3;
+    h2 {
+      margin-right: -17% !important;
+      margin-left: -15% !important;
+      margin-top: calc(110% + 5vh);
+      text-align: left;
+      font-weight: 400 !important;
+    }
   }
   .header-button-container {
     order: 1;
   }
+  .slideshowframe {
+    order: 2;
+    max-width: 680px !important;
+    bottom: calc(20% - 1vw) !important;
+  }
   .hero-image-wrapper {
-    height: 190vh;
+    height: 220vh;
     .background {
-      width: calc(130% - 50px);
+      width: 100%;
       position: absolute;
-      bottom: calc(60% + 10px);
+      bottom: calc(44.5% + 30px);
+      content: url('../assets/images/background/mobilebg.svg');
     }
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
   #hero {
-    height: 180vh;
+    height: 158vh;
   }
   .header-text-container {
-    margin-top: calc(130% + 10px);
     order: 2;
+    h2 {
+      margin-right: -30% !important;
+      margin-left: -25% !important;
+      text-align: left;
+      font-size: 12px !important;
+      font-weight: 400 !important;
+    }
   }
   .header-button-container {
     order: 1;
+    .neon-button {
+      transform: scale(0.8);
+    }
+  }
+  .header {
+    .register {
+      transform: translate(0px, 20px);
+      margin-top: calc(200% + 50%) !important;
+      min-width: 200px !important;
+    }
   }
 
   .header-content {
@@ -252,12 +293,18 @@ defineProps<{
   .hero-image-wrapper {
     height: 180vh;
     .background {
-      width: 120%;
+      transform: scaleY(1.2);
+      width: 100%;
       position: absolute;
-      bottom: calc(65% + 5px);
+      bottom: calc(50% + 5px);
+      content: url('../assets/images/background/mobilebg.svg');
     }
   }
-
+  .slideshowframe {
+    order: 2;
+    max-width: 380px !important;
+    top: 87vh !important;
+  }
   /*
   .header-text-container {
     order: 2;
