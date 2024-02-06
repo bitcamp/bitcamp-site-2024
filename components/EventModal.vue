@@ -43,16 +43,14 @@ function formatTime(startTime?: string, endTime?: string) {
         @click="emit('close')"
       />
     </div>
-    <div class="modal-body">
-      <p class="event-category">{{ formatCategory(event?.category) }}</p>
-      <div>
-        <p class="event-time">
-          {{ formatTime(event?.start_time, event?.end_time) }}
-        </p>
-        <p class="event-location">{{ event?.location }}</p>
-      </div>
-      <p class="event-description">{{ event?.description }}</p>
+    <div>
+      <p class="event-time">
+        {{ formatTime(event?.start_time, event?.end_time) }}
+      </p>
+      <p class="event-location">{{ event?.location }}</p>
     </div>
+    <p class="event-description">{{ event?.description }}</p>
+    <p class="event-category">{{ formatCategory(event?.category) }}</p>
   </VueFinalModal>
 </template>
 
@@ -65,13 +63,18 @@ function formatTime(startTime?: string, endTime?: string) {
   align-items: center;
 }
 .modal-content {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1rem;
   padding: 1rem;
-  border-style: solid;
+  // close button
+  padding-right: 3rem;
+  // border-style: solid;
   border-radius: 0.5rem;
-  border-width: 0.25rem;
-  box-shadow: 0.3rem 0.3rem 0.7rem rgba(black, 0.5);
+  // border-width: 0.25rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 50rem;
   margin: 2rem;
 
@@ -96,9 +99,6 @@ function formatTime(startTime?: string, endTime?: string) {
     border-color: $COLOR_FOOD_BORDER;
   }
 }
-.modal-content > * + * {
-  margin: 0.5rem 0;
-}
 .modal-header {
   display: flex;
   gap: 1rem;
@@ -108,6 +108,9 @@ function formatTime(startTime?: string, endTime?: string) {
   min-height: 2rem;
   max-width: 2rem;
   max-height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   transform: rotate(45deg);
   cursor: pointer;
 }
@@ -115,22 +118,22 @@ function formatTime(startTime?: string, endTime?: string) {
   flex: 1;
 }
 .event-category {
-  font-size: 1.125rem;
+  // font-size: 1.125rem;
   color: rgba(white, 0.9);
-  margin-top: -0.25rem;
-  margin-bottom: 1rem;
+  background: hsla(0, 0%, 0%, 0.25);
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  flex-grow: 0;
 }
 .event-time {
-  font-size: 0.875rem;
+  // font-size: 0.875rem;
   color: rgba(white, 0.75);
-  margin-bottom: 0.25rem;
 }
 .event-location {
-  font-size: 0.875rem;
+  // font-size: 0.875rem;
   color: rgba(white, 0.75);
 }
 .event-description {
-  margin-top: 1rem;
   font-size: 1rem;
 }
 </style>

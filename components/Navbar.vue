@@ -31,42 +31,27 @@
 
       <ul v-if="showDropdown || bigScreen" class="nav-pages">
         <li class="page">
-          <a href="#mission">Our Mission</a>
+          <a href="#mission" class="page-type">Our Mission</a>
         </li>
         <li class="page">
-          <a href="#tracks">Tracks</a>
+          <a href="#tracks" class="page-type">Tracks</a>
         </li>
         <li class="page">
-          <a href="#mini-events">Mini Events</a>
+          <a href="#mini-events" class="page-type">Mini Events</a>
         </li>
         <li class="page">
-          <a href="#campfire-games">Campfire Games</a>
+          <a href="#campfire-games" class="page-type">Campfire Games</a>
         </li>
         <li class="page">
-          <a href="#schedule">Schedule</a>
+          <a href="#schedule" class="page-type">Schedule</a>
         </li>
         <li class="page">
-          <a href="#faq">FAQ</a>
+          <a href="#faq" class="page-type">FAQ</a>
         </li>
         <li class="page">
-          <a href="#sponsors">Sponsors</a>
+          <a href="#sponsors" class="page-type">Sponsors</a>
         </li>
         <template v-if="bigScreen">
-          <li class="image">
-            <img class="marshie red" src="~/assets/images/marshies/rider.png" />
-          </li>
-          <li class="image">
-            <img
-              class="marshie blue"
-              src="~/assets/images/marshies/hiker.png"
-            />
-          </li>
-          <li class="image">
-            <img
-              class="marshie green"
-              src="~/assets/images/marshies/watcher.png"
-            />
-          </li>
           <a
             id="mlh-trust-badge"
             style="
@@ -80,11 +65,11 @@
               margin-right: -1.5rem;
               margin-top: -1.5rem;
             "
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=blue"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
             target="_blank"
             ><img
-              src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg"
-              alt="Major League Hacking 2023 Hackathon Season"
+              src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
+              alt="Major League Hacking 2024 Hackathon Season"
               style="width: 100%"
           /></a>
         </template>
@@ -117,10 +102,12 @@ onMounted(() => {
     bigScreen.value = false;
   }
   window.addEventListener('resize', onresize);
+  window.addEventListener('scroll', setColorAndOpacity);
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', onresize);
+  window.removeEventListener('scroll', setColorAndOpacity);
 });
 
 function onresize() {
@@ -132,10 +119,26 @@ function onresize() {
     bigScreen.value = true;
     showDropdown.value = false;
   }
+
+  setColorAndOpacity();
+}
+
+function setColorAndOpacity() {
+  var header = document.getElementsByTagName('header')[0];
+  if (bigScreen.value) {
+    const navbarHeight = header.offsetHeight;
+    const scrollPosition = window.scrollY;
+    // roughly scaled so it is opaque after registration section
+    const opacity = Math.min(scrollPosition / (6*navbarHeight), 1);
+    header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
+  } else {
+    header.style.backgroundColor = '#521B1D';
+  }
 }
 
 function toggleDropdown() {
   showDropdown.value = !showDropdown.value;
+  setColorAndOpacity();
 }
 </script>
 
@@ -145,12 +148,13 @@ $mango: var(--color-mango);
 
 header {
   margin: 0;
-  z-index: 1;
-  position: relative;
+  z-index: 1000; // should be higher than everything else
+  position: fixed;
+  // position: relative;
   padding: 0.5% 1.5%;
   border: 0;
   width: 100%;
-  background-color: #10274f;
+  background-color: transparent;
 }
 
 nav {
@@ -161,15 +165,8 @@ nav {
 
 #logo-container {
   position: absolute;
-  margin-top: -2px;
+  margin-top: 2px;
   margin-left: 1%;
-  height: 100%;
-  width: 100%;
-}
-
-#marshie-container {
-  position: absolute;
-  margin-left: 80%;
   height: 100%;
   width: 100%;
 }
@@ -184,17 +181,24 @@ nav {
   display: none;
 }
 
-.marshie {
-  display: flex;
-  width: 32px;
+.page-type {
+  color: #FFF7E2;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: #ff3700;
+  font-family: Aleo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
-  &.red {
-    width: 44px;
-  }
+.page-type:hover {
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #ee552a;
 }
 
 .nav-pages {
-  margin-left: 15vw;
+  margin-left: 25vw;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -208,11 +212,6 @@ nav {
 
   &.page {
     margin-top: 4px;
-  }
-
-  :hover {
-    color: $mango;
-    text-decoration: underline;
   }
 }
 
@@ -348,15 +347,11 @@ nav {
     height: 48px;
   }
 
-  #logo-container {
-    margin-top: 2px;
-  }
-
   .nav-pages {
     margin-left: 1vw;
     width: 100%;
     font-size: 32px;
-    background-color: #10274f;
+    background-color: #521B1D;
     position: relative;
     flex-direction: column;
     align-self: flex-start;
@@ -423,7 +418,7 @@ nav {
     font: inherit;
     color: inherit;
     text-transform: none;
-    background-color: transparent;
+    background-color: transparent; 
     border: 0;
     margin: 0;
     overflow: visible;
