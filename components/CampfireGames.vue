@@ -79,17 +79,26 @@
   color: white;
   position: relative;
   margin-bottom: 10px;
-  padding-top: 100px;
+  // padding-top: 100px;
 }
 
 #cfg-blurb {
   padding-bottom: 20px;
   text-align: left;
   padding-top: 4.5rem;
-  max-width: 700px;
-  padding-right: 2vw;
-  padding-left: 70px;
+  max-width: 50%;
+  padding-right: 2%;
+  padding-left: 2%;
   color: black
+}
+
+.campfire-games {
+  // height: 300px;
+  margin: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 500px;
+  width: 100%;
 }
 
 #teams-div {
@@ -98,7 +107,7 @@
   gap: 2rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: center;
-  padding-top: 10vh;
+  // padding-top: 10vh;
 }
 
 #sign-info {
@@ -112,29 +121,36 @@
 .team-section {
   width: 30%;
   text-align: center;
+  margin-top: 70px;
 }
 
 .team-title {
   padding-bottom: 25px;
 }
 
-img {
-  height: 400px;
-  margin: auto;
-  border-color: red;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  max-width: 500px;
-  width: 90%;
-}
+// img {
+//   height: 300px;
+//   margin: auto;
+//   border-color: red;
+//   padding-right: 1rem;
+//   padding-left: 1rem;
+//   max-width: 500px;
+//   width: 90%;
+// }
 
 .team-title {
-  padding-top: 15px;
+  // padding-top: 15px;
   font-size: 1.5rem;
 }
 
 .team-picture {
   max-width: 400px;
+  height: 250px;
+  border-color: red;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 500px;
+  width: 90%;
 }
 .team-picture.red-marshie {
   width: 65%;
@@ -144,30 +160,42 @@ img {
   color: black;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .team-picture {
-    width: 25vw;
-  }
-  .team-picture.red-marshie {
-    width: 19vw;
-  }
-}
-
 @media (min-width: 1900px) {
   #cfg-blurb {
-    padding-right: 10vw;
+    padding-right: 10%;
   }
 
   .campfire-games {
-    margin-left: 20vw;
-    margin-right: 5vw;
+    margin-left: 20%;
+    margin-right: 5%;
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #campfire-games {
+    // width: 25%;
+  }
+  #cfg-blurb {
+    max-width: 52%;
+    padding-left: 5%;
+    padding-right: 0%;
+  }
+  // .team-picture {
+  //   width: 25%;
+  // }
+  // .team-picture.red-marshie {
+  //   width: 19%;
+  // }
+}
+
 @media only screen and (max-width: 1000px) {
+  #campfire-games {
+    margin-top: 150px;
+  }
   .team-section {
     width: 100%;
-    padding-bottom: 5rem;
+    margin-top: 0px;
+    // padding-bottom: 5rem;
   }
 
   #sign-info {
@@ -176,30 +204,53 @@ img {
   }
 
   #cfg-blurb {
-    max-width: 100vw;
+    max-width: 100%;
+    padding-bottom: 5rem;
+    padding-top: 2.5rem;
+    // max-width: 50%;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   .team-picture {
-    width: 60vw;
+    width: 50%;
   }
 
   .team-picture.red-marshie {
-    width: 35vw;
+    width: 37%;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  #cfg-blurb {
+    padding-bottom: 3rem;
+  }
+  .team-picture {
+    width: 80%;
+  }
   .team-picture.red-marshie {
-    width: 50vw;
+    width: 55%;
   }
 }
 
 @media only screen and (max-width: 576px) {
+  .team-section {
+    margin-top: -20px;
+  }
+  .team-title.blue {
+    margin-top: -30px;
+  }
+  .team-title.green {
+    margin-top: -30px;
+  }
+  .campfire-games {
+    width: 100%
+  }
   .team-picture {
-    width: 70vw;
+    width: 70%;
   }
   .team-picture.red-marshie {
-    width: 60vw;
+    width: 60%;
   }
 }
 

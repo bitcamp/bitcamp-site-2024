@@ -142,7 +142,7 @@
   text-align: center;
   width: calc(33.33% - 30px);
   margin: 15px;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   padding-top: 70px;
 
   img {

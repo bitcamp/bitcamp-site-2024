@@ -222,18 +222,18 @@ function toggleButton(question: string) {
 }
 
 .banner-container {
-  padding-top: 11vh;
+  padding-top: 7vh;
 
   @media (max-width: 767.8px) {
-    padding-top: 12vh;
+    // padding-top: 12vh;
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    padding-top: 17vh;
+    // padding-top: 17vh;
   }
 
   @media (min-width: 1200px) {
-    padding-top: 20vh;
+    // padding-top: 20vh; 
   }
 }
 
