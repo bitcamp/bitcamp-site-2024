@@ -26,8 +26,7 @@
     </div>
     <div id="pagetop" class="fixed right-0 bottom-0" @click="toTop">
       <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
-            stroke="#2f3136"
-            stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+            stroke-width="2" stroke-linecap="square" stroke-linejoin="round">
         <path d="M18 15l-6-6-6 6"/>
       </svg>
     </div>
@@ -231,12 +230,17 @@ const toTop = () => {
   z-index: 99;
   pointer-events: auto;
   border-radius: 10px;
+  background-color: #FF6F3F;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 #pagetop:hover {
-  background-color: #e0e0e0;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
+}
+#pagetop > svg {
+  stroke: white;
 }
   
 .footer-text {
