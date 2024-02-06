@@ -132,7 +132,10 @@ function setColorAndOpacity() {
     const opacity = Math.min(scrollPosition / (6*navbarHeight), 1);
     header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
   } else {
-    header.style.backgroundColor = '#521B1D';
+    const navbarHeight = header.offsetHeight;
+    const scrollPosition = window.scrollY;
+    const opacity = Math.min(scrollPosition / (10*navbarHeight), 1);
+    header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
   }
 }
 

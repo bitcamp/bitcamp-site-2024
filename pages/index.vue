@@ -6,7 +6,7 @@
     <!--<img class="cloud-1" src="~/assets/images/background/cloud1.png" />-->
     <MiniEvents />
     <CampfireGames />
-    <Schedule />
+    <!-- <Schedule /> -->
     <!--<img class="cloud-2" src="~/assets/images/background/cloud2.png" />-->
     <FAQ />
     <Sponsors />
@@ -25,11 +25,11 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'og:site_name',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'og:url',
@@ -54,7 +54,7 @@ useHead({
     },
     {
       property: 'twitter:title',
-      content: 'Bitcamp 2023',
+      content: 'Bitcamp 2024',
     },
     {
       property: 'twitter:description',
@@ -115,7 +115,7 @@ export default {
   position: relative;
   background-color: #f6ebcc;
 
-  & > .section {
+  &>.section {
     margin-bottom: 5rem !important;
   }
 }

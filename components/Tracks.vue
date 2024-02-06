@@ -2,18 +2,10 @@
   <div id="tracks" class="section">
     <div class="tracks-container">
       <article class="card">
-        <img
-          class="tracks-sign"
-          src="~/assets/images/tracks/tracks.svg"
-          alt="Tracks Sign Photo"
-        />
+        <img class="tracks-sign" src="~/assets/images/tracks/tracks.svg" alt="Tracks Sign Photo" />
       </article>
       <article class="card">
-        <img
-          class="tracks-image"
-          src="~/assets/images/tracks/general.svg"
-          alt="General Track Photo"
-        />
+        <img class="tracks-image" src="~/assets/images/tracks/general.svg" alt="General Track Photo" />
         <div class="text">
           <h1>General Track</h1>
           <p>
@@ -24,11 +16,7 @@
         </div>
       </article>
       <article class="card">
-        <img
-          class="tracks-image"
-          src="~/assets/images/tracks/ml.svg"
-          alt="Machine Learning Track Photo"
-        />
+        <img class="tracks-image" src="~/assets/images/tracks/ml.svg" alt="Machine Learning Track Photo" />
         <div class="text">
           <h1>Machine Learning Track</h1>
           <p>
@@ -41,11 +29,7 @@
         </div>
       </article>
       <article class="card">
-        <img
-          class="tracks-image"
-          src="~/assets/images/tracks/quantum.svg"
-          alt="Quantum Track Photo"
-        />
+        <img class="tracks-image" src="~/assets/images/tracks/quantum.svg" alt="Quantum Track Photo" />
         <div class="text">
           <h1>Quantum Track</h1>
           <p>
@@ -59,11 +43,7 @@
         </div>
       </article>
       <article class="card">
-        <img
-          class="tracks-image"
-          src="~/assets/images/tracks/cybersecurity.svg"
-          alt="Cybersecurity Track Photo"
-        />
+        <img class="tracks-image" src="~/assets/images/tracks/cybersecurity.svg" alt="Cybersecurity Track Photo" />
         <div class="text">
           <h1>Cybersecurity Track</h1>
           <p>
@@ -76,11 +56,7 @@
         </div>
       </article>
       <article class="card">
-        <img
-          class="tracks-image"
-          src="~/assets/images/tracks/app_dev.svg"
-          alt="App Dev Track Photo"
-        />
+        <img class="tracks-image" src="~/assets/images/tracks/app_dev.svg" alt="App Dev Track Photo" />
         <div class="text">
           <h1>App Development Track</h1>
           <p>
@@ -127,13 +103,15 @@ export default {
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    margin-top: 15%;
+    margin-top: 10%;
   }
 
   @media (max-width: 576px) {
     width: 90%;
+    margin-top: 10%;
   }
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -149,6 +127,7 @@ export default {
     margin-top: -100px;
     margin-right: 40px;
   }
+
   .tracks-image {
     width: 117px;
     height: 118px;
@@ -198,6 +177,7 @@ export default {
       width: calc(130% - 5px);
       min-width: 350px;
     }
+
     #tracks {
       padding-top: 0px;
     }
@@ -215,6 +195,7 @@ export default {
       width: 300px;
       transform: translateY(-60px);
     }
+
     #tracks {
       margin-top: -10px;
     }

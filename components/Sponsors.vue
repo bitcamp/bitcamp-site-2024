@@ -24,6 +24,12 @@
         Copyright &copy; 2019 - 2023 Bitcamp. All Rights Reserved.
       </div>
     </div>
+    <div id="pagetop" class="fixed right-0 bottom-0" @click="toTop">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke-width="2" stroke-linecap="square" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -34,6 +40,8 @@ export default {
 </script>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
 interface Sponsor {
   name: string;
   amount: number;
@@ -52,6 +60,32 @@ const sponsors: Sponsor[] = [
     url: 'https://www.pepsi.com/',
   },
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
+
+const scTimer = ref(0);
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+const handleScroll = () => {
+  if (scTimer.value) return;
+  scTimer.value = setTimeout(() => {
+    const pagetopButton = document.getElementById('pagetop');
+    if (pagetopButton) {
+      pagetopButton.style.display = window.scrollY > 100 ? 'block' : 'none';
+    }
+    clearTimeout(scTimer.value);
+    scTimer.value = 0;
+  }, 100) as any;
+};
+
+const toTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
 </script>
 
 <style scoped lang="scss">
@@ -67,6 +101,30 @@ const sponsors: Sponsor[] = [
   margin-bottom: 65px;
   position: relative;
   left: 27%;
+}
+
+#pagetop{
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  z-index: 99;
+  pointer-events: auto;
+  border-radius: 10px;
+  background-color: #FF6F3F;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  width: 60px;
+  height: 60px;
+}
+
+#pagetop:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#pagetop > svg {
+  stroke: white;
+  width: 100%;
+  height: 100%;
 }
   
 .footer-text {
@@ -151,6 +209,10 @@ const sponsors: Sponsor[] = [
       grid-column-end: 4;
     }
   }
+
+  #pagetop{
+    transform: scale(0.8); 
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -164,6 +226,12 @@ const sponsors: Sponsor[] = [
     max-width: 100%;
     left: 8%;
     margin-bottom: 20px;
+  }
+
+  #pagetop{
+    transform: scale(0.65); 
+    bottom: 0.5rem !important;
+    right: -0.75rem !important;
   }
 }
 
