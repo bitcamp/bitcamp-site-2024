@@ -17,10 +17,7 @@
             <br /><br />
             If you're ready for an adventure, we'll see you by the campfire!
           </div>
-          <div class="neon-button-container">
-            <Button class="neon-button" text="REGISTER" link="https://register.bit.camp/" size="medium" neon="true"
-              color="#d8a84a" />
-          </div>
+          <RegisterButton text="REGISTER" link="https://register.bit.camp/" />
         </div>
         <div class="slideshowframe-container">
           <img class="slideshowframe" src="~/assets/images/background/10yearsign.svg" alt="Slideshow Frame Photo" />
@@ -29,7 +26,9 @@
     </div>
     <div class="hero-image-wrapper">
       <img class="background" alt="Background image" />
-      <img class="additional-background" />
+      <img class="mobile_img" src="../assets/images/background/mobilebg.svg" alt="deez" />
+      <img class="mobile_img_add" src="../assets/images/background/mobilebgadd.svg" alt="nuts" />
+      <!-- <img class="additional-background" /> -->
     </div>
   </div>
 </template>
@@ -71,7 +70,7 @@ const counter = ref(0);
 function incrementCounter() {
   counter.value++;
 }
-setInterval(incrementCounter, 175);
+setInterval(incrementCounter, 250);
 
 // let imagesList: string[] = [];
 // for (let m = 0; m < 17+8; m++) {
@@ -121,6 +120,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   padding-top: 10%;
   // z-index: 100;
   width: auto;
+  height: fit-content;
 }
 
 .hero-image-wrapper {
@@ -164,26 +164,45 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   }
 
   @media (max-width: 576px) {
-    padding-top: 14rem;
-    top: 0%;
+    content: url('../assets/images/background/mobilebg.svg');
+    display: none;
     position: relative;
+    width: 100vw;
+    // height: 100vh; // Ensures the image takes the height of the viewport
+    padding-top: 0; // Adjust or remove padding-top to ensure full coverage from the top
+    background-size: cover; // Ensure it covers the entire area
+    background-attachment: fixed;
   }
 }
 
-.additional-background {
-  z-index: 2;
-  position: relative;
-
-  @media (min-width: 430.01px) {
-    content: url('../assets/images/background/mobileSecond.svg');
+.mobile_img {
+  @media (min-width: 576px) {
     display: none;
   }
 
-  @media (max-width: 430px) {
-    content: url('../assets/images/background/mobileSecond.svg');
+  @media (max-width: 576px) {
+    top: 69%;
+    position: relative;
+    z-index: 0;
     width: 100%;
-    top: -21%;
-    // background-color: red;
+    background-attachment: fixed;
+    min-width: 20rem;
+  }
+}
+
+.mobile_img_add {
+  @media (min-width: 576px) {
+    display: none;
+  }
+
+  @media (max-width: 576px) {
+    top: -10.5%;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 190%;
+    background-attachment: fixed;
+    min-width: 20rem;
   }
 }
 
@@ -194,30 +213,6 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   width: 60%;
   // width: 30%;
   // min-width: 200px;
-}
-
-.neon-button {
-  // width: '100%';
-  width: 2rem;
-  display: block;
-}
-
-.neon-button-container {
-  display: flex;
-  align-items: center;
-  margin-left: calc(50% - 20%);
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    margin-left: calc(50% - 27.5%);
-  }
-
-  @media (min-width: 576px) and (max-width: 767.8px) {
-    margin-left: calc(50% - 40%);
-  }
-
-  @media (max-width: 576px) {
-    margin-left: calc(50% - 49%);
-  }
 }
 
 .header-text {
@@ -249,9 +244,11 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   height: 55rem;
 
   @media (max-width: 576px) {
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: auto;
   }
 }
 
@@ -263,7 +260,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 }
 
 .img-container {
-  width: 50%;
+  width: 60%;
   margin-right: 2rem;
   display: flex;
   align-items: center;
@@ -292,8 +289,8 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   }
 
   @media (max-width: 576px) {
-    width: 15rem;
-    padding-bottom: 10rem;
+    width: 24rem;
+    margin-bottom: 7rem;
   }
 }
 
@@ -303,6 +300,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 6rem;
 
   @media (max-width: 576px) {
     margin-left: 0rem;
@@ -319,5 +317,6 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 .slideshowframe-container {
   position: relative;
   z-index: 20;
+  margin-bottom: 15rem;
 }
 </style>

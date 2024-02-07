@@ -4,24 +4,13 @@
       <div class="non-pages">
         <div id="logo-container">
           <a tag="img" href="/">
-            <img
-              id="logo-with-text"
-              src="~/public/bitcamp-brand/logos/logotype.png"
-            />
-            <img
-              id="logo-image"
-              src="~/public/bitcamp-brand/logos/bitcamp.png"
-            />
+            <img id="logo-with-text" src="~/public/bitcamp-brand/logos/logotype.png" />
+            <img id="logo-image" src="~/public/bitcamp-brand/logos/bitcamp.png" />
           </a>
         </div>
         <div class="hamburgerContainer">
-          <button
-            class="hamburger hamburger--spin"
-            type="button"
-            style="color: #ffffff"
-            :class="{ 'is-active': showDropdown }"
-            @click="toggleDropdown"
-          >
+          <button class="hamburger hamburger--spin" type="button" style="color: #ffffff"
+            :class="{ 'is-active': showDropdown }" @click="toggleDropdown">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
@@ -52,9 +41,7 @@
           <a href="#sponsors" class="page-type">Sponsors</a>
         </li>
         <template v-if="bigScreen">
-          <a
-            id="mlh-trust-badge"
-            style="
+          <a id="mlh-trust-badge" style="
               display: block;
               height: 32px;
               width: 32px;
@@ -66,12 +53,9 @@
               margin-top: -1.5rem;
             "
             href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
-            target="_blank"
-            ><img
+            target="_blank"><img
               src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
-              alt="Major League Hacking 2024 Hackathon Season"
-              style="width: 100%"
-          /></a>
+              alt="Major League Hacking 2024 Hackathon Season" style="width: 100%" /></a>
         </template>
       </ul>
     </nav>
@@ -129,12 +113,12 @@ function setColorAndOpacity() {
     const navbarHeight = header.offsetHeight;
     const scrollPosition = window.scrollY;
     // roughly scaled so it is opaque after registration section
-    const opacity = Math.min(scrollPosition / (6*navbarHeight), 1);
+    const opacity = Math.min(scrollPosition / (6 * navbarHeight), 1);
     header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
   } else {
     const navbarHeight = header.offsetHeight;
     const scrollPosition = window.scrollY;
-    const opacity = Math.min(scrollPosition / (10*navbarHeight), 1);
+    const opacity = Math.min(scrollPosition / (10 * navbarHeight), 1);
     header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
   }
 }
@@ -364,6 +348,7 @@ nav {
   .nav-pages li {
     margin-top: 1vw;
   }
+
   .nav-pages li a {
     font-size: 1.2rem;
   }
@@ -421,7 +406,7 @@ nav {
     font: inherit;
     color: inherit;
     text-transform: none;
-    background-color: transparent; 
+    background-color: transparent;
     border: 0;
     margin: 0;
     overflow: visible;
