@@ -46,7 +46,7 @@ withDefaults(defineProps<Props>(), {
 }
 
 .button-text {
-    width: 12rem;
+    width: 11rem;
     height: 2.5rem;
     font-size: 1.5rem;
     display: flex;
@@ -56,7 +56,7 @@ withDefaults(defineProps<Props>(), {
     flex-wrap: wrap;
 
     @media (min-width: 768px) and (max-width: 1040px) {
-        width: 11rem;
+        width: 9rem;
         height: 2.25rem;
         font-size: 1.25rem;
     }

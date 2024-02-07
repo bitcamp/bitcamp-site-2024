@@ -43,6 +43,7 @@ export default {
   position: relative;
   height: 75%;
   width: 100%;
+  z-index: 10000;
 }
 
 .slideshow-frame {

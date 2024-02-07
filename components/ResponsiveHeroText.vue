@@ -43,7 +43,7 @@
 .registerSign {
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  width: 16rem;
   display: block;
   padding: 3% 0;
 }
