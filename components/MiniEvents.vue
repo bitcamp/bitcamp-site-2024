@@ -82,6 +82,7 @@
 
 .mini-events-header {
   position: relative;
+  margin-bottom: 2rem;
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -103,14 +104,14 @@
   height: auto;
 
   @media (max-width: 767.8px) {
-    width: 50%;
-    max-width: 50%;
+    width: 0%;
+    max-width: 360px;
     bottom: 20px;
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    width: 30%;
-    max-width: 30%;
+    // width: 30%;
+    max-width: 400px;
     bottom: 20px;
   }
 
@@ -142,7 +143,7 @@
   text-align: center;
   width: calc(33.33% - 30px);
   margin: 15px;
-  // margin-bottom: 50px;
+  margin-bottom: 50px;
   padding-top: 70px;
 
   img {
