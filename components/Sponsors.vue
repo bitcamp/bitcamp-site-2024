@@ -105,8 +105,8 @@ const toTop = () => {
 
 #pagetop{
   position: fixed !important;
-  bottom: 1rem !important;
-  right: 1rem !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
   z-index: 99;
   pointer-events: auto;
   border-radius: 10px;
@@ -210,7 +210,7 @@ const toTop = () => {
     }
   }
 
-  #pagetop{
+  #pagetop {
     transform: scale(0.8); 
   }
 }
@@ -231,8 +231,8 @@ const toTop = () => {
 
   #pagetop{
     transform: scale(0.65); 
-    bottom: 0.5rem !important;
-    right: -0.75rem !important;
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
   }
 }
 

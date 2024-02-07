@@ -31,6 +31,7 @@
     "dayjs": "^1.11.7",
     "jquery": "^3.6.3",
     "vue-final-modal": "^4.2.0",
-    "vue-popperjs": "^2.3.0"
+    "vue-popperjs": "^2.3.0",
+    "vue3-carousel": "^0.3.1"
   }
 }
