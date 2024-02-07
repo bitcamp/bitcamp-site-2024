@@ -2,21 +2,78 @@
   <div class="hero">
     <div class="container">
       <div class="column">
-        <h1>Column 1</h1>
-        <p>This is the first column of text...</p>
+        <img :src="signSrc" class="svgStyle" alt="Bitcamp sign" />
       </div>
       <div class="column column-2">
-        <h1>Column 3</h1>
-        <p>This is the second column of text...</p>
+        <responsive-text v-if="!isMobile"></responsive-text>
       </div>
     </div>
+    <img class="foilage-large" src="../assets/images/background/heroFoilage.svg" />
   </div>
-  <responsive-text v-if="isMobile"></responsive-text>
+  <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}"></responsive-text>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import ResponsiveText from "./ResponsiveHeroText.vue"
 
+import sign_empty from '../assets/images/bitcamp-sign/sign_empty.svg';
+import sign_full from '../assets/images/bitcamp-sign/sign_full.svg';
+import sign_1 from '../assets/images/bitcamp-sign/sign_1.svg';
+import sign_2 from '../assets/images/bitcamp-sign/sign_2.svg';
+import sign_3 from '../assets/images/bitcamp-sign/sign_3.svg';
+import sign_4 from '../assets/images/bitcamp-sign/sign_4.svg';
+import sign_5 from '../assets/images/bitcamp-sign/sign_5.svg';
+import sign_6 from '../assets/images/bitcamp-sign/sign_6.svg';
+import sign_7 from '../assets/images/bitcamp-sign/sign_7.svg';
+import sign_8 from '../assets/images/bitcamp-sign/sign_8.svg';
+import sign_9 from '../assets/images/bitcamp-sign/sign_9.svg';
+import sign_10 from '../assets/images/bitcamp-sign/sign_10.svg';
+import sign_11 from '../assets/images/bitcamp-sign/sign_11.svg';
+import sign_12 from '../assets/images/bitcamp-sign/sign_12.svg';
+import sign_13 from '../assets/images/bitcamp-sign/sign_13.svg';
+import sign_14 from '../assets/images/bitcamp-sign/sign_14.svg';
+import sign_15 from '../assets/images/bitcamp-sign/sign_15.svg';
+import sign_16 from '../assets/images/bitcamp-sign/sign_16.svg';
+import sign_17 from '../assets/images/bitcamp-sign/sign_17.svg';
+
+import { ref } from 'vue';
+
+const counter = ref(0);
+function incrementCounter() {
+  counter.value++;
+}
+setInterval(incrementCounter, 250);
+
+let imagesList = [
+  sign_2,
+  sign_3,
+  sign_4,
+  sign_5,
+  sign_6,
+  sign_7,
+  sign_8,
+  sign_9,
+  sign_10,
+  sign_11,
+  sign_12,
+  sign_13,
+  sign_14,
+  sign_15,
+  sign_16,
+  sign_17,
+  sign_1,
+  sign_full,
+  sign_full,
+  sign_empty,
+  sign_empty,
+  sign_full,
+  sign_full,
+];
+
+const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
+</script>
+
+<script lang="ts">
 export default {
   components: {
     ResponsiveText
@@ -46,37 +103,59 @@ export default {
 </script>
 
 <style scoped>
-  .hero {
-    height: 100vh;
-    background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 15%;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  display: flex;
+  z-index: 1;
+}
+
+.column-2 {
+  display: block;
+}
+
+.svgStyle {
+  width: 80%;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.foilage-large {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+@media (max-width: 776px) {
+  .column-2 {
+    display: none;
   }
 
   .column {
-    flex: 1;
-    min-width: 300px;
-    margin: 10px;
+    flex: 0 0 100%;
   }
-  .column-2 {
-    display: block;
-  }
-
-  @media (max-width: 776px) {
-    .column-2 {
-      display: none;
-    }
-    .column {
-      flex: 0 0 100%;
-    }
-  }
+}
 </style>
