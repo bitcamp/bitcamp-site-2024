@@ -153,7 +153,7 @@ const toTop = () => {
   column-gap: 2rem;
   max-width: 60rem;
   border-radius: 20px;
-  padding: 4rem;
+  // padding: 4rem;
 }
 
 @media only screen and (min-width: 992px) {
@@ -176,27 +176,27 @@ const toTop = () => {
   }
 
   .sponsor-image{
-    width: 43vw;
+    width: 35vw;
     max-width: 100%;
     margin-bottom: 10px;
   }
 }
 
 @media only screen and (min-width: 850px) and (max-width: 992px) {
-  .sponsor-image{
+  .sponsor-image {
     width: 50vw;
     left: 20%;
     max-width: 100%;
-    margin-bottom: -30px;
+    margin-bottom: 10px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 850px) {
-  .sponsor-image{
+  .sponsor-image {
     width: 48vw;
     left: 15%;
     max-width: 100%;
-    margin-bottom: -30px;
+    margin-bottom: 10px;
   }
 }
 
@@ -218,7 +218,8 @@ const toTop = () => {
 @media only screen and (max-width: 576px) {
   .sponsor-container {
     grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .sponsor-image{
