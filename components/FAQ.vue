@@ -90,7 +90,7 @@ const questions = ref<FAQ[]>([
   {
     question: 'How else can I get involved?',
     answer:
-      "We'd love to get you on our volunteering or mentoring teams! If you'd like to help, please fill out our mentor form or our volunteer form. Also, be sure to follow us on Facebook and Twitter for updates!",
+      "We'd love to get you on our volunteering or mentoring teams! If you'd like to help, please register as a <a class='link' href='https://register.bit.camp/mentor' target='_blank'>mentor</a> or <a class='link' href='https://register.bit.camp/volunteer' target='_blank'>volunteer</a>. Also, be sure to follow us on Facebook and Twitter for updates!",
   },
   {
     question: 'How do I join a team?',
@@ -123,18 +123,11 @@ const questions = ref<FAQ[]>([
   },
   {
     question: 'What hardware is provided at Bitcamp?',
-    answer:
-      'Arduinos, sensors (ultrasonic, photoresistors, thermistors), inputs (buttons, switches), outputs (LEDs, piezo speakers, 7-segment displays, micro servo motors), passive components (resistors, capacitors, diodes), and wiring.',
+    answer: 'More information coming soon!',
   },
   {
     question: "What if I don't go to the University of Maryland?",
-    answer: `We\'d love to have you attend! We are providing bus transportation along the following routes:
-      <ul>
-        <li>George Mason University, University of Virginia</li>
-        <li>Johns Hopkins University, Morgan State University</li>
-        <li>UMBC</li>
-      </ul>
-      If you go to these one of these schools, our travel team will contact you with bus registration details within a few days. Contact <a class="link" href="mailto:travel@bit.camp">travel@bit.camp</a> with any questions!`,
+    answer: 'More information coming soon!',
   },
   {
     question: 'Do I need to wear a mask?',
