@@ -1,20 +1,20 @@
 <template>
   <div class="hero-wrapper">
-    <div class="hero">
-      <div class="container">
-        <div class="column column-1">
-          <img :src="signSrc" class="svgStyle" alt="Bitcamp sign" />
-        </div>
-        <div class="column column-2">
-          <responsive-text v-if="!isMobile"></responsive-text>
-          <Slideshow class="slide" />
-        </div>
+    <div class="container">
+      <div class="column column-1">
+        <img :src="signSrc" class="svgStyle" alt="Bitcamp sign" />
       </div>
+      <div class="column column-2">
+        <responsive-text v-if="!isMobile"></responsive-text>
+        <Slideshow class="slide" />
+      </div>
+    </div>
+    
+    <div class="hero">
       <img class="foilage-large" src="~/assets/images/background/heroFoilage.svg" />
     </div>
-    <div class="space"></div>
   </div>
-  <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}"></responsive-text>
+  <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}"></responsive-text>0
 </template>
 
 <script setup lang="ts">
@@ -109,14 +109,36 @@ export default {
 <style scoped lang="scss">
 .hero-wrapper {
   height: 100%;
-}
-.hero {
-  height: 20%;
-  background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-bottom: 10em;
+
+  @media (max-width: 1000px) {
+    padding-bottom: 15em;
+    
+  }
+  @media (max-width: 776px) {
+    padding-bottom: 0em;
+  }
+}
+.hero {
+  position: absolute;
+  background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 83%;
+
+  @media (max-width: 1000px) {
+    height: 70%;
+  }
+
+  @media (max-width: 776px) {
+    height: 100%;
+  }
+  
 }
 .space {
   height: 300px;
@@ -126,7 +148,7 @@ export default {
   flex-wrap: wrap;
   max-width: min(100%, 1300px);
   margin: 0 auto;
-  padding-top: 10%;
+  padding-top: 7%;
 }
 
 .column {
@@ -140,6 +162,7 @@ export default {
 .slide {
   margin: auto;
   position: relative;
+  margin-top: 2rem;
 }
 .column-1 {
   // padding-top: 4rem;

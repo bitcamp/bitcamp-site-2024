@@ -106,7 +106,7 @@ export default {
 
 <style scoped lang="scss">
 #tracks {
-  padding-top: 10%;
+  margin-top: 5%;
   padding-bottom: 5%;
   background-color: #f6ebcc;
   position: relative;
@@ -122,12 +122,12 @@ export default {
   margin: 0 auto;
 
   @media (min-width: 576px) and (max-width: 767.8px) {
-    padding-top: 90px;
+    margin-top: 100px;
     width: 90%;
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    padding-top: 100px;
+    margin-top: 125px;
   }
 
   @media (max-width: 576px) {
