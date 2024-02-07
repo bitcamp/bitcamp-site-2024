@@ -316,6 +316,8 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   width: 100%;
   margin-top: 4rem;
   position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .slideshowframe-container {
@@ -326,8 +328,8 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 }
 
 .deez {
-  top: 4.8rem;
-  left: 2.57rem;
+  bottom: 104px;
+  left: 10%;
   position: absolute;
 }
 </style>
