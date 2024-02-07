@@ -119,7 +119,7 @@ const questions = ref<FAQ[]>([
   {
     question: 'What have people made in the past at Bitcamp?',
     answer:
-      'From Augmented Reality Human-Scale Pong to a research paper detailing vulnerabilities in Google\'s reCaptcha system, the projects at Bitcamp span across all categories and interests. You can check out all of the amazing submissions at the <a class="link" href="https://bitcamp2022.devpost.com/?ref_feature=challenge&ref_medium=discover"> Bitcamp 2022 Devpost!</a>', //ADD LINK
+      'From Augmented Reality Human-Scale Pong to a research paper detailing vulnerabilities in Google\'s reCaptcha system, the projects at Bitcamp span across all categories and interests. You can check out all of the amazing submissions at the <a class="link" href="https://bitcamp2023.devpost.com/project-gallery"> Bitcamp 2023 Devpost!</a>', //ADD LINK
   },
   {
     question: 'What hardware is provided at Bitcamp?',

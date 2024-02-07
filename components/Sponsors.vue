@@ -21,7 +21,7 @@
         </span>
       </div>
       <div class="copyright">
-        Copyright &copy; 2019 - 2023 Bitcamp. All Rights Reserved.
+        Copyright &copy; 2019 - 2024 Bitcamp. All Rights Reserved.
       </div>
     </div>
     <div id="pagetop" class="fixed right-0 bottom-0" @click="toTop">
