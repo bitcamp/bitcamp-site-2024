@@ -46,8 +46,8 @@ withDefaults(defineProps<Props>(), {
 }
 
 .button-text {
-    width: 13.5rem;
-    height: 3rem;
+    width: 12rem;
+    height: 2.5rem;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -56,22 +56,22 @@ withDefaults(defineProps<Props>(), {
     flex-wrap: wrap;
 
     @media (min-width: 768px) and (max-width: 1040px) {
-        width: 11.25rem;
-        height: 2.5rem;
+        width: 11rem;
+        height: 2.25rem;
         font-size: 1.25rem;
     }
 
     @media (min-width: 576px) and (max-width: 767.8px) {
-        width: 9.5rem;
+        width: 10rem;
         height: 2rem;
         font-size: 1rem;
 
     }
 
     @media (max-width: 576px) {
-        width: 8rem;
+        width: 9rem;
         height: 1.75rem;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }
 }
 

@@ -25,10 +25,9 @@
       </div>
     </div>
     <div class="hero-image-wrapper">
-      <img class="background" alt="Background image" />
+      <img class="background-large" src="../assets/images/background/bgElements.svg" alt="Background image" />
       <img class="mobile_img" src="../assets/images/background/mobilebg.svg" alt="deez" />
       <img class="mobile_img_add" src="../assets/images/background/mobilebgadd.svg" alt="nuts" />
-      <!-- <img class="additional-background" /> -->
     </div>
   </div>
 </template>
@@ -127,7 +126,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   position: absolute;
   top: 0;
   width: 100%;
-  height: 145vh;
+  height: 100vh;
   // overflow: hidden;
   background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
   background-position: center bottom;
@@ -135,20 +134,19 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   background-size: 100% 100%;
 
   @media (min-width: 768px) and (max-width: 1040px) {
-    height: 120vh;
+    height: 90vh;
   }
 
-  @media (min-width: 576px) and (max-width: 767.8px) {
-    height: 110vh;
-  }
+  // @media (min-width: 576px) and (max-width: 768px) {
+  //   height: 75vh;
+  // }
 
-  @media (max-width: 576px) {
-    height: 100vh;
+  @media (max-width: 768px) {
+    height: 80vh;
   }
 }
 
-.background {
-  content: url('../assets/images/background/bgElements.svg');
+.background-large {
   width: 100%;
   z-index: 0;
   padding-top: 31.5rem;
@@ -156,31 +154,24 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   background-repeat: no-repeat;
 
   @media (min-width: 768px) and (max-width: 1040px) {
-    padding-top: 25rem;
+    padding-top: 30rem;
   }
 
-  @media (min-width: 576px) and (max-width: 767.8px) {
-    padding-top: 19rem;
-  }
+  // @media (min-width: 576px) and (max-width: 767.8px) {
+  //   padding-top: 27rem;
+  // }
 
-  @media (max-width: 576px) {
-    content: url('../assets/images/background/mobilebg.svg');
+  @media (max-width: 768px) {
     display: none;
-    position: relative;
-    width: 100vw;
-    // height: 100vh; // Ensures the image takes the height of the viewport
-    padding-top: 0; // Adjust or remove padding-top to ensure full coverage from the top
-    background-size: cover; // Ensure it covers the entire area
-    background-attachment: fixed;
   }
 }
 
 .mobile_img {
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     display: none;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     top: 69%;
     position: relative;
     z-index: 0;
@@ -191,12 +182,42 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 }
 
 .mobile_img_add {
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     display: none;
   }
 
-  @media (max-width: 576px) {
-    top: -10.5%;
+  @media (min-width: 672px) and (max-width: 768px) {
+    top: 13%;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 190%;
+    background-attachment: fixed;
+    min-width: 20rem;
+  }
+
+  @media (min-width: 576px) and (max-width: 672px) {
+    top: 11%;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 190%;
+    background-attachment: fixed;
+    min-width: 20rem;
+  }
+
+  @media (min-width: 430px) and (max-width: 576px) {
+    top: -13%;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 190%;
+    background-attachment: fixed;
+    min-width: 20rem;
+  }
+
+  @media (max-width: 430px) {
+    top: -7%;
     position: relative;
     z-index: 100;
     width: 100%;
@@ -211,8 +232,19 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-  // width: 30%;
-  // min-width: 200px;
+  max-width: 20rem;
+
+  @media (min-width: 768px) and (max-width: 1040px) {
+    width: 60%;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.8px) {
+    width: 60%;
+  }
+
+  @media (max-width: 576px) {
+    width: 60%;
+  }
 }
 
 .header-text {
@@ -223,11 +255,12 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   font-family: 'Aleo';
 
   @media (min-width: 768px) and (max-width: 1040px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
-  @media (min-width: 576px) and (max-width: 767.8px) {
-    font-size: 0.7rem;
+  @media (min-width: 576px) and (max-width: 768px) {
+    font-size: 0.8rem;
+    z-index: 420;
   }
 
   @media (max-width: 576px) {
@@ -243,8 +276,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 
   height: 55rem;
 
-  @media (max-width: 576px) {
-
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -260,52 +292,91 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 }
 
 .img-container {
-  width: 60%;
+  width: 40%;
   margin-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-bottom: 5rem;
 
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     margin-right: 0rem;
     width: 100%;
   }
 }
 
 .svgStyle {
-  width: 34rem;
+  width: 38rem;
   display: flex;
   padding-bottom: 5rem;
   z-index: 1;
   position: relative;
 
-  @media (min-width: 768px) and (max-width: 1040px) {
-    width: 26rem;
+  @media (min-width: 1276px) and (max-width: 1512px) {
+    width: 35rem;
   }
 
-  @media (min-width: 576px) and (max-width: 767.8px) {
-    width: 20rem;
+  @media (min-width: 1040px) and (max-width: 1276px) {
+    width: 31rem;
   }
 
-  @media (max-width: 576px) {
-    width: 24rem;
-    margin-bottom: 7rem;
+  @media (min-width: 904px) and (max-width: 1040px) {
+    width: 27rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 904px) {
+    width: 23rem;
+  }
+
+  // @media (min-width: 672px) and (max-width: 768px) {
+  //   width: 19rem;
+  // }
+
+  // @media (min-width: 576px) and (max-width: 672px) {
+  //   width: 16rem;
+  // }
+
+  @media (max-width: 768px) {
+    width: 27rem;
+    margin-bottom: 9rem;
   }
 }
 
 .right-side-information {
-  width: 40%;
+  width: 60%;
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 6rem;
+  padding-top: 18rem;
 
-  @media (max-width: 576px) {
+  @media (min-width: 768px) and (max-width: 1040px) {
+    padding-top: 8rem;
+  }
+
+  @media (min-width: 672px) and (max-width: 768px) {
     margin-left: 0rem;
     width: 100%;
-    margin-top: -50%;
+    margin-top: -100%;
+  }
+
+  @media (min-width: 576px) and (max-width: 672px) {
+    margin-left: 0rem;
+    width: 100%;
+    margin-top: -120%;
+  }
+
+  @media (min-width: 430px) and (max-width: 576px) {
+    margin-left: 0rem;
+    width: 100%;
+    margin-top: -140%;
+  }
+
+  @media (max-width: 430px) {
+    margin-left: 0rem;
+    width: 90%;
+    margin-top: -137%;
   }
 }
 
@@ -316,7 +387,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 
 .slideshowframe-container {
   position: relative;
-  z-index: 20;
+  z-index: 200;
   margin-bottom: 15rem;
 }
 </style>
