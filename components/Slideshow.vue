@@ -3,7 +3,7 @@
     <img class="slideshow-frame" src="~/assets/images/background/slideshow-background.svg" alt="Slideshow Frame" />
     <img class="slideshow-front" src="~/assets/images/background/slideshow-front.svg" alt="Slideshow Front" />
     <!-- <SlideshowCard class="slideshow-card" year="2023" theme="Find Your Frontier" /> -->
-    <Carousel wrapAround="true" class="slideshow-card">
+    <Carousel class="slideshow-card" wrapAround autoplay="3000" transition="1000" pauseAutoplayOnHover>
       <Slide key="1">
         <SlideshowCard path="slideshow/slide-1.svg" year="2023" theme="Find Your Frontier" />
       </Slide>
