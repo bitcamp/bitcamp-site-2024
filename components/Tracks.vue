@@ -106,7 +106,7 @@ export default {
 
 <style scoped lang="scss">
 #tracks {
-  padding-top: 20%;
+  padding-top: 10%;
   padding-bottom: 5%;
   background-color: #f6ebcc;
   position: relative;

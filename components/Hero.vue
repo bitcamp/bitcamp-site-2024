@@ -1,14 +1,18 @@
 <template>
-  <div class="hero">
-    <div class="container">
-      <div class="column">
-        <img :src="signSrc" class="svgStyle" alt="Bitcamp sign" />
+  <div class="hero-wrapper">
+    <div class="hero">
+      <div class="container">
+        <div class="column column-1">
+          <img :src="signSrc" class="svgStyle" alt="Bitcamp sign" />
+        </div>
+        <div class="column column-2">
+          <responsive-text v-if="!isMobile"></responsive-text>
+          <Slideshow class="slide" />
+        </div>
       </div>
-      <div class="column column-2">
-        <responsive-text v-if="!isMobile"></responsive-text>
-      </div>
+      <img class="foilage-large" src="~/assets/images/background/heroFoilage.svg" />
     </div>
-    <img class="foilage-large" src="~/assets/images/background/heroFoilage.svg" />
+    <div class="space"></div>
   </div>
   <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}"></responsive-text>
 </template>
@@ -102,22 +106,27 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.hero-wrapper {
+  height: 100%;
+}
 .hero {
-  height: 100vh;
+  height: 20%;
   background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-
+.space {
+  height: 300px;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: min(100%, 1300px);
   margin: 0 auto;
-  padding-top: 15%;
+  padding-top: 10%;
 }
 
 .column {
@@ -128,16 +137,25 @@ export default {
   z-index: 1;
 }
 
+.slide {
+  margin: auto;
+  position: relative;
+}
+.column-1 {
+  // padding-top: 4rem;
+}
+
 .column-2 {
   display: block;
+  padding-top: 3rem;
 }
 
 .svgStyle {
   width: 100%;
-  z-index: 10000;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  // display: block; 
+  // position: absolute;
 }
 
 .foilage-large {
@@ -151,12 +169,14 @@ export default {
 }
 
 @media (max-width: 776px) {
+  
   .column-2 {
     display: none;
   }
 
   .column {
     flex: 0 0 100%;
+    margin: 0;
   }
 }
 </style>
