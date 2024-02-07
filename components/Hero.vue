@@ -23,8 +23,7 @@
           </div>
         </div>
         <div class="slideshowframe-container">
-          <img class="slideshowframe" src="~/assets/images/background/slideshow-background.svg" alt="Slideshow Frame Photo" />
-          <SlideshowCard year="2023" theme="Find Your Frontier" class="deez"/>
+          <Slideshow class="slideshow"/>
         </div>
       </div>
     </div>
@@ -312,12 +311,9 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   }
 }
 
-.slideshowframe {
-  width: 100%;
+.slideshow {
   margin-top: 4rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  width: 100%;
 }
 
 .slideshowframe-container {
@@ -325,11 +321,5 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   width: 100%;
   position: relative;
   z-index: 20;
-}
-
-.deez {
-  bottom: 104px;
-  left: 10%;
-  position: absolute;
 }
 </style>

@@ -40,8 +40,8 @@ export default {
 
 <style scoped>
 .event {
-  width: 80%;
-  aspect-ratio: 10 / 6.5;
+  width: 70%;
+  aspect-ratio: 10 / 7;
 
   text-align: left;
 
