@@ -15,16 +15,17 @@
             Bitcamp, hosted annually at the University of Maryland, is one of the largest
             collegiate hackathons on the East Coast, bringing together thousands of students
             each year. This year is a truly special milestone for us as we proudly celebrate the
-            10th anniversary of Bitcamp! Over the past decade, Bitcamp has served as a hub
-            of innovation, pushing limits and fostering creativity by uniting over 9,000
-            talented hackers.
+            <b>10th anniversary</b> of Bitcamp! Over the past decade, Bitcamp has served as a hub
+            of innovation, pushing limits and fostering creativity by uniting <b>9,000+</b>
+            talented hackers that have created <b>1,200+</b> hacks. Our hackathon will be hosted <b>in person</b> at the
+            University of Maryland from April 19th to 21st, and we are expecting over <b>1,000</b> attendees!.
           </p>
           <p>
             Bitcamp is a melting pot of creativity; a great place to influence a diverse group
             of the nation's brightest innovators who are passionate about solving the
             problems of tomorrow. Hackers and their teams develop a multi-disciplinary
-            mindset. This year, we are introducing a new App Development track to introduce
-            hackers to the software development life cycle and a new Cybersecurity track to
+            mindset. This year, we are introducing a new <b>App Development</b> track to introduce
+            hackers to the software development life cycle and a new <b>Cybersecurity</b> track to
             facilitate discussions of web vulnerabilities in addition to our ML track we debuted
             last year. Not only focusing on the coding aspects of their projects, they are also
             challenged to learn new skills including project management and user-friendly
@@ -43,10 +44,7 @@
             donations made to Bitcamp will be fully tax-deductible.
           </p>
           <p>
-            We invite you to review the various tiers of sponsorship below. More detailed
-            information regarding each individual perk can be accessed on our website by
-            visiting
-            <b><a href="https://bit.camp/sponsor">bit.camp/sponsor</a></b>. If you’re interested in becoming an official
+            We invite you to review the various tiers of sponsorship below. If you’re interested in becoming an official
             sponsor
             for Bitcamp 2024, we’d love to chat! You can reach us at <b><a
                 href="mailto:sponsorship@bit.camp">sponsorship@bit.camp</a></b>. We
