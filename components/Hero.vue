@@ -8,7 +8,7 @@
         <responsive-text v-if="!isMobile"></responsive-text>
       </div>
     </div>
-    <img class="foilage-large" src="../assets/images/background/heroFoilage.svg" />
+    <img class="foilage-large" src="~/assets/images/background/heroFoilage.svg" />
   </div>
   <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}"></responsive-text>
 </template>
@@ -133,8 +133,8 @@ export default {
 }
 
 .svgStyle {
-  width: 80%;
-  z-index: 1;
+  width: 100%;
+  z-index: 10000;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -146,6 +146,7 @@ export default {
   left: 0;
   width: 100%;
   object-fit: cover;
+  transform: translate(0, 23%);
   z-index: 0;
 }
 
