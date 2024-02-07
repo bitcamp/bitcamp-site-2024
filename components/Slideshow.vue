@@ -2,9 +2,41 @@
   <div class="slideshow-wrapper">
     <img class="slideshow-frame" src="~/assets/images/background/slideshow-background.svg" alt="Slideshow Frame" />
     <img class="slideshow-front" src="~/assets/images/background/slideshow-front.svg" alt="Slideshow Front" />
-    <SlideshowCard class="slideshow-card" year="2023" theme="Find Your Frontier" />
+    <!-- <SlideshowCard class="slideshow-card" year="2023" theme="Find Your Frontier" /> -->
+    <Carousel wrapAround="true" class="slideshow-card">
+      <Slide key="1">
+        <SlideshowCard path="slideshow/slide-1.svg" year="2023" theme="Find Your Frontier" />
+      </Slide>
+      <Slide key="2">
+        <SlideshowCard path="slideshow/slide-2.svg" year="2023" theme="Find Your Frontier" />
+      </Slide>
+      <Slide key="3">
+        <SlideshowCard path="slideshow/slide-3.svg" year="2023" theme="Find Your Frontier" />
+      </Slide>
+
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
   </div>
+  
 </template>
+
+<script>
+// If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
+export default {
+  name: 'App',
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+}
+</script>
 
 <style scoped>
 .slideshow-wrapper {
@@ -36,5 +68,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -68%);
+  width: 70%;
 }
 </style>
