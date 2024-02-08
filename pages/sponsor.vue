@@ -254,7 +254,7 @@
   '',
   '1 event',
   '2 events',
-]" :description="'Any recruitment event or information session you hope to advertise from the moment you choose to sponsor Bitcamp to when the event takes place, we will advertise on our Bitcamp social media account. Based on the tier at which you sponsor, we will advertise up to 3 recruitment events (Peta) through LinkedIn and Email to all registered hackers!'" />
+]" :description="'Any recruitment event or information session you hope to advertise from the moment you choose to sponsor Bitcamp to when the event takes place, we will advertise on our Bitcamp social media account. Based on the tier at which you sponsor, we will advertise up to 2 recruitment events (Tera) through LinkedIn and Email to all registered hackers!'" />
 
             <ProspectusBottomRow :categoryName="'Pre-Event Email to All Hackers'" :tierNames="[
               'Byte',
