@@ -126,7 +126,7 @@ const questions = ref<FAQ[]>([
     answer: 'More information coming soon!',
   },
   {
-    question: "What if I don't go to the University of Maryland?",
+    question: "Does Bitcamp provide travel accomodations or reimbursement?",
     answer: 'More information coming soon!',
   },
   {
