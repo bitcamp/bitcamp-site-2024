@@ -7,6 +7,23 @@
       </template>
     </div>
     <div class="footer-text">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/bitcmp">
+          <img class="icon" src="~/assets/images/social/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/bitcamp">
+          <img class="icon" src="~/assets/images/social/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/channel/UC_F_7Hv3SAUcQBubYWD-2BA">
+          <img class="icon" src="~/assets/images/social/youtube.svg" alt="Youtube">
+        </a>
+        <a href="https://twitter.com/bitcmp">
+          <img class="icon" src="~/assets/images/social/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://snapchat.com/add/bitcamp">
+          <img class="icon" src="~/assets/images/social/snapchat.svg" alt="Snapchat">
+        </a>
+      </div>
       <div class="links">
         <span class="links-1">
           <a href="http://mlh.io/code-of-conduct" target="_blank"
@@ -133,6 +150,7 @@ const toTop = () => {
   
 .footer-text {
   margin-top: 50px;
+  margin-bottom: -30px;
   color: black;
 }
 
@@ -151,6 +169,7 @@ const toTop = () => {
   background-color: var(--color-foreground);
   border-radius: var(--border-radius);
   margin: 0 auto;
+  margin-bottom: 10rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   row-gap: 2rem;
@@ -250,5 +269,50 @@ const toTop = () => {
     color: var(--color-bitcamp);
     text-decoration: none;
   }
+}
+
+.social-icons a {
+  margin-left: 0.875rem;
+  margin-right: 0.875rem;
+}
+
+.social-icons img {
+  width: 2.75rem;
+  padding: 0.25rem;
+  -webkit-transition: -webkit-transform var(--transition-timing);
+  transition: -webkit-transform var(--transition-timing);
+  -o-transition: transform var(--transition-timing);
+  transition: transform var(--transition-timing);
+  transition: transform var(--transition-timing), -webkit-transform var(--transition-timing);
+}
+
+@media only screen and (max-width: 575px) {
+  .social-icons a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .social-icons img {
+    width: 2.25rem;
+    padding: 0.125rem;
+  }
+}
+
+.social-icons {
+  margin: 2rem auto;
+  text-align: center;
+  /* Inline-block whitespace removal hack (https://davidwalsh.name/remove-whitespace-inline-block) */
+  font-size: 0;
+}
+
+.social-icons a:hover {
+  text-decoration: none;
+}
+
+.social-icons a:hover img {
+  transition-duration: 500ms;
+  -webkit-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
 }
 </style>
