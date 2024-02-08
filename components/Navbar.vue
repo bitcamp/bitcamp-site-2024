@@ -311,7 +311,7 @@ nav {
 
 @media only screen and (max-width: 992px) {
   header {
-    padding: 1.5%;
+    padding: 0;
   }
 
   nav {
@@ -321,9 +321,9 @@ nav {
     margin: 0;
   }
 
-  non-pages {
-    display: flex;
-    flex-direction: row;
+  .non-pages {
+    padding: 0.5rem;
+    z-index: 1;
   }
 
   #logo-with-text {
@@ -339,13 +339,14 @@ nav {
   }
 
   .nav-pages {
-    margin-left: 1vw;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    padding: 1rem 0;
     font-size: 32px;
     background-color: #521B1D;
-    position: relative;
     flex-direction: column;
-    align-self: flex-start;
     align-items: center;
   }
 
@@ -360,7 +361,7 @@ nav {
   .hamburgerContainer {
     position: relative;
     display: flex;
-    margin-right: 1vw;
+    margin-right: 0.25rem;
     align-items: flex-end;
     flex-direction: column;
   }
@@ -401,7 +402,7 @@ nav {
   }
 
   .hamburger {
-    padding: 15px 15px;
+    padding: 15px 4px;
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -413,6 +414,7 @@ nav {
     background-color: transparent;
     border: 0;
     margin: 0;
+    margin-bottom: -0.25rem;
     overflow: visible;
   }
 
