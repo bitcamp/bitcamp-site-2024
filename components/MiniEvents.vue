@@ -2,7 +2,7 @@
   <div id="mini-events" class="section">
     <div class="mini-events-header">
       <img
-        src="~/assets/images/mini-events/mini-events-banner.svg"
+        src="~/assets/images/mini-events/mini-events-banner.png"
         alt="Mini Events Banner with Bus"
       />
       <img

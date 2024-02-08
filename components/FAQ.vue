@@ -4,7 +4,7 @@
       <div class="banner-container">
         <img
           class="img-banner"
-          src="~/assets/images/FAQ/bitsite2-11.svg"
+          src="~/assets/images/FAQ/faq-banner.png"
           alt="FAQ Banner scenery"
         />
       </div>
