@@ -41,9 +41,8 @@ export default {
 <style scoped>
 .slideshow-wrapper {
   position: relative;
-  height: 75%;
+  height: 100%;
   width: 100%;
-  z-index: 10000;
 }
 
 .slideshow-frame {

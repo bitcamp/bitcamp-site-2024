@@ -113,6 +113,17 @@ export default {
   z-index: 10;
 }
 
+@media (min-width: 2000px) {
+  .tracks-sign {
+    max-width: 120%;
+  }
+
+  .tracks-image {
+    min-width: 180px;
+    min-height: 180px;
+  }
+}
+
 .tracks-container {
   display: flex;
   flex-wrap: wrap;
@@ -204,7 +215,7 @@ export default {
 
     .tracks-sign {
       width: 300px;
-      transform: translateX(0) translateY(-20%);
+      transform: translateX(0) translateY(0%);
     }
   }
 }

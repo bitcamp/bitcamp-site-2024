@@ -6,7 +6,7 @@
       </div>
       <div class="column column-2">
         <responsive-text v-if="!isMobile"></responsive-text>
-        <Slideshow class="slide" />
+        <!-- <Slideshow v-if="!isMobile" class="slide" /> -->
       </div>
     </div>
     
@@ -14,7 +14,7 @@
       <img class="foilage-large" src="~/assets/images/background/heroFoilage.svg" />
     </div>
   </div>
-  <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}"></responsive-text>0
+  <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}" :slideshow=true></responsive-text>
 </template>
 
 <script setup lang="ts">
@@ -113,14 +113,15 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-bottom: 10em;
+  margin-bottom: 15rem;
 
   @media (max-width: 1000px) {
-    padding-bottom: 15em;
+    padding-bottom: 7em;
     
   }
   @media (max-width: 776px) {
     padding-bottom: 0em;
+    margin-bottom: 0px;
   }
 }
 .hero {
@@ -129,10 +130,11 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 83%;
+  height: 95%;
+
 
   @media (max-width: 1000px) {
-    height: 70%;
+    height: 80%;
   }
 
   @media (max-width: 776px) {
@@ -161,7 +163,7 @@ export default {
 
 .slide {
   margin: auto;
-  position: relative;
+  // position: relative;
   margin-top: 2rem;
 }
 .column-1 {
