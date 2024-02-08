@@ -196,15 +196,17 @@ function toggleButton(question: string) {
   height: auto;
 
   @media (max-width: 767.8px) {
-    width: 50%;
-    max-width: 50%;
-    margin-top: -5vh !important;
-    margin-left: -7vw !important;
+    width: 60%;
+    max-width: 60%;
+    margin-top: -10vh !important;
+    margin-left: -8vw !important;
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
-    width: 40%;
-    max-width: 40%;
+    width: 50%;
+    max-width: 50%;
+    margin-top: -10vh;
+    margin-left: -6vw;
   }
 
   @media (min-width: 1200px) {
