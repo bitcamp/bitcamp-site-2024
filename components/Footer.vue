@@ -1,7 +1,7 @@
 <template>
   <footer>
     <img class="footer-image" src="~/assets/images/background/footer.png" />
-    <div class="footer-text">
+    <!-- <div class="footer-text">
       <div class="links">
         <span class="links-1">
           <a href="http://mlh.io/code-of-conduct" target="_blank">MLH Code of Conduct</a>
@@ -15,7 +15,7 @@
       <div class="copyright">
         Copyright &copy; 2019 - 2024 Bitcamp. All Rights Reserved.
       </div>
-    </div>
+    </div> -->
   </footer>
 </template>
 

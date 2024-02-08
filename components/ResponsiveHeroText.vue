@@ -12,7 +12,7 @@
       If you're ready for an adventure, we'll see you by the campfire!
     </div>
     <RegisterButton text="REGISTER" link="https://register.bit.camp/" />
-    <div class="slideshow-wrapper">
+    <div id="mission" class="slideshow-wrapper">
       <Slideshow class="r-slide" />
     </div>
   </div>
