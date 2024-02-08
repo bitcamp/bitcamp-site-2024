@@ -1,154 +1,207 @@
 <template>
-  <div id="hero" class="section">
-    <div class="hero-image-wrapper">
-      <img class="hero-image" src="~/assets/images/background/hero.png" />
-    </div>
-    <div class="header">
-      <img src="/bitcamp-brand/logos/bitcamp.png" />
-      <div class="header-content">
-        <h1>Find Your Frontier!</h1>
-        <h3>April 7-9, 2024 @ XFINITY Center</h3>
-        <!-- <h2>Applications are now open!</h2> -->
-        <h2>Registrations are now closed. Click below to join our waitlist!</h2>
-        <div class="header-button-container">
-          <Button text="Click Here!" link="https://forms.gle/C31xLjHLnLkBNRSXA" size="large" />
-          <!-- <Button text="Hacker" link="https://register.bit.camp" size="medium" />
-          <Button text="Volunteer" link="https://forms.gle/kyQwDzX7UKDEwa7b9" size="medium" color="#10274f" />
-          <Button text="Mentor" link="https://forms.gle/kP2nrzPzwd6PD8nLA" size="medium" color="#324A79" />
-          <Button text="Workshop" link="https://forms.gle/wXKe5ZyiJ1f14tDs6" size="medium" color="#8F9EBC" /> -->
-        </div>
+  <div class="hero-wrapper">
+    <div class="container">
+      <div class="column column-1">
+        <img :src="signSrc" class="svgStyle" alt="Bitcamp sign" />
+      </div>
+      <div class="column column-2">
+        <responsive-text v-if="!isMobile"></responsive-text>
+        <!-- <Slideshow v-if="!isMobile" class="slide" /> -->
       </div>
     </div>
+    
+    <div class="hero">
+      <img class="foilage-large" src="~/assets/images/background/heroFoilage.svg" />
+    </div>
   </div>
+  <responsive-text v-if="isMobile" :style="{ backgroundColor: '#4A3859'}" :slideshow=true></responsive-text>
 </template>
+
+<script setup lang="ts">
+import ResponsiveText from "./ResponsiveHeroText.vue"
+
+import sign_empty from '../assets/images/bitcamp-sign/sign_empty.svg';
+import sign_full from '../assets/images/bitcamp-sign/sign_full.svg';
+import sign_1 from '../assets/images/bitcamp-sign/sign_1.svg';
+import sign_2 from '../assets/images/bitcamp-sign/sign_2.svg';
+import sign_3 from '../assets/images/bitcamp-sign/sign_3.svg';
+import sign_4 from '../assets/images/bitcamp-sign/sign_4.svg';
+import sign_5 from '../assets/images/bitcamp-sign/sign_5.svg';
+import sign_6 from '../assets/images/bitcamp-sign/sign_6.svg';
+import sign_7 from '../assets/images/bitcamp-sign/sign_7.svg';
+import sign_8 from '../assets/images/bitcamp-sign/sign_8.svg';
+import sign_9 from '../assets/images/bitcamp-sign/sign_9.svg';
+import sign_10 from '../assets/images/bitcamp-sign/sign_10.svg';
+import sign_11 from '../assets/images/bitcamp-sign/sign_11.svg';
+import sign_12 from '../assets/images/bitcamp-sign/sign_12.svg';
+import sign_13 from '../assets/images/bitcamp-sign/sign_13.svg';
+import sign_14 from '../assets/images/bitcamp-sign/sign_14.svg';
+import sign_15 from '../assets/images/bitcamp-sign/sign_15.svg';
+import sign_16 from '../assets/images/bitcamp-sign/sign_16.svg';
+import sign_17 from '../assets/images/bitcamp-sign/sign_17.svg';
+
+import { ref } from 'vue';
+
+const counter = ref(0);
+function incrementCounter() {
+  counter.value++;
+}
+setInterval(incrementCounter, 250);
+
+let imagesList = [
+  sign_2,
+  sign_3,
+  sign_4,
+  sign_5,
+  sign_6,
+  sign_7,
+  sign_8,
+  sign_9,
+  sign_10,
+  sign_11,
+  sign_12,
+  sign_13,
+  sign_14,
+  sign_15,
+  sign_16,
+  sign_17,
+  sign_1,
+  sign_full,
+  sign_full,
+  sign_empty,
+  sign_empty,
+  sign_full,
+  sign_full,
+];
+
+const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
+</script>
 
 <script lang="ts">
 export default {
-  name: 'HeroComponent',
-};
-</script>
-
-<script setup lang="ts">
-defineProps<{
-  link?: string;
-}>();
+  components: {
+    ResponsiveText
+  },
+  data() {
+    return {
+      screenWidth: window.innerWidth
+    };
+  },
+  computed: {
+    isMobile() {
+      return this.screenWidth <= 776;
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.updateScreenWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateScreenWidth);
+  },
+  methods: {
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth;
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
-#hero {
+.hero-wrapper {
+  height: 100%;
   display: flex;
-  justify-content: center;
-  padding: 10% 0;
-
-  @media (max-width: 576px) {
-    margin-bottom: 0rem !important;
-  }
-}
-
-.hero-image-wrapper {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero-image {
-  position: absolute;
-  top: -15vw;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (max-width: 576px) {
-    top: 0;
-    width: 200%;
-  }
-}
-
-.header {
-  width: 760px;
-  height: 300px;
-  box-sizing: border-box;
-  background-color: #21498e80;
-  backdrop-filter: blur(35px);
-  border-radius: 10px;
-  padding: 4.8rem;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  color: white;
-  box-shadow: 0 0.5rem 1rem rgba(black, 0.3);
+  justify-content: center;
+  position: relative;
+  margin-bottom: 15rem;
 
-  img {
-    max-height: 100%;
+  @media (max-width: 1000px) {
+    padding-bottom: 7em;
+    
   }
-
-  .header-content {
-    width: 410px;
-
-    h1 {
-      font-size: 32px;
-    }
-
-    h3 {
-      font-size: 18px;
-      opacity: 0.5;
-      font-weight: normal;
-      padding-bottom: 0.8rem;
-    }
-
-    h2 {
-      font-size: 20px;
-      font-weight: normal;
-      padding-bottom: 1.2rem;
-    }
-
-    .header-button-container {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
+  @media (max-width: 776px) {
+    padding-bottom: 0em;
+    margin-bottom: 0px;
   }
 }
+.hero {
+  position: absolute;
+  background-image: linear-gradient(180deg, #943f33, #b86242, #ffaf52);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
 
-@media only screen and (max-width: 864px) {
-  .header {
-    width: 65%;
-    height: fit-content;
-    flex-direction: column;
-    padding: 3rem;
 
-    img {
-      max-width: 150px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .header-content {
-      width: 100%;
-      margin-top: 2rem;
-      text-align: center;
-
-      .header-button-container {
-        width: fit-content;
-        flex-direction: column;
-        margin: 0 auto;
-        gap: 0.75rem;
-
-        & :deep(.button) {
-          width: 130px !important;
-        }
-      }
-    }
+  @media (max-width: 1000px) {
+    height: 80%;
   }
+
+  @media (max-width: 776px) {
+    height: 100%;
+  }
+  
+}
+.space {
+  height: 300px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: min(100%, 1300px);
+  margin: 0 auto;
+  padding-top: 7%;
 }
 
-@media only screen and (max-width: 480px) {
-  .header {
-    width: 80%;
+.column {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  display: flex;
+  z-index: 1;
+}
+
+.slide {
+  margin: auto;
+  // position: relative;
+  margin-top: 2rem;
+}
+.column-1 {
+  // padding-top: 4rem;
+}
+
+.column-2 {
+  display: block;
+  padding-top: 3rem;
+}
+
+.svgStyle {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  // display: block; 
+  // position: absolute;
+}
+
+.foilage-large {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  transform: translate(0, 23%);
+  z-index: 0;
+}
+
+@media (max-width: 776px) {
+  
+  .column-2 {
+    display: none;
+  }
+
+  .column {
+    flex: 0 0 100%;
+    margin: 0;
   }
 }
 </style>
