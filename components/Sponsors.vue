@@ -40,7 +40,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 interface Sponsor {
   name: string;
@@ -66,6 +66,10 @@ const scTimer = ref(0);
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+})
 
 const handleScroll = () => {
   if (scTimer.value) return;

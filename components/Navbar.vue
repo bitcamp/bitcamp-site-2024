@@ -89,7 +89,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted} from 'vue';
 
 const showDropdown = ref(false);
 const bigScreen = ref(false);

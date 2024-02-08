@@ -84,7 +84,7 @@ export default {
   },
   data() {
     return {
-      screenWidth: window.innerWidth
+      screenWidth: 1000
     };
   },
   computed: {
@@ -93,6 +93,7 @@ export default {
     }
   },
   mounted() {
+    this.screenWidth = window.innerWidth;
     window.addEventListener('resize', this.updateScreenWidth);
   },
   beforeDestroy() {
