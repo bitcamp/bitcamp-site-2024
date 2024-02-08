@@ -176,7 +176,12 @@ function toggleButton(question: string) {
   box-shadow: 0, 0, 20px, 0 rgba(24, 22, 81, 0.2);
   z-index: 10;
   text-align: center;
-  background-color: #5eb8ba;
+  // background-color: #5eb8ba;
+  // background-color: #ABD2D3;
+  // background-color: #354C4D;
+  // background-color: #3D6982;
+  // background-color: #256871;
+  background-color: #26446A;
   backdrop-filter: blur(35px);
   margin: 8vw;
   margin-bottom: 0;
