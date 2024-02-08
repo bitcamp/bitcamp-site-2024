@@ -20,25 +20,25 @@
 <script setup lang="ts">
 import ResponsiveText from "./ResponsiveHeroText.vue"
 
-import sign_empty from '../assets/images/bitcamp-sign/sign_empty.svg';
-import sign_full from '../assets/images/bitcamp-sign/sign_full.svg';
-import sign_1 from '../assets/images/bitcamp-sign/sign_1.svg';
-import sign_2 from '../assets/images/bitcamp-sign/sign_2.svg';
-import sign_3 from '../assets/images/bitcamp-sign/sign_3.svg';
-import sign_4 from '../assets/images/bitcamp-sign/sign_4.svg';
-import sign_5 from '../assets/images/bitcamp-sign/sign_5.svg';
-import sign_6 from '../assets/images/bitcamp-sign/sign_6.svg';
-import sign_7 from '../assets/images/bitcamp-sign/sign_7.svg';
-import sign_8 from '../assets/images/bitcamp-sign/sign_8.svg';
-import sign_9 from '../assets/images/bitcamp-sign/sign_9.svg';
-import sign_10 from '../assets/images/bitcamp-sign/sign_10.svg';
-import sign_11 from '../assets/images/bitcamp-sign/sign_11.svg';
-import sign_12 from '../assets/images/bitcamp-sign/sign_12.svg';
-import sign_13 from '../assets/images/bitcamp-sign/sign_13.svg';
-import sign_14 from '../assets/images/bitcamp-sign/sign_14.svg';
-import sign_15 from '../assets/images/bitcamp-sign/sign_15.svg';
-import sign_16 from '../assets/images/bitcamp-sign/sign_16.svg';
-import sign_17 from '../assets/images/bitcamp-sign/sign_17.svg';
+import sign_empty from '../assets/images/bitcamp-sign/sign_empty.webp';
+import sign_full from '../assets/images/bitcamp-sign/sign_full.webp';
+import sign_1 from '../assets/images/bitcamp-sign/sign_1.webp';
+import sign_2 from '../assets/images/bitcamp-sign/sign_2.webp';
+import sign_3 from '../assets/images/bitcamp-sign/sign_3.webp';
+import sign_4 from '../assets/images/bitcamp-sign/sign_4.webp';
+import sign_5 from '../assets/images/bitcamp-sign/sign_5.webp';
+import sign_6 from '../assets/images/bitcamp-sign/sign_6.webp';
+import sign_7 from '../assets/images/bitcamp-sign/sign_7.webp';
+import sign_8 from '../assets/images/bitcamp-sign/sign_8.webp';
+import sign_9 from '../assets/images/bitcamp-sign/sign_9.webp';
+import sign_10 from '../assets/images/bitcamp-sign/sign_10.webp';
+import sign_11 from '../assets/images/bitcamp-sign/sign_11.webp';
+import sign_12 from '../assets/images/bitcamp-sign/sign_12.webp';
+import sign_13 from '../assets/images/bitcamp-sign/sign_13.webp';
+import sign_14 from '../assets/images/bitcamp-sign/sign_14.webp';
+import sign_15 from '../assets/images/bitcamp-sign/sign_15.webp';
+import sign_16 from '../assets/images/bitcamp-sign/sign_16.webp';
+import sign_17 from '../assets/images/bitcamp-sign/sign_17.webp';
 
 import { ref } from 'vue';
 
