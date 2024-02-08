@@ -1,11 +1,11 @@
 <template>
-  <div class="slide" :style="{
-      backgroundImage: `url('_nuxt/assets/images/${path}')`,
+  <!-- <div class="slide" :style="{
+      backgroundImage: `url('${backgroundURL}')`,
       
-    }">
-    <a href="#">
-    </a>
-  </div>
+    }"> </div>-->
+    <img class="slide" :src="`/images/${path}`" />
+    <!-- <a href="#">
+    </a> -->
 </template>
 
 <script lang="ts">
