@@ -105,7 +105,7 @@ const questions = ref<FAQ[]>([
   {
     question: 'Who can apply to Bitcamp?',
     answer:
-      'Any college student or high school student is more than welcome to apply to Bitcamp!',
+      'Any college student, high school student, or middle school student is more than welcome to apply to Bitcamp!',
   },
   {
     question: 'Is Bitcamp free to attend?',
