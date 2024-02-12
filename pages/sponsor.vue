@@ -314,7 +314,7 @@
             ]" :args="['', '', '', '', 'check-w']"
               :description="'Peta-level sponsors will be given special recognition in our marketing materials as a co-host. '" />
 
-            <ProspectusEmptyRow :categoryName="'Restriced Add-Ons'" />
+            <ProspectusEmptyRow :categoryName="'Restricted Add-Ons'" />
             <ProspectusBottomRow :categoryName="'Podcast (by March 6th)'" :tierNames="[
               'Byte',
               'Kilo',
