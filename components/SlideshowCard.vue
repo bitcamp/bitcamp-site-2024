@@ -16,18 +16,6 @@ export default {
       type: String,
       required: true,
     },
-    year: {
-      type: Number,
-      required: false,
-    },
-    theme: {
-      type: String,
-      required: false,
-    },
-    text: {
-      type: String,
-      required: false,
-    }
   },
 };
 </script>

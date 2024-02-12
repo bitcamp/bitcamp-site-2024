@@ -5,14 +5,17 @@
     <!-- <SlideshowCard class="slideshow-card" year="2023" theme="Find Your Frontier" /> -->
     <Carousel class="slideshow-card" wrapAround autoplay="3000" transition="1000" pauseAutoplayOnHover>
       <Slide key="1">
-        <SlideshowCard path="slideshow/slide-1.svg" year="2023" theme="Find Your Frontier" />
+        <SlideshowCard path="slideshow/slide-1.svg" />
       </Slide>
       <Slide key="2">
-        <SlideshowCard path="slideshow/slide-2.svg" year="2023" theme="Find Your Frontier" />
+        <SlideshowCard path="slideshow/slide-2.svg" />
       </Slide>
       <Slide key="3">
-        <SlideshowCard path="slideshow/slide-3.svg" year="2023" theme="Find Your Frontier" />
+        <SlideshowCard path="slideshow/slide-3.svg" />
       </Slide>
+      <Slide v-for="i in 17" :key="i+3">
+        <SlideshowCard :path="`slideshow/slide-${i+3}.JPG`" />
+      </Slide> 
 
       <template #addons>
         <Navigation />
