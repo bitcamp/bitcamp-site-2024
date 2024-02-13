@@ -123,7 +123,8 @@ const questions = ref<FAQ[]>([
   },
   {
     question: 'What hardware is provided at Bitcamp?',
-    answer: 'More information coming soon!',
+    answer:
+      'Arduinos, sensors (ultrasonic, photoresistors, thermistors), inputs (buttons, switches), outputs (LEDs, piezo speakers, 7-segment displays, micro servo motors), passive components (resistors, capacitors, diodes), and wiring.',
   },
   {
     question: "Does Bitcamp provide travel accomodations or reimbursement?",
