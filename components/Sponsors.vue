@@ -76,6 +76,21 @@ const sponsors: Sponsor[] = [
     amount: 1500,
     url: 'https://www.pepsi.com/',
   },
+  {
+    name: 'UMIACS',
+    amount: 13332,
+    url: 'https://www.umiacs.umd.edu/'
+  },
+  {
+    name: 'CMNS',
+    amount: 13333,
+    url: 'https://cmns.umd.edu/'
+  },
+  {
+    name: 'UMDCS',
+    amount: 13335,
+    url: 'https://www.cs.umd.edu/'
+  }
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
