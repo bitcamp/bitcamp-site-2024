@@ -1,11 +1,6 @@
 <template>
   <div id="campfire-games" class="section">
     <div id="sign-info">
-      <!-- <img
-        class="campfire-games"
-        src="../assets/images/campfire-games/cfg-sign.svg"
-        alt="Campfire Games"
-      /> -->
 
       <img :src="signSrc" class="campfire-games" alt="Bitcamp sign" />
 
@@ -72,7 +67,7 @@ const counter = ref(0);
 function incrementCounter() {
   counter.value++;
 }
-setInterval(incrementCounter, 250);
+setInterval(incrementCounter, 315);
 
 let imagesList = [
   sign_1,
@@ -114,7 +109,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   max-width: 50%;
   padding-right: 2%;
   padding-left: 2%;
-  color: black
+  color: black;
 }
 
 .campfire-games {
