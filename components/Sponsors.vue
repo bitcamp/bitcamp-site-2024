@@ -90,6 +90,11 @@ const sponsors: Sponsor[] = [
     name: 'UMDCS',
     amount: 13335,
     url: 'https://www.cs.umd.edu/'
+  },
+  {
+    name: 'LTS',
+    amount: 3500,
+    url: 'https://www.ltsnet.net/'
   }
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
