@@ -52,14 +52,14 @@
 </template>
 
 <script setup lang="ts">
-import sign_1 from '../assets/images/campfire-games/campfire_1.svg';
-import sign_2 from '../assets/images/campfire-games/campfire_2.svg';
-import sign_3 from '../assets/images/campfire-games/campfire_3.svg';
-import sign_4 from '../assets/images/campfire-games/campfire_4.svg';
-import sign_5 from '../assets/images/campfire-games/campfire_5.svg';
-import sign_6 from '../assets/images/campfire-games/campfire_6.svg';
-import sign_empty from '../assets/images/campfire-games/campfire_none.svg';
-import sign_all from '../assets/images/campfire-games/campfire_all.svg';
+import sign_1 from '../assets/images/campfire-games/campfire_1.webp';
+import sign_2 from '../assets/images/campfire-games/campfire_2.webp';
+import sign_3 from '../assets/images/campfire-games/campfire_3.webp';
+import sign_4 from '../assets/images/campfire-games/campfire_4.webp';
+import sign_5 from '../assets/images/campfire-games/campfire_5.webp';
+import sign_6 from '../assets/images/campfire-games/campfire_6.webp';
+import sign_empty from '../assets/images/campfire-games/campfire_none.webp';
+import sign_all from '../assets/images/campfire-games/campfire_all.webp';
 
 import { ref } from 'vue';
 
