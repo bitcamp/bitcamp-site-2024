@@ -1,11 +1,8 @@
 <template>
   <div id="campfire-games" class="section">
     <div id="sign-info">
-      <img
-        class="campfire-games"
-        src="../assets/images/campfire-games/cfg-sign.svg"
-        alt="Campfire Games"
-      />
+
+      <img :src="signSrc" class="campfire-games" alt="Bitcamp sign" />
 
       <p id="cfg-blurb">
         The Campfire Games is a way to learn, grow, and build with the Bitcamp
@@ -22,11 +19,7 @@
 
     <div id="teams-div">
       <div class="team-section">
-        <img
-          class="team-picture red-marshie"
-          src="../assets/images/marshies/red-marshie.svg"
-          alt="Red marshie"
-        />
+        <img class="team-picture red-marshie" src="../assets/images/marshies/red-marshie.svg" alt="Red marshie" />
         <h3 class="team-title red">Red Team</h3>
         <p class="team-blurb">
           The red team is <strong class="red">passionate</strong> and
@@ -35,11 +28,7 @@
         </p>
       </div>
       <div class="team-section">
-        <img
-          class="team-picture"
-          src="../assets/images/marshies/blue-marshie.svg"
-          alt="Blue marshie"
-        />
+        <img class="team-picture" src="../assets/images/marshies/blue-marshie.svg" alt="Blue marshie" />
         <h3 class="team-title blue">Blue Team</h3>
         <p class="team-blurb">
           The blue team is <strong class="blue">rational</strong> and
@@ -49,11 +38,7 @@
         </p>
       </div>
       <div class="team-section">
-        <img
-          class="team-picture"
-          src="../assets/images/marshies/green-marshie.svg"
-          alt="Green marshie"
-        />
+        <img class="team-picture" src="../assets/images/marshies/green-marshie.svg" alt="Green marshie" />
         <h3 class="team-title green">Green Team</h3>
         <p class="team-blurb">
           The green team is
@@ -66,7 +51,42 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import sign_1 from '../assets/images/campfire-games/campfire_1.webp';
+import sign_2 from '../assets/images/campfire-games/campfire_2.webp';
+import sign_3 from '../assets/images/campfire-games/campfire_3.webp';
+import sign_4 from '../assets/images/campfire-games/campfire_4.webp';
+import sign_5 from '../assets/images/campfire-games/campfire_5.webp';
+import sign_6 from '../assets/images/campfire-games/campfire_6.webp';
+import sign_empty from '../assets/images/campfire-games/campfire_none.webp';
+import sign_all from '../assets/images/campfire-games/campfire_all.webp';
+
+import { ref } from 'vue';
+
+const counter = ref(0);
+function incrementCounter() {
+  counter.value++;
+}
+setInterval(incrementCounter, 315);
+
+let imagesList = [
+  sign_1,
+  sign_2,
+  sign_3,
+  sign_4,
+  sign_5,
+  sign_6,
+  sign_all,
+  sign_all,
+  sign_empty,
+  sign_empty,
+  sign_all,
+  sign_all,
+];
+
+const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
+</script>
+
 
 <style scoped lang="scss">
 #campfire-games {
@@ -89,7 +109,7 @@
   max-width: 50%;
   padding-right: 2%;
   padding-left: 2%;
-  color: black
+  color: black;
 }
 
 .campfire-games {
@@ -152,6 +172,7 @@
   max-width: 500px;
   width: 90%;
 }
+
 .team-picture.red-marshie {
   width: 65%;
 }
@@ -175,11 +196,13 @@
   #campfire-games {
     // width: 25%;
   }
+
   #cfg-blurb {
     max-width: 52%;
     padding-left: 5%;
     padding-right: 0%;
   }
+
   // .team-picture {
   //   width: 25%;
   // }
@@ -192,6 +215,7 @@
   #campfire-games {
     margin-top: 150px;
   }
+
   .team-section {
     width: 100%;
     margin-top: 0px;
@@ -225,9 +249,11 @@
   #cfg-blurb {
     padding-bottom: 3rem;
   }
+
   .team-picture {
     width: 80%;
   }
+
   .team-picture.red-marshie {
     width: 55%;
   }
@@ -237,18 +263,23 @@
   .team-section {
     margin-top: -20px;
   }
+
   .team-title.blue {
     margin-top: -30px;
   }
+
   .team-title.green {
     margin-top: -30px;
   }
+
   .campfire-games {
     width: 100%
   }
+
   .team-picture {
     width: 70%;
   }
+
   .team-picture.red-marshie {
     width: 60%;
   }

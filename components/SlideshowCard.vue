@@ -3,8 +3,8 @@
       backgroundImage: `url('${backgroundURL}')`,
       
     }"> </div>-->
-    <img class="slide" :src="`/images/${path}`" />
-    <!-- <a href="#">
+  <img class="slide" :src="`/images/${path}`" />
+  <!-- <a href="#">
     </a> -->
 </template>
 
@@ -46,6 +46,4 @@ export default {
   font-family: Avenir;
   font-weight: 900;
 }
-
-
 </style>
