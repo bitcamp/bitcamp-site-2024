@@ -1,18 +1,20 @@
 <template>
   <div v-if="showText" class="responsive-text">
     <img class="registerSign" src="../assets/images/background/applicationsnowopen.svg" alt="Applications Now Open!" />
-    <div class="header-text" >
-      <span class = "special-text">Come celebrate Bitcamp’s 10th anniversary with us on<br/> </span>
-      <span class = "conference-date">April 19-21, 2024<br /></span>
-      <span style = "line-height: 2.5;">Bitcamp is a place for exploration...</span>
-      <br>
-      <div class = "body-text">
-        You have 36 hours to explore, learn, and create with world-
-        class mentors and over 1,000 participants. Whether you're a 
-        seasoned hacker or new to it all, there's something for everyone.
+    <div class="header-text">
+      <p class="special-text">Come celebrate Bitcamp’s 10th anniversary with us on</p>
+      <p class="conference-date">April 19-21, 2024</p>
+      <div class="body-text">
+        <span style="line-height: 2.5;">Bitcamp is a place for exploration...</span>
+        <br>
+        <div>
+          You have 36 hours to explore, learn, and create with world-
+          class mentors and over 1,000 participants. Whether you're a 
+          seasoned hacker or new to it all, there's something for everyone.
+        </div>
+        <br>
+        <span>If you're ready for an adventure, we'll see you by the campfire!</span>
       </div>
-      <br>
-      <span>If you're ready for an adventure, we'll see you by the campfire!</span>
     </div>
     <RegisterButton text="REGISTER" link="https://register.bit.camp/" />
     <div id="mission" class="slideshow-wrapper">
@@ -39,7 +41,7 @@
 .responsive-text {
   color: white;
   text-align: left;
-  padding: 0 20px 20px 20px;
+  padding: 20px;
   @media (max-width: 776px) {
     margin-bottom: 20rem;
   }
@@ -50,7 +52,12 @@
   margin-bottom: 2rem;
   font-family: 'Aleo';
   font-size: 1rem;
-  padding: 0 3%;
+  // padding: 0 7%;
+  padding: 0 5%;
+
+  @media (max-width: 776px) {
+    padding: 0 0;
+  }
   font-weight: 400;
 
   .special-text{
@@ -61,24 +68,32 @@
   }
 
   .conference-date{
+    padding-top: 0.2rem;
     font-size: 1.5rem;
     color: #FEF7D2;
     font-weight: 700;
   }
   
-  .body-text{
-    padding-right: 98px;
-  }
+  // .body-text{
+  //   padding-right: 98px;
+  // }
 
 }
 .registerSign {
   margin-left: auto;
   margin-right: auto;
-  width: 25rem;
+  width: 26rem;
   display: block;
-  margin-right: 7.5rem;
-  padding: 2% 0;
-}.slideshow-wrapper {
+  // margin-right: 7.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0;
+
+  @media (max-width: 1000px) {
+    width: 23rem;
+  }
+}
+
+.slideshow-wrapper {
   margin: auto;
   /* padding-top: 15rem; */
   width: 95%;
@@ -90,6 +105,10 @@
     height: 150px;
   }
 
+}
+
+.body-text {
+  margin-top: 0.5rem;
 }
 .r-slide {
   /* position: absolute; */
