@@ -49,11 +49,11 @@
         transform="matrix(-1 0 0 1 68.079 217.145)" />
     <ellipse cx="-231.615" cy="366.15" fill="url(#e)" rx="42.591" ry="35.865"
         style="mix-blend-mode:hard-light" transform="scale(-1 1)" visibility="hidden">
-        <animate id="g" fill="freeze" attributeName="visibility" begin="f.end-0.2s" dur="0.4s"
+        <animate id="g" fill="freeze" attributeName="visibility" begin="f.end-0.2s" dur="0.515s"
             values="visible;hidden" />
-        <animate id="h" fill="freeze" attributeName="visibility" begin="g.end" dur="0.8s"
+        <animate id="h" fill="freeze" attributeName="visibility" begin="g.end" dur="1.1s"
             values="visible;hidden" />
-        <animate id="r" fill="freeze" attributeName="visibility" begin="h.end" dur="0.8s"
+        <animate id="r" fill="freeze" attributeName="visibility" begin="h.end" dur="1.1s"
             values="visible;hidden" />
     </ellipse>
     <ellipse cx="11.616" cy="9.656" fill="#fff" rx="11.616" ry="9.656"
@@ -91,47 +91,47 @@
     </defs>
     <ellipse cx="-176.615" cy="366.15" fill="url(#i)" rx="42.591" ry="35.865"
         style="mix-blend-mode:hard-light" transform="scale(-1 1)" visibility="hidden">
-        <animate id="f" fill="freeze" attributeName="visibility" begin="j.end-0.2s" dur="0.4s"
+        <animate id="f" fill="freeze" attributeName="visibility" begin="j.end-0.2s" dur="0.515s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="1.1s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="1.1s"
             values="visible;hidden" />
     </ellipse>
     <ellipse cx="-126.099" cy="365.61" fill="url(#k)" rx="42.591" ry="35.865"
         style="mix-blend-mode:hard-light" transform="scale(-1 1)" visibility="hidden">
-        <animate id="j" fill="freeze" attributeName="visibility" begin="l.end-0.2s" dur="0.4s"
+        <animate id="j" fill="freeze" attributeName="visibility" begin="l.end-0.2s" dur="0.515s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="1.1s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="1.1s"
             values="visible;hidden" />
     </ellipse>
     <ellipse cx="-70.099" cy="354.15" fill="url(#m)" rx="42.591" ry="35.865"
         style="mix-blend-mode:hard-light" transform="scale(-1 1)" visibility="hidden">
-        <animate id="l" fill="freeze" attributeName="visibility" begin="n.end-0.2s" dur="0.4s"
+        <animate id="l" fill="freeze" attributeName="visibility" begin="n.end-0.2s" dur="0.515s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="1.1s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="1.1s"
             values="visible;hidden" />
     </ellipse>
     <ellipse cx="-56.559" cy="285.06" fill="url(#o)" rx="42.591" ry="35.865"
         style="mix-blend-mode:hard-light" transform="scale(-1 1)" visibility="hidden">
-        <animate id="n" fill="freeze" attributeName="visibility" begin="p.end-0.2s" dur="0.4s"
+        <animate id="n" fill="freeze" attributeName="visibility" begin="p.end-0.2s" dur="0.515s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="1.1s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="1.1s"
             values="visible;hidden" />
     </ellipse>
     <ellipse cx="-56.463" cy="227.261" fill="url(#q)" rx="42.591" ry="35.865"
         style="mix-blend-mode:hard-light" transform="scale(-1 1)" visibility="hidden">
-        <animate id="p" fill="freeze" attributeName="visibility" begin="0s; r.end-0.2s" dur="0.4s"
+        <animate id="p" fill="freeze" attributeName="visibility" begin="0s; r.end-0.2s" dur="0.515s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="g.end" dur="1.1s"
             values="visible;hidden" />
-        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="0.8s"
+        <animate fill="freeze" attributeName="visibility" begin="h.end" dur="1.1s"
             values="visible;hidden" />
     </ellipse>
 </svg>

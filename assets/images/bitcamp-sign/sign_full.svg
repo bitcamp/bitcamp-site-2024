@@ -1188,7 +1188,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="0s; anim20.end"
                 id="anim1" />
@@ -1234,7 +1234,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
                 begin="anim1.end-0.2s"
@@ -1282,7 +1282,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim2.end-0.2s"
                 id="anim3" />
@@ -1328,7 +1328,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim4.end-0.2s"
                 id="anim5" />
@@ -1375,7 +1375,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim3.end-0.2s"
                 id="anim4" />
@@ -1422,7 +1422,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 id="anim10"
                 begin="anim9.end-0.2s" />
@@ -1470,7 +1470,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
                 begin="anim8.end-0.2s"
@@ -1519,7 +1519,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
                 begin="anim7.end-0.2s"
@@ -1567,7 +1567,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
                 begin="anim5.end-0.2s"
@@ -1616,7 +1616,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
                 begin="anim6.end-0.2s"
@@ -1665,7 +1665,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
                 begin="anim11.end-0.2s"
@@ -1714,7 +1714,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim10.end-0.2s"
                 id="anim11" />
@@ -1762,7 +1762,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim16.end-0.2s"
                 id="anim18" />
@@ -1811,7 +1811,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim15.end-0.2s"
                 id="anim16" />
@@ -1859,7 +1859,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim14.end-0.2s"
                 id="anim15" />
@@ -1908,7 +1908,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim13.end-0.2s"
                 id="anim14" />
@@ -1957,7 +1957,7 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.4s"
+                dur="0.45s"
                 fill="freeze"
                 begin="anim12.end-0.2s"
                 id="anim13" />
