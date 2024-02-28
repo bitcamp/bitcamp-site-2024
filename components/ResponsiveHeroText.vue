@@ -1,6 +1,6 @@
 <template>
   <div v-if="showText" class="responsive-text">
-    <img class="registerSign" src="../assets/images/background/applicationsnowopen.svg" alt="Applications Now Open!" />
+    <img class="registerSign" src="~/assets/images/background/applications-open.svg" alt="Applications Now Open!" />
     <div class="header-text">
       <p class="special-text">Come celebrate Bitcamp’s 10th anniversary with us on</p>
       <p class="conference-date">April 19-21, 2024</p>
