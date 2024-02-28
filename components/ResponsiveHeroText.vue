@@ -1,15 +1,18 @@
 <template>
   <div v-if="showText" class="responsive-text">
-    <img class="registerSign" src="../assets/images/background/registerSign.svg" alt="Register Now" />
+    <img class="registerSign" src="../assets/images/background/applicationsnowopen.svg" alt="Applications Now Open!" />
     <div class="header-text" >
-      Bitcamp is a place for exploration. <br /><br />
-      You will have 36 hours to delve into your curiosities, learn
-      something new, and make something awesome. With world-class mentors
-      and 1,000+ fellow campers, you're in for an amazing time. Whether
-      you're a seasoned hacker or completely new to the world of hacking,
-      we'll have something for you.
-      <br /><br />
-      If you're ready for an adventure, we'll see you by the campfire!
+      <span class = "special-text">Come celebrate Bitcamp’s 10th anniversary with us on<br/> </span>
+      <span class = "conference-date">April 19-21, 2024<br /></span>
+      <span style = "line-height: 2.5;">Bitcamp is a place for exploration...</span>
+      <br>
+      <div class = "body-text">
+        You have 36 hours to explore, learn, and create with world-
+        class mentors and over 1,000 participants. Whether you're a 
+        seasoned hacker or new to it all, there's something for everyone.
+      </div>
+      <br>
+      <span>If you're ready for an adventure, we'll see you by the campfire!</span>
     </div>
     <RegisterButton text="REGISTER" link="https://register.bit.camp/" />
     <div id="mission" class="slideshow-wrapper">
@@ -36,7 +39,7 @@
 .responsive-text {
   color: white;
   text-align: left;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   @media (max-width: 776px) {
     margin-bottom: 20rem;
   }
@@ -47,16 +50,35 @@
   margin-bottom: 2rem;
   font-family: 'Aleo';
   font-size: 1rem;
-  padding: 0 5%;
+  padding: 0 3%;
+  font-weight: 400;
+
+  .special-text{
+    line-height: 1.8;
+    font-size: 1.125rem;
+    color: #FEF7D2;
+    font-weight: 700;
+  }
+
+  .conference-date{
+    font-size: 1.5rem;
+    color: #FEF7D2;
+    font-weight: 700;
+  }
+  
+  .body-text{
+    padding-right: 98px;
+  }
+
 }
 .registerSign {
   margin-left: auto;
   margin-right: auto;
-  width: 16rem;
+  width: 25rem;
   display: block;
-  padding: 3% 0;
-}
-.slideshow-wrapper {
+  margin-right: 7.5rem;
+  padding: 2% 0;
+}.slideshow-wrapper {
   margin: auto;
   /* padding-top: 15rem; */
   width: 95%;
