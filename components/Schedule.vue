@@ -82,11 +82,6 @@
         </div>
       </div>
     </div>
-    <img
-      src="~/assets/images/icons/register-now.svg"
-      alt=""
-      class="register-icon"
-    />
   </div>
   <ModalsContainer />
   <EventModal
@@ -381,14 +376,6 @@ export default {
       width: 18rem;
       margin-bottom: 1rem;
     }
-  }
-
-  .register-icon {
-    width: 10rem;
-    margin: -0.2rem auto;
-    z-index: 4;
-    position: relative;
-    display: block;
   }
 
   .event-list-container {
