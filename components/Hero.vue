@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import ResponsiveText from './ResponsiveHeroText.vue';
 
-import sign_empty from '../assets/images/bitcamp-sign/sign_full.svg';
+import sign_empty from '../assets/images/bitcamp-sign/sign_full.min.svg';
 
 import { ref } from 'vue';
 
