@@ -2,7 +2,9 @@
   <div class="hero-wrapper">
     <div class="container">
       <div class="column column-1">
-        <img :src="signSrc" class="svgStyle" alt="Bitcamp sign" />
+        <img v-for="(image, index) in preloadedImages" :src="image.src" class="svgStyle"
+         :style="{ display: index === currentFrame ? 'inline-block' : 'none' }"
+         alt="Bitcamp sign" />
       </div>
       <div class="column column-2">
         <responsive-text v-if="!isMobile"></responsive-text>
@@ -74,7 +76,21 @@ let imagesList = [
   sign_full,
 ];
 
-const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
+// const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
+const currentFrame = computed(() => counter.value % imagesList.length);
+
+let preloadedImages: HTMLElement[] = [];
+
+const preloadImages = () => {
+  // Map over imagesList and preload each image
+  preloadedImages = imagesList.map(imageURL => {
+    const img = new Image();
+    img.src = imageURL;
+    return img;
+  });
+}
+onMounted(preloadImages);
+  
 </script>
 
 <script lang="ts">
@@ -102,7 +118,7 @@ export default {
   methods: {
     updateScreenWidth() {
       this.screenWidth = window.innerWidth;
-    }
+    },
   }
 }
 </script>

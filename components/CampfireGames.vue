@@ -2,7 +2,9 @@
   <div id="campfire-games" class="section">
     <div id="sign-info">
 
-      <img :src="signSrc" class="campfire-games" alt="Bitcamp sign" />
+      <img v-for="i in imagesList.length" :src="imagesList[i-1]" class="campfire-games"
+        :style="{ display: i-1 === currentFrame ? 'inline-block' : 'none'  }"  
+        alt="Campfire Games sign" />
 
       <p id="cfg-blurb">
         The Campfire Games is a way to learn, grow, and build with the Bitcamp
@@ -84,7 +86,8 @@ let imagesList = [
   sign_all,
 ];
 
-const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
+// const currentFrame = computed(() => imagesList[counter.value % imagesList.length]);
+const currentFrame = computed(() => counter.value % imagesList.length);
 </script>
 
 
