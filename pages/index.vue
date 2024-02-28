@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <Navbar />
-    <Hero />
+    <!-- <Hero /> -->
     <Tracks />
     <!--<img class="cloud-1" src="~/assets/images/background/cloud1.png" />-->
     <MiniEvents />

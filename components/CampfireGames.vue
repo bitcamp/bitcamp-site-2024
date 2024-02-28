@@ -1,8 +1,33 @@
 <template>
   <div id="campfire-games" class="section">
     <div id="sign-info">
-
-      <img :src="signSrc" class="campfire-games" alt="Bitcamp sign" />
+      <div :class="{ 'no-display-image': counter > 5 }">
+        <img :src="sign_1" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 5 || counter > 10 }">
+        <img :src="sign_2" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 10 || counter > 15 }">
+        <img :src="sign_3" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 15 || counter > 20 }">
+        <img :src="sign_4" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 20 || counter > 25 }">
+        <img :src="sign_5" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 25 || counter > 30 }">
+        <img :src="sign_6" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 30 || counter > 35 }">
+        <img :src="sign_all" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 35 || counter > 40 }">
+        <img :src="sign_empty" class="campfire-games" alt="Bitcamp sign" />
+      </div>
+      <div :class="{ 'no-display-image': counter <= 40 }">
+        <img :src="sign_all" class="campfire-games" alt="Bitcamp sign" />
+      </div>
 
       <p id="cfg-blurb">
         The Campfire Games is a way to learn, grow, and build with the Bitcamp
@@ -66,27 +91,11 @@ import { ref } from 'vue';
 const counter = ref(0);
 function incrementCounter() {
   counter.value++;
+
+  if (counter.value >= 45) counter.value = 0;
 }
-setInterval(incrementCounter, 315);
-
-let imagesList = [
-  sign_1,
-  sign_2,
-  sign_3,
-  sign_4,
-  sign_5,
-  sign_6,
-  sign_all,
-  sign_all,
-  sign_empty,
-  sign_empty,
-  sign_all,
-  sign_all,
-];
-
-const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
+setInterval(incrementCounter, 45);
 </script>
-
 
 <style scoped lang="scss">
 #campfire-games {
@@ -110,6 +119,10 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   padding-right: 2%;
   padding-left: 2%;
   color: black;
+}
+
+.no-display-image {
+  display: none;
 }
 
 .campfire-games {
@@ -273,7 +286,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   }
 
   .campfire-games {
-    width: 100%
+    width: 100%;
   }
 
   .team-picture {
