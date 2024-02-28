@@ -2,7 +2,11 @@
   <div class="hero-wrapper">
     <div class="container">
       <div class="column column-1">
-        <img :src="sign_empty" class="svgStyle" alt="Bitcamp sign" />
+        <img
+          src="../assets/images/bitcamp-sign/sign_full.min.svg"
+          class="svgStyle"
+          alt="Bitcamp sign"
+        />
       </div>
       <div class="column column-2">
         <responsive-text v-if="!isMobile"></responsive-text>
@@ -26,16 +30,6 @@
 
 <script setup lang="ts">
 import ResponsiveText from './ResponsiveHeroText.vue';
-
-import sign_empty from '../assets/images/bitcamp-sign/sign_full.svg';
-
-import { ref } from 'vue';
-
-const counter = ref(0);
-function incrementCounter() {
-  counter.value++;
-}
-setInterval(incrementCounter, 250);
 </script>
 
 <script lang="ts">

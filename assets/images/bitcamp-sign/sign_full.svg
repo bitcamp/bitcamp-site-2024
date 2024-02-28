@@ -1188,37 +1188,44 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="0s; anim19.end-0.3s"
+                begin="0s; anim20.end"
                 id="anim1" />
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="151.605"
                 cy="167.604"
                 r="19.6049"
                 fill="url(#paint1_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle123" />
             <circle
                 cx="176.605"
                 cy="157.604"
                 r="19.6049"
                 fill="url(#paint2_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle125" />
             <circle
                 cx="202.605"
                 cy="162.604"
                 r="19.6049"
                 fill="url(#paint3_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle127" />
         </g>
         <g
@@ -1227,39 +1234,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
-                begin="anim1.end-0.3s"
+                begin="anim1.end-0.2s"
                 id="anim2" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="227.605"
                 cy="155.604"
                 r="19.6049"
                 fill="url(#paint4_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle129" />
             <circle
                 cx="247.605"
                 cy="147.604"
                 r="19.6049"
                 fill="url(#paint5_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle131" />
             <circle
                 cx="274.605"
                 cy="136.604"
                 r="19.6049"
                 fill="url(#paint6_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle133" />
         </g>
         <g
@@ -1268,37 +1282,44 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim2.end-0.3s"
+                begin="anim2.end-0.2s"
                 id="anim3" />
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="298.605"
                 cy="136.604"
                 r="19.6049"
                 fill="url(#paint7_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle135" />
             <circle
                 cx="325.605"
                 cy="146.604"
                 r="19.6049"
                 fill="url(#paint8_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle137" />
             <circle
                 cx="350.605"
                 cy="154.604"
                 r="19.6049"
                 fill="url(#paint9_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle139" />
         </g>
         <g
@@ -1307,37 +1328,45 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim4.end-0.3s"
+                begin="anim4.end-0.2s"
                 id="anim5" />
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="468.605"
                 cy="180.604"
                 r="19.6049"
                 fill="url(#paint10_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle141" />
             <circle
                 cx="486.605"
                 cy="187.604"
                 r="19.6049"
                 fill="url(#paint11_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle143" />
             <circle
                 cx="443.605"
                 cy="180.604"
                 r="19.6049"
                 fill="url(#paint12_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle145" />
         </g>
         <g
@@ -1346,37 +1375,45 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim3.end-0.3s"
+                begin="anim3.end-0.2s"
                 id="anim4" />
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="418.605"
                 cy="177.604"
                 r="19.6049"
                 fill="url(#paint13_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle147" />
             <circle
                 cx="396.605"
                 cy="170.604"
                 r="19.6049"
                 fill="url(#paint14_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle149" />
             <circle
                 cx="373.605"
                 cy="162.604"
                 r="19.6049"
                 fill="url(#paint15_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle151" />
         </g>
         <g
@@ -1385,38 +1422,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
                 id="anim10"
-                begin="anim9.end-0.3s" />
+                begin="anim9.end-0.2s" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="379.605"
                 cy="304.604"
                 r="19.6049"
                 fill="url(#paint16_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle153" />
             <circle
                 cx="399.605"
                 cy="297.604"
                 r="19.6049"
                 fill="url(#paint17_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle155" />
             <circle
                 cx="420.605"
                 cy="305.604"
                 r="19.6049"
                 fill="url(#paint18_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle157" />
         </g>
         <g
@@ -1425,39 +1470,47 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
-                begin="anim8.end-0.3s"
+                begin="anim8.end-0.2s"
                 id="anim9" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="442.605"
                 cy="306.604"
                 r="19.6049"
                 fill="url(#paint19_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle159" />
             <circle
                 cx="465.605"
                 cy="302.604"
                 r="19.6049"
                 fill="url(#paint21_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle163" />
             <circle
                 cx="478.605"
                 cy="287.604"
                 r="19.6049"
                 fill="url(#paint22_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle165" />
         </g>
         <g
@@ -1466,38 +1519,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
-                begin="anim7.end-0.3s"
+                begin="anim7.end-0.2s"
                 id="anim8" />
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="492.605"
                 cy="273.604"
                 r="19.6049"
                 fill="url(#paint23_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle167" />
             <circle
                 cx="504.605"
                 cy="259.604"
                 r="19.6049"
                 fill="url(#paint24_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle169" />
             <circle
                 cx="523.605"
                 cy="251.604"
                 r="19.6049"
                 fill="url(#paint25_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle171" />
         </g>
         <g
@@ -1506,39 +1567,47 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
-                begin="anim5.end-0.3s"
+                begin="anim5.end-0.2s"
                 id="anim6" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
+
             <circle
                 cx="501.605"
                 cy="202.604"
                 r="19.6049"
                 fill="url(#paint20_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle161" />
             <circle
                 cx="520.605"
                 cy="209.604"
                 r="19.6049"
                 fill="url(#paint26_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle173" />
             <circle
                 cx="539.605"
                 cy="216.604"
                 r="19.6049"
                 fill="url(#paint28_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle177" />
         </g>
         <g
@@ -1547,39 +1616,47 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
-                begin="anim6.end-0.3s"
+                begin="anim6.end-0.2s"
                 id="anim7" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="542.605"
                 cy="244.604"
                 r="19.6049"
                 fill="url(#paint27_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle175" />
             <circle
                 cx="561.605"
                 cy="237.604"
                 r="19.6049"
                 fill="url(#paint29_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle179" />
             <circle
                 cx="559.605"
                 cy="222.604"
                 r="19.6049"
                 fill="url(#paint30_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle181" />
         </g>
         <g
@@ -1588,39 +1665,47 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 repeatCount="1"
                 fill="freeze"
-                begin="anim11.end-0.3s"
+                begin="anim11.end-0.2s"
                 id="anim12" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="241.605"
                 cy="321.604"
                 r="19.6049"
                 fill="url(#paint33_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle187" />
             <circle
                 cx="265.605"
                 cy="330.604"
                 r="19.6049"
                 fill="url(#paint34_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle189" />
             <circle
                 cx="288.605"
                 cy="337.604"
                 r="19.6049"
                 fill="url(#paint35_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle191" />
         </g>
         <g
@@ -1629,38 +1714,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim10.end-0.3s"
+                begin="anim10.end-0.2s"
                 id="anim11" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="311.605"
                 cy="329.604"
                 r="19.6049"
                 fill="url(#paint36_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle193" />
             <circle
                 cx="331.605"
                 cy="321.604"
                 r="19.6049"
                 fill="url(#paint37_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle195" />
             <circle
                 cx="356.605"
                 cy="313.604"
                 r="19.6049"
                 fill="url(#paint38_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle197" />
         </g>
         <g
@@ -1669,39 +1762,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim16.end-0.3s"
+                begin="anim16.end-0.2s"
                 id="anim18" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
 
             <circle
                 cx="126.605"
                 cy="158.604"
                 r="19.6049"
                 fill="url(#paint0_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle121" />
             <circle
                 cx="78.6049"
                 cy="177.605"
                 r="19.6049"
                 fill="url(#paint40_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle201" />
             <circle
                 cx="96.6049"
                 cy="159.605"
                 r="19.6049"
                 fill="url(#paint41_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle203" />
         </g>
         <g
@@ -1711,38 +1811,45 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim15.end-0.3s"
+                begin="anim15.end-0.2s"
                 id="anim16" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="78.6049"
                 cy="200.605"
                 r="19.6049"
                 fill="url(#paint39_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle199" />
             <circle
                 cx="58.6049"
                 cy="210.605"
                 r="19.6049"
                 fill="url(#paint42_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle205" />
             <circle
                 cx="33.6049"
                 cy="219.605"
                 r="19.6049"
                 fill="url(#paint43_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle207" />
         </g>
         <g
@@ -1752,38 +1859,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim14.end-0.3s"
+                begin="anim14.end-0.2s"
                 id="anim15" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="19.6049"
                 cy="231.605"
                 r="19.6049"
                 fill="url(#paint44_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle209" />
             <circle
                 cx="39.6049"
                 cy="244.605"
                 r="19.6049"
                 fill="url(#paint45_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle211" />
             <circle
                 cx="67.6049"
                 cy="255.605"
                 r="19.6049"
                 fill="url(#paint46_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle213" />
         </g>
         <g
@@ -1793,38 +1908,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim13.end-0.3s"
+                begin="anim13.end-0.2s"
                 id="anim14" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="90.6049"
                 cy="275.605"
                 r="19.6049"
                 fill="url(#paint47_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle215" />
             <circle
                 cx="115.605"
                 cy="288.605"
                 r="19.6049"
                 fill="url(#paint48_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle217" />
             <circle
                 cx="145.605"
                 cy="292.605"
                 r="19.6049"
                 fill="url(#paint49_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle219" />
         </g>
         <g
@@ -1834,38 +1957,46 @@
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.6s"
+                dur="0.45s"
                 fill="freeze"
-                begin="anim12.end-0.3s"
+                begin="anim12.end-0.2s"
                 id="anim13" />
 
             <animate
                 attributeName="visibility"
                 values="visible;hidden"
-                dur="0.5s"
+                dur="0.8s"
                 fill="freeze"
-                begin="anim18.end-0.3s"
+                begin="anim18.end"
                 id="anim19" />
+
+            <animate
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.8s"
+                fill="freeze"
+                begin="anim19.end"
+                id="anim20" />
             <circle
                 cx="195.605"
                 cy="305.604"
                 r="19.6049"
                 fill="url(#paint31_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle183" />
             <circle
                 cx="216.605"
                 cy="313.604"
                 r="19.6049"
                 fill="url(#paint32_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle185" />
             <circle
                 cx="170.605"
                 cy="294.605"
                 r="19.6049"
                 fill="url(#paint50_radial_1_357)"
-                style="mix-b.end-0.3s-mode:hard-light"
+                style="mix-b.end-mode:hard-light"
                 id="circle221" />
         </g>
     </g>
@@ -2116,7 +2247,7 @@
         d="M319.576 441.524L316.663 444.265L316.705 444.31L316.748 444.352L319.576 441.524ZM319.576 422.036L316.748 419.208L316.705 419.25L316.663 419.295L319.576 422.036ZM331.7 422.036L328.787 424.777L328.829 424.822L328.872 424.864L331.7 422.036ZM331.7 424.92L328.872 422.092L328.829 422.134L328.787 422.179L331.7 424.92ZM331.14 430.044L328.227 432.785L328.269 432.83L328.312 432.872L331.14 430.044ZM331.14 432.704L328.312 429.876L328.269 429.918L328.227 429.963L331.14 432.704ZM331.7 438.64L328.787 441.381L328.829 441.426L328.872 441.468L331.7 438.64ZM331.7 441.524L328.872 438.696L328.829 438.738L328.787 438.783L331.7 441.524ZM320.696 438C320.987 438 321.322 438.057 321.659 438.2C321.992 438.341 322.239 438.53 322.404 438.696L316.748 444.352C317.777 445.382 319.153 446 320.696 446V438ZM322.489 438.783C322.654 438.958 322.827 439.204 322.954 439.52C323.081 439.838 323.128 440.145 323.128 440.404H315.128C315.128 441.869 315.678 443.219 316.663 444.265L322.489 438.783ZM323.128 440.404V423.156H315.128V440.404H323.128ZM323.128 423.156C323.128 423.415 323.081 423.722 322.954 424.04C322.827 424.356 322.654 424.602 322.489 424.777L316.663 419.295C315.678 420.341 315.128 421.691 315.128 423.156H323.128ZM322.404 424.864C322.239 425.03 321.992 425.219 321.659 425.36C321.322 425.503 320.987 425.56 320.696 425.56V417.56C319.153 417.56 317.777 418.178 316.748 419.208L322.404 424.864ZM320.696 425.56H330.608V417.56H320.696V425.56ZM330.608 425.56C330.318 425.56 329.967 425.504 329.605 425.346C329.244 425.189 328.973 424.974 328.787 424.777L334.613 419.295C333.571 418.188 332.159 417.56 330.608 417.56V425.56ZM328.872 424.864C328.706 424.699 328.517 424.452 328.376 424.119C328.233 423.782 328.176 423.447 328.176 423.156H336.176C336.176 421.613 335.558 420.237 334.528 419.208L328.872 424.864ZM328.176 423.156V423.8H336.176V423.156H328.176ZM328.176 423.8C328.176 423.509 328.233 423.174 328.376 422.837C328.517 422.504 328.706 422.257 328.872 422.092L334.528 427.748C335.558 426.719 336.176 425.343 336.176 423.8H328.176ZM328.787 422.179C328.973 421.982 329.244 421.767 329.605 421.61C329.967 421.452 330.318 421.396 330.608 421.396V429.396C332.159 429.396 333.571 428.768 334.613 427.661L328.787 422.179ZM330.608 421.396H324.112V429.396H330.608V421.396ZM324.112 421.396C323.421 421.396 322.168 421.572 321.116 422.624C320.064 423.676 319.888 424.929 319.888 425.62H327.888C327.888 426.162 327.75 427.303 326.772 428.28C325.795 429.258 324.654 429.396 324.112 429.396V421.396ZM319.888 425.62V429.316H327.888V425.62H319.888ZM319.888 429.316C319.888 429.908 320.009 431.099 320.954 432.162C321.979 433.315 323.291 433.568 324.112 433.568V425.568C324.784 425.568 325.983 425.779 326.934 426.848C327.804 427.827 327.888 428.892 327.888 429.316H319.888ZM324.112 433.568H330.048V425.568H324.112V433.568ZM330.048 433.568C329.758 433.568 329.407 433.512 329.045 433.354C328.684 433.197 328.412 432.982 328.227 432.785L334.053 427.303C333.011 426.196 331.599 425.568 330.048 425.568V433.568ZM328.312 432.872C328.146 432.707 327.957 432.46 327.816 432.127C327.673 431.79 327.616 431.455 327.616 431.164H335.616C335.616 429.621 334.998 428.245 333.968 427.216L328.312 432.872ZM327.616 431.164V431.584H335.616V431.164H327.616ZM327.616 431.584C327.616 431.293 327.673 430.958 327.816 430.621C327.957 430.288 328.146 430.041 328.312 429.876L333.968 435.532C334.998 434.503 335.616 433.127 335.616 431.584H327.616ZM328.227 429.963C328.412 429.766 328.684 429.551 329.045 429.394C329.407 429.236 329.758 429.18 330.048 429.18V437.18C331.599 437.18 333.011 436.552 334.053 435.445L328.227 429.963ZM330.048 429.18H324.112V437.18H330.048V429.18ZM324.112 429.18C323.421 429.18 322.168 429.356 321.116 430.408C320.064 431.46 319.888 432.713 319.888 433.404H327.888C327.888 433.946 327.75 435.087 326.772 436.064C325.795 437.042 324.654 437.18 324.112 437.18V429.18ZM319.888 433.404V437.94H327.888V433.404H319.888ZM319.888 437.94C319.888 438.631 320.064 439.884 321.116 440.936C322.168 441.988 323.421 442.164 324.112 442.164V434.164C324.654 434.164 325.795 434.302 326.772 435.28C327.75 436.257 327.888 437.398 327.888 437.94H319.888ZM324.112 442.164H330.608V434.164H324.112V442.164ZM330.608 442.164C330.318 442.164 329.967 442.108 329.605 441.95C329.244 441.793 328.973 441.578 328.787 441.381L334.613 435.899C333.571 434.792 332.159 434.164 330.608 434.164V442.164ZM328.872 441.468C328.706 441.303 328.517 441.056 328.376 440.723C328.233 440.386 328.176 440.051 328.176 439.76H336.176C336.176 438.217 335.558 436.841 334.528 435.812L328.872 441.468ZM328.176 439.76V440.404H336.176V439.76H328.176ZM328.176 440.404C328.176 440.113 328.233 439.778 328.376 439.441C328.517 439.108 328.706 438.861 328.872 438.696L334.528 444.352C335.558 443.323 336.176 441.947 336.176 440.404H328.176ZM328.787 438.783C328.973 438.586 329.244 438.371 329.605 438.214C329.967 438.056 330.318 438 330.608 438V446C332.159 446 333.571 445.372 334.613 444.265L328.787 438.783ZM330.608 438H320.696V446H330.608V438Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-233-outside-16_1_357)"
         id="path246" />
     <mask
@@ -2146,7 +2277,7 @@
         d="M274.604 453.524L271.776 456.352H271.776L274.604 453.524ZM274.604 434.036L271.776 431.208L271.776 431.208L274.604 434.036ZM278.412 434.036L275.499 436.777L275.541 436.822L275.584 436.864L278.412 434.036ZM285.608 434.036L282.78 431.208L282.737 431.25L282.695 431.295L285.608 434.036ZM289.444 434.036L292.272 431.208L292.272 431.208L289.444 434.036ZM285.608 453.524L282.695 456.265L282.737 456.31L282.78 456.352L285.608 453.524ZM278.412 453.524L275.584 450.696L275.541 450.738L275.499 450.783L278.412 453.524ZM275.724 450C276.015 450 276.35 450.057 276.687 450.2C277.02 450.341 277.267 450.53 277.432 450.696L271.776 456.352C272.805 457.382 274.181 458 275.724 458V450ZM277.432 450.696C277.598 450.861 277.787 451.108 277.928 451.441C278.071 451.778 278.128 452.113 278.128 452.404H270.128C270.128 453.947 270.746 455.323 271.776 456.352L277.432 450.696ZM278.128 452.404V435.156H270.128V452.404H278.128ZM278.128 435.156C278.128 435.447 278.071 435.782 277.928 436.119C277.787 436.452 277.598 436.699 277.432 436.864L271.776 431.208C270.746 432.237 270.128 433.613 270.128 435.156H278.128ZM277.432 436.864C277.267 437.03 277.02 437.219 276.687 437.36C276.35 437.503 276.015 437.56 275.724 437.56V429.56C274.181 429.56 272.805 430.178 271.776 431.208L277.432 436.864ZM275.724 437.56H277.32V429.56H275.724V437.56ZM277.32 437.56C277.03 437.56 276.679 437.504 276.317 437.346C275.956 437.189 275.685 436.974 275.499 436.777L281.325 431.295C280.283 430.188 278.871 429.56 277.32 429.56V437.56ZM275.584 436.864C275.418 436.699 275.229 436.452 275.088 436.119C274.945 435.782 274.888 435.447 274.888 435.156H282.888C282.888 433.613 282.27 432.237 281.24 431.208L275.584 436.864ZM274.888 435.156V441.316H282.888V435.156H274.888ZM274.888 441.316C274.888 442.017 275.066 443.277 276.123 444.333C277.179 445.39 278.439 445.568 279.14 445.568V437.568C279.673 437.568 280.807 437.704 281.779 438.677C282.752 439.649 282.888 440.783 282.888 441.316H274.888ZM279.14 445.568H284.908V437.568H279.14V445.568ZM284.908 445.568C285.609 445.568 286.869 445.39 287.925 444.333C288.982 443.277 289.16 442.017 289.16 441.316H281.16C281.16 440.783 281.296 439.649 282.269 438.677C283.241 437.704 284.375 437.568 284.908 437.568V445.568ZM289.16 441.316V435.156H281.16V441.316H289.16ZM289.16 435.156C289.16 435.415 289.113 435.722 288.986 436.04C288.859 436.356 288.686 436.602 288.521 436.777L282.695 431.295C281.71 432.341 281.16 433.691 281.16 435.156H289.16ZM288.436 436.864C288.271 437.03 288.024 437.219 287.691 437.36C287.354 437.503 287.019 437.56 286.728 437.56V429.56C285.185 429.56 283.809 430.178 282.78 431.208L288.436 436.864ZM286.728 437.56H288.324V429.56H286.728V437.56ZM288.324 437.56C288.033 437.56 287.698 437.503 287.361 437.36C287.028 437.219 286.781 437.03 286.616 436.864L292.272 431.208C291.243 430.178 289.867 429.56 288.324 429.56V437.56ZM286.616 436.864C286.45 436.699 286.261 436.452 286.12 436.119C285.977 435.782 285.92 435.447 285.92 435.156H293.92C293.92 433.613 293.302 432.237 292.272 431.208L286.616 436.864ZM285.92 435.156V452.404H293.92V435.156H285.92ZM285.92 452.404C285.92 452.113 285.977 451.778 286.12 451.441C286.261 451.108 286.45 450.861 286.616 450.696L292.272 456.352C293.302 455.323 293.92 453.947 293.92 452.404H285.92ZM286.616 450.696C286.781 450.53 287.028 450.341 287.361 450.2C287.698 450.057 288.033 450 288.324 450V458C289.867 458 291.243 457.382 292.272 456.352L286.616 450.696ZM288.324 450H286.728V458H288.324V450ZM286.728 450C287.019 450 287.354 450.057 287.691 450.2C288.024 450.341 288.271 450.53 288.436 450.696L282.78 456.352C283.809 457.382 285.185 458 286.728 458V450ZM288.521 450.783C288.686 450.958 288.859 451.204 288.986 451.52C289.113 451.838 289.16 452.145 289.16 452.404H281.16C281.16 453.869 281.71 455.219 282.695 456.265L288.521 450.783ZM289.16 452.404V445.404H281.16V452.404H289.16ZM289.16 445.404C289.16 444.583 288.907 443.271 287.754 442.246C286.691 441.301 285.5 441.18 284.908 441.18V449.18C284.484 449.18 283.419 449.096 282.44 448.226C281.371 447.275 281.16 446.076 281.16 445.404H289.16ZM284.908 441.18H279.14V449.18H284.908V441.18ZM279.14 441.18C278.548 441.18 277.357 441.301 276.294 442.246C275.141 443.271 274.888 444.583 274.888 445.404H282.888C282.888 446.076 282.677 447.275 281.608 448.226C280.629 449.096 279.564 449.18 279.14 449.18V441.18ZM274.888 445.404V452.404H282.888V445.404H274.888ZM274.888 452.404C274.888 452.113 274.945 451.778 275.088 451.441C275.229 451.108 275.418 450.861 275.584 450.696L281.24 456.352C282.27 455.323 282.888 453.947 282.888 452.404H274.888ZM275.499 450.783C275.685 450.586 275.956 450.371 276.317 450.214C276.679 450.056 277.03 450 277.32 450V458C278.871 458 280.283 457.372 281.325 456.265L275.499 450.783ZM277.32 450H275.724V458H277.32V450Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-235-outside-17_1_357)"
         id="path249" />
     <mask
@@ -2176,7 +2307,7 @@
         d="M319.576 441.524L317.391 443.58L317.423 443.613L317.455 443.645L319.576 441.524ZM319.576 422.036L317.455 419.915L317.423 419.947L317.391 419.98L319.576 422.036ZM331.7 422.036L329.515 424.092L329.547 424.125L329.579 424.157L331.7 422.036ZM331.7 424.92L329.579 422.799L329.547 422.831L329.515 422.864L331.7 424.92ZM331.14 430.044L328.955 432.1L328.987 432.133L329.019 432.165L331.14 430.044ZM331.14 432.704L329.019 430.583L328.987 430.615L328.955 430.648L331.14 432.704ZM331.7 438.64L329.515 440.696L329.547 440.729L329.579 440.761L331.7 438.64ZM331.7 441.524L329.579 439.403L329.547 439.435L329.515 439.468L331.7 441.524ZM320.696 439C320.861 439 321.062 439.033 321.267 439.12C321.471 439.206 321.613 439.318 321.697 439.403L317.455 443.645C318.306 444.497 319.432 445 320.696 445V439ZM321.761 439.468C321.847 439.56 321.949 439.701 322.025 439.892C322.102 440.083 322.128 440.263 322.128 440.404H316.128C316.128 441.61 316.578 442.716 317.391 443.58L321.761 439.468ZM322.128 440.404V423.156H316.128V440.404H322.128ZM322.128 423.156C322.128 423.297 322.102 423.477 322.025 423.668C321.949 423.859 321.847 424 321.761 424.092L317.391 419.98C316.578 420.844 316.128 421.95 316.128 423.156H322.128ZM321.697 424.157C321.613 424.242 321.471 424.354 321.267 424.44C321.062 424.527 320.861 424.56 320.696 424.56V418.56C319.432 418.56 318.306 419.063 317.455 419.915L321.697 424.157ZM320.696 424.56H330.608V418.56H320.696V424.56ZM330.608 424.56C330.444 424.56 330.23 424.528 330.004 424.429C329.779 424.331 329.617 424.2 329.515 424.092L333.885 419.98C333.029 419.07 331.878 418.56 330.608 418.56V424.56ZM329.579 424.157C329.494 424.073 329.382 423.931 329.296 423.727C329.209 423.522 329.176 423.321 329.176 423.156H335.176C335.176 421.892 334.673 420.766 333.821 419.915L329.579 424.157ZM329.176 423.156V423.8H335.176V423.156H329.176ZM329.176 423.8C329.176 423.635 329.209 423.434 329.296 423.229C329.382 423.025 329.494 422.883 329.579 422.799L333.821 427.041C334.673 426.19 335.176 425.064 335.176 423.8H329.176ZM329.515 422.864C329.617 422.756 329.779 422.625 330.004 422.527C330.23 422.428 330.444 422.396 330.608 422.396V428.396C331.878 428.396 333.029 427.886 333.885 426.976L329.515 422.864ZM330.608 422.396H324.112V428.396H330.608V422.396ZM324.112 422.396C323.575 422.396 322.621 422.532 321.823 423.331C321.024 424.129 320.888 425.083 320.888 425.62H326.888C326.888 426.008 326.789 426.85 326.065 427.573C325.342 428.297 324.5 428.396 324.112 428.396V422.396ZM320.888 425.62V429.316H326.888V425.62H320.888ZM320.888 429.316C320.888 429.781 320.984 430.69 321.702 431.498C322.48 432.373 323.477 432.568 324.112 432.568V426.568C324.597 426.568 325.483 426.721 326.186 427.512C326.83 428.236 326.888 429.019 326.888 429.316H320.888ZM324.112 432.568H330.048V426.568H324.112V432.568ZM330.048 432.568C329.884 432.568 329.67 432.536 329.444 432.437C329.219 432.339 329.057 432.208 328.955 432.1L333.325 427.988C332.469 427.078 331.318 426.568 330.048 426.568V432.568ZM329.019 432.165C328.934 432.081 328.822 431.939 328.736 431.735C328.649 431.53 328.616 431.329 328.616 431.164H334.616C334.616 429.9 334.113 428.774 333.261 427.923L329.019 432.165ZM328.616 431.164V431.584H334.616V431.164H328.616ZM328.616 431.584C328.616 431.419 328.649 431.218 328.736 431.013C328.822 430.809 328.934 430.667 329.019 430.583L333.261 434.825C334.113 433.974 334.616 432.848 334.616 431.584H328.616ZM328.955 430.648C329.057 430.54 329.219 430.409 329.444 430.311C329.67 430.212 329.884 430.18 330.048 430.18V436.18C331.318 436.18 332.469 435.67 333.325 434.76L328.955 430.648ZM330.048 430.18H324.112V436.18H330.048V430.18ZM324.112 430.18C323.575 430.18 322.621 430.316 321.823 431.115C321.024 431.913 320.888 432.867 320.888 433.404H326.888C326.888 433.792 326.789 434.634 326.065 435.357C325.342 436.081 324.5 436.18 324.112 436.18V430.18ZM320.888 433.404V437.94H326.888V433.404H320.888ZM320.888 437.94C320.888 438.477 321.024 439.431 321.823 440.229C322.621 441.028 323.575 441.164 324.112 441.164V435.164C324.5 435.164 325.342 435.263 326.065 435.987C326.789 436.71 326.888 437.552 326.888 437.94H320.888ZM324.112 441.164H330.608V435.164H324.112V441.164ZM330.608 441.164C330.444 441.164 330.23 441.132 330.004 441.033C329.779 440.935 329.617 440.804 329.515 440.696L333.885 436.584C333.029 435.674 331.878 435.164 330.608 435.164V441.164ZM329.579 440.761C329.494 440.677 329.382 440.535 329.296 440.331C329.209 440.126 329.176 439.925 329.176 439.76H335.176C335.176 438.496 334.673 437.37 333.821 436.519L329.579 440.761ZM329.176 439.76V440.404H335.176V439.76H329.176ZM329.176 440.404C329.176 440.239 329.209 440.038 329.296 439.833C329.382 439.629 329.494 439.487 329.579 439.403L333.821 443.645C334.673 442.794 335.176 441.668 335.176 440.404H329.176ZM329.515 439.468C329.617 439.36 329.779 439.229 330.004 439.131C330.23 439.032 330.444 439 330.608 439V445C331.878 445 333.029 444.49 333.885 443.58L329.515 439.468ZM330.608 439H320.696V445H330.608V439Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-237-outside-18_1_357)"
         id="path252" />
     <mask
@@ -2206,7 +2337,7 @@
         d="M274.604 453.524L272.483 455.645H272.483L274.604 453.524ZM274.604 434.036L272.483 431.915L272.483 431.915L274.604 434.036ZM278.412 434.036L276.227 436.092L276.259 436.125L276.291 436.157L278.412 434.036ZM285.608 434.036L283.487 431.915L283.455 431.947L283.423 431.98L285.608 434.036ZM289.444 434.036L291.565 431.915L291.565 431.915L289.444 434.036ZM285.608 453.524L283.423 455.58L283.455 455.613L283.487 455.645L285.608 453.524ZM278.412 453.524L276.291 451.403L276.259 451.435L276.227 451.468L278.412 453.524ZM275.724 451C275.889 451 276.09 451.033 276.295 451.12C276.499 451.206 276.641 451.318 276.725 451.403L272.483 455.645C273.334 456.497 274.46 457 275.724 457V451ZM276.725 451.403C276.81 451.487 276.922 451.629 277.008 451.833C277.095 452.038 277.128 452.239 277.128 452.404H271.128C271.128 453.668 271.631 454.794 272.483 455.645L276.725 451.403ZM277.128 452.404V435.156H271.128V452.404H277.128ZM277.128 435.156C277.128 435.321 277.095 435.522 277.008 435.727C276.922 435.931 276.81 436.073 276.725 436.157L272.483 431.915C271.631 432.766 271.128 433.892 271.128 435.156H277.128ZM276.725 436.157C276.641 436.242 276.499 436.354 276.295 436.44C276.09 436.527 275.889 436.56 275.724 436.56V430.56C274.46 430.56 273.334 431.063 272.483 431.915L276.725 436.157ZM275.724 436.56H277.32V430.56H275.724V436.56ZM277.32 436.56C277.156 436.56 276.942 436.528 276.716 436.429C276.491 436.331 276.329 436.2 276.227 436.092L280.597 431.98C279.741 431.07 278.59 430.56 277.32 430.56V436.56ZM276.291 436.157C276.206 436.073 276.094 435.931 276.008 435.727C275.921 435.522 275.888 435.321 275.888 435.156H281.888C281.888 433.892 281.385 432.766 280.533 431.915L276.291 436.157ZM275.888 435.156V441.316H281.888V435.156H275.888ZM275.888 441.316C275.888 441.862 276.027 442.823 276.83 443.626C277.633 444.429 278.594 444.568 279.14 444.568V438.568C279.518 438.568 280.353 438.665 281.072 439.384C281.791 440.103 281.888 440.938 281.888 441.316H275.888ZM279.14 444.568H284.908V438.568H279.14V444.568ZM284.908 444.568C285.454 444.568 286.415 444.429 287.218 443.626C288.021 442.823 288.16 441.862 288.16 441.316H282.16C282.16 440.938 282.257 440.103 282.976 439.384C283.695 438.665 284.53 438.568 284.908 438.568V444.568ZM288.16 441.316V435.156H282.16V441.316H288.16ZM288.16 435.156C288.16 435.297 288.134 435.477 288.057 435.668C287.981 435.859 287.879 436 287.793 436.092L283.423 431.98C282.61 432.844 282.16 433.95 282.16 435.156H288.16ZM287.729 436.157C287.645 436.242 287.503 436.354 287.299 436.44C287.094 436.527 286.893 436.56 286.728 436.56V430.56C285.464 430.56 284.338 431.063 283.487 431.915L287.729 436.157ZM286.728 436.56H288.324V430.56H286.728V436.56ZM288.324 436.56C288.159 436.56 287.958 436.527 287.753 436.44C287.549 436.354 287.407 436.242 287.323 436.157L291.565 431.915C290.714 431.063 289.588 430.56 288.324 430.56V436.56ZM287.323 436.157C287.238 436.073 287.126 435.931 287.04 435.727C286.953 435.522 286.92 435.321 286.92 435.156H292.92C292.92 433.892 292.417 432.766 291.565 431.915L287.323 436.157ZM286.92 435.156V452.404H292.92V435.156H286.92ZM286.92 452.404C286.92 452.239 286.953 452.038 287.04 451.833C287.126 451.629 287.238 451.487 287.323 451.403L291.565 455.645C292.417 454.794 292.92 453.668 292.92 452.404H286.92ZM287.323 451.403C287.407 451.318 287.549 451.206 287.753 451.12C287.958 451.033 288.159 451 288.324 451V457C289.588 457 290.714 456.497 291.565 455.645L287.323 451.403ZM288.324 451H286.728V457H288.324V451ZM286.728 451C286.893 451 287.094 451.033 287.299 451.12C287.503 451.206 287.645 451.318 287.729 451.403L283.487 455.645C284.338 456.497 285.464 457 286.728 457V451ZM287.793 451.468C287.879 451.56 287.981 451.701 288.057 451.892C288.134 452.083 288.16 452.263 288.16 452.404H282.16C282.16 453.61 282.61 454.716 283.423 455.58L287.793 451.468ZM288.16 452.404V445.404H282.16V452.404H288.16ZM288.16 445.404C288.16 444.769 287.965 443.772 287.09 442.994C286.282 442.276 285.373 442.18 284.908 442.18V448.18C284.611 448.18 283.828 448.122 283.104 447.478C282.313 446.775 282.16 445.889 282.16 445.404H288.16ZM284.908 442.18H279.14V448.18H284.908V442.18ZM279.14 442.18C278.675 442.18 277.766 442.276 276.958 442.994C276.083 443.772 275.888 444.769 275.888 445.404H281.888C281.888 445.889 281.735 446.775 280.944 447.478C280.22 448.122 279.437 448.18 279.14 448.18V442.18ZM275.888 445.404V452.404H281.888V445.404H275.888ZM275.888 452.404C275.888 452.239 275.921 452.038 276.008 451.833C276.094 451.629 276.206 451.487 276.291 451.403L280.533 455.645C281.385 454.794 281.888 453.668 281.888 452.404H275.888ZM276.227 451.468C276.329 451.36 276.491 451.229 276.716 451.131C276.942 451.032 277.156 451 277.32 451V457C278.59 457 279.741 456.49 280.597 455.58L276.227 451.468ZM277.32 451H275.724V457H277.32V451Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-239-outside-19_1_357)"
         id="path255" />
     <mask
@@ -2236,7 +2367,7 @@
         d="M319.576 441.524L318.12 442.895L318.14 442.917L318.162 442.938L319.576 441.524ZM319.576 422.036L318.162 420.622L318.14 420.643L318.12 420.665L319.576 422.036ZM331.7 422.036L330.244 423.407L330.264 423.429L330.286 423.45L331.7 422.036ZM331.7 424.92L330.286 423.506L330.264 423.527L330.244 423.549L331.7 424.92ZM331.14 430.044L329.684 431.415L329.704 431.437L329.726 431.458L331.14 430.044ZM331.14 432.704L329.726 431.29L329.704 431.311L329.684 431.333L331.14 432.704ZM331.7 438.64L330.244 440.011L330.264 440.033L330.286 440.054L331.7 438.64ZM331.7 441.524L330.286 440.11L330.264 440.131L330.244 440.153L331.7 441.524ZM320.696 440C320.734 440 320.801 440.008 320.876 440.04C320.95 440.071 320.987 440.106 320.99 440.11L318.162 442.938C318.835 443.612 319.71 444 320.696 444V440ZM321.032 440.153C321.04 440.162 321.071 440.199 321.097 440.263C321.123 440.328 321.128 440.382 321.128 440.404H317.128C317.128 441.351 317.478 442.213 318.12 442.895L321.032 440.153ZM321.128 440.404V423.156H317.128V440.404H321.128ZM321.128 423.156C321.128 423.178 321.123 423.232 321.097 423.297C321.071 423.361 321.04 423.398 321.032 423.407L318.12 420.665C317.478 421.347 317.128 422.209 317.128 423.156H321.128ZM320.99 423.45C320.987 423.454 320.95 423.489 320.876 423.52C320.801 423.552 320.734 423.56 320.696 423.56V419.56C319.71 419.56 318.835 419.948 318.162 420.622L320.99 423.45ZM320.696 423.56H330.608V419.56H320.696V423.56ZM330.608 423.56C330.57 423.56 330.494 423.552 330.404 423.512C330.314 423.473 330.262 423.426 330.244 423.407L333.156 420.665C332.486 419.953 331.598 419.56 330.608 419.56V423.56ZM330.286 423.45C330.282 423.447 330.247 423.41 330.216 423.336C330.184 423.261 330.176 423.194 330.176 423.156H334.176C334.176 422.17 333.788 421.295 333.114 420.622L330.286 423.45ZM330.176 423.156V423.8H334.176V423.156H330.176ZM330.176 423.8C330.176 423.762 330.184 423.695 330.216 423.62C330.247 423.546 330.282 423.509 330.286 423.506L333.114 426.334C333.788 425.661 334.176 424.786 334.176 423.8H330.176ZM330.244 423.549C330.262 423.53 330.314 423.483 330.404 423.444C330.494 423.404 330.57 423.396 330.608 423.396V427.396C331.598 427.396 332.486 427.003 333.156 426.291L330.244 423.549ZM330.608 423.396H324.112V427.396H330.608V423.396ZM324.112 423.396C323.729 423.396 323.074 423.493 322.53 424.038C321.985 424.582 321.888 425.237 321.888 425.62H325.888C325.888 425.854 325.828 426.396 325.358 426.866C324.888 427.336 324.346 427.396 324.112 427.396V423.396ZM321.888 425.62V429.316H325.888V425.62H321.888ZM321.888 429.316C321.888 429.654 321.958 430.281 322.449 430.834C322.98 431.431 323.664 431.568 324.112 431.568V427.568C324.411 427.568 324.982 427.663 325.439 428.176C325.855 428.645 325.888 429.146 325.888 429.316H321.888ZM324.112 431.568H330.048V427.568H324.112V431.568ZM330.048 431.568C330.01 431.568 329.934 431.56 329.844 431.52C329.754 431.481 329.702 431.434 329.684 431.415L332.596 428.673C331.926 427.961 331.038 427.568 330.048 427.568V431.568ZM329.726 431.458C329.722 431.455 329.687 431.418 329.656 431.344C329.624 431.269 329.616 431.202 329.616 431.164H333.616C333.616 430.178 333.228 429.303 332.554 428.63L329.726 431.458ZM329.616 431.164V431.584H333.616V431.164H329.616ZM329.616 431.584C329.616 431.546 329.624 431.479 329.656 431.404C329.687 431.33 329.722 431.293 329.726 431.29L332.554 434.118C333.228 433.445 333.616 432.57 333.616 431.584H329.616ZM329.684 431.333C329.702 431.314 329.754 431.267 329.844 431.228C329.934 431.188 330.01 431.18 330.048 431.18V435.18C331.038 435.18 331.926 434.787 332.596 434.075L329.684 431.333ZM330.048 431.18H324.112V435.18H330.048V431.18ZM324.112 431.18C323.729 431.18 323.074 431.277 322.53 431.822C321.985 432.366 321.888 433.021 321.888 433.404H325.888C325.888 433.638 325.828 434.18 325.358 434.65C324.888 435.12 324.346 435.18 324.112 435.18V431.18ZM321.888 433.404V437.94H325.888V433.404H321.888ZM321.888 437.94C321.888 438.323 321.985 438.978 322.53 439.522C323.074 440.067 323.729 440.164 324.112 440.164V436.164C324.346 436.164 324.888 436.224 325.358 436.694C325.828 437.164 325.888 437.706 325.888 437.94H321.888ZM324.112 440.164H330.608V436.164H324.112V440.164ZM330.608 440.164C330.57 440.164 330.494 440.156 330.404 440.116C330.314 440.077 330.262 440.03 330.244 440.011L333.156 437.269C332.486 436.557 331.598 436.164 330.608 436.164V440.164ZM330.286 440.054C330.282 440.051 330.247 440.014 330.216 439.94C330.184 439.865 330.176 439.798 330.176 439.76H334.176C334.176 438.774 333.788 437.899 333.114 437.226L330.286 440.054ZM330.176 439.76V440.404H334.176V439.76H330.176ZM330.176 440.404C330.176 440.366 330.184 440.299 330.216 440.224C330.247 440.15 330.282 440.113 330.286 440.11L333.114 442.938C333.788 442.265 334.176 441.39 334.176 440.404H330.176ZM330.244 440.153C330.262 440.134 330.314 440.087 330.404 440.048C330.494 440.008 330.57 440 330.608 440V444C331.598 444 332.486 443.607 333.156 442.895L330.244 440.153ZM330.608 440H320.696V444H330.608V440Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-241-outside-20_1_357)"
         id="path258" />
     <mask
@@ -2266,7 +2397,7 @@
         d="M274.604 453.524L273.19 454.938H273.19L274.604 453.524ZM274.604 434.036L273.19 432.622L273.19 432.622L274.604 434.036ZM278.412 434.036L276.956 435.407L276.976 435.429L276.998 435.45L278.412 434.036ZM285.608 434.036L284.194 432.622L284.172 432.643L284.152 432.665L285.608 434.036ZM289.444 434.036L290.858 432.622L290.858 432.622L289.444 434.036ZM285.608 453.524L284.152 454.895L284.172 454.917L284.194 454.938L285.608 453.524ZM278.412 453.524L276.998 452.11L276.976 452.131L276.956 452.153L278.412 453.524ZM275.724 452C275.762 452 275.829 452.008 275.904 452.04C275.978 452.071 276.015 452.106 276.018 452.11L273.19 454.938C273.863 455.612 274.738 456 275.724 456V452ZM276.018 452.11C276.022 452.113 276.057 452.15 276.088 452.224C276.12 452.299 276.128 452.366 276.128 452.404H272.128C272.128 453.39 272.516 454.265 273.19 454.938L276.018 452.11ZM276.128 452.404V435.156H272.128V452.404H276.128ZM276.128 435.156C276.128 435.194 276.12 435.261 276.088 435.336C276.057 435.41 276.022 435.447 276.018 435.45L273.19 432.622C272.516 433.295 272.128 434.17 272.128 435.156H276.128ZM276.018 435.45C276.015 435.454 275.978 435.489 275.904 435.52C275.829 435.552 275.762 435.56 275.724 435.56V431.56C274.738 431.56 273.863 431.948 273.19 432.622L276.018 435.45ZM275.724 435.56H277.32V431.56H275.724V435.56ZM277.32 435.56C277.282 435.56 277.206 435.552 277.116 435.512C277.026 435.473 276.974 435.426 276.956 435.407L279.868 432.665C279.198 431.953 278.31 431.56 277.32 431.56V435.56ZM276.998 435.45C276.994 435.447 276.959 435.41 276.928 435.336C276.896 435.261 276.888 435.194 276.888 435.156H280.888C280.888 434.17 280.5 433.295 279.826 432.622L276.998 435.45ZM276.888 435.156V441.316H280.888V435.156H276.888ZM276.888 441.316C276.888 441.708 276.987 442.37 277.537 442.919C278.086 443.469 278.748 443.568 279.14 443.568V439.568C279.364 439.568 279.9 439.625 280.365 440.091C280.831 440.556 280.888 441.092 280.888 441.316H276.888ZM279.14 443.568H284.908V439.568H279.14V443.568ZM284.908 443.568C285.3 443.568 285.962 443.469 286.511 442.919C287.061 442.37 287.16 441.708 287.16 441.316H283.16C283.16 441.092 283.217 440.556 283.683 440.091C284.148 439.625 284.684 439.568 284.908 439.568V443.568ZM287.16 441.316V435.156H283.16V441.316H287.16ZM287.16 435.156C287.16 435.178 287.155 435.232 287.129 435.297C287.103 435.361 287.072 435.398 287.064 435.407L284.152 432.665C283.51 433.347 283.16 434.209 283.16 435.156H287.16ZM287.022 435.45C287.019 435.454 286.982 435.489 286.908 435.52C286.833 435.552 286.766 435.56 286.728 435.56V431.56C285.742 431.56 284.867 431.948 284.194 432.622L287.022 435.45ZM286.728 435.56H288.324V431.56H286.728V435.56ZM288.324 435.56C288.286 435.56 288.219 435.552 288.144 435.52C288.07 435.489 288.033 435.454 288.03 435.45L290.858 432.622C290.185 431.948 289.31 431.56 288.324 431.56V435.56ZM288.03 435.45C288.026 435.447 287.991 435.41 287.96 435.336C287.928 435.261 287.92 435.194 287.92 435.156H291.92C291.92 434.17 291.532 433.295 290.858 432.622L288.03 435.45ZM287.92 435.156V452.404H291.92V435.156H287.92ZM287.92 452.404C287.92 452.366 287.928 452.299 287.96 452.224C287.991 452.15 288.026 452.113 288.03 452.11L290.858 454.938C291.532 454.265 291.92 453.39 291.92 452.404H287.92ZM288.03 452.11C288.033 452.106 288.07 452.071 288.144 452.04C288.219 452.008 288.286 452 288.324 452V456C289.31 456 290.185 455.612 290.858 454.938L288.03 452.11ZM288.324 452H286.728V456H288.324V452ZM286.728 452C286.766 452 286.833 452.008 286.908 452.04C286.982 452.071 287.019 452.106 287.022 452.11L284.194 454.938C284.867 455.612 285.742 456 286.728 456V452ZM287.064 452.153C287.072 452.162 287.103 452.199 287.129 452.263C287.155 452.328 287.16 452.382 287.16 452.404H283.16C283.16 453.351 283.51 454.213 284.152 454.895L287.064 452.153ZM287.16 452.404V445.404H283.16V452.404H287.16ZM287.16 445.404C287.16 444.956 287.023 444.272 286.426 443.741C285.873 443.25 285.246 443.18 284.908 443.18V447.18C284.738 447.18 284.237 447.147 283.768 446.731C283.255 446.274 283.16 445.703 283.16 445.404H287.16ZM284.908 443.18H279.14V447.18H284.908V443.18ZM279.14 443.18C278.802 443.18 278.175 443.25 277.622 443.741C277.025 444.272 276.888 444.956 276.888 445.404H280.888C280.888 445.703 280.793 446.274 280.28 446.731C279.811 447.147 279.31 447.18 279.14 447.18V443.18ZM276.888 445.404V452.404H280.888V445.404H276.888ZM276.888 452.404C276.888 452.366 276.896 452.299 276.928 452.224C276.959 452.15 276.994 452.113 276.998 452.11L279.826 454.938C280.5 454.265 280.888 453.39 280.888 452.404H276.888ZM276.956 452.153C276.974 452.134 277.026 452.087 277.116 452.048C277.206 452.008 277.282 452 277.32 452V456C278.31 456 279.198 455.607 279.868 454.895L276.956 452.153ZM277.32 452H275.724V456H277.32V452Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-243-outside-21_1_357)"
         id="path261" />
     <mask
@@ -2296,7 +2427,7 @@
         d="M230.904 427.032L228.076 429.86L228.076 429.86L230.904 427.032ZM230.904 424.036L228.076 421.208L228.076 421.208L230.904 424.036ZM245.632 424.036L248.46 421.208L248.46 421.208L245.632 424.036ZM245.632 427.032L248.46 429.86L248.46 429.86L245.632 427.032ZM240.228 443.524L243.056 446.352L243.056 446.352L240.228 443.524ZM236.308 443.524L233.48 446.352L233.48 446.352L236.308 443.524ZM232.024 423.508C232.315 423.508 232.65 423.565 232.987 423.708C233.32 423.849 233.567 424.038 233.732 424.204L228.076 429.86C229.105 430.89 230.481 431.508 232.024 431.508V423.508ZM233.732 424.204C233.898 424.369 234.087 424.616 234.228 424.949C234.371 425.286 234.428 425.621 234.428 425.912H226.428C226.428 427.455 227.046 428.831 228.076 429.86L233.732 424.204ZM234.428 425.912V425.156H226.428V425.912H234.428ZM234.428 425.156C234.428 425.447 234.371 425.782 234.228 426.119C234.087 426.452 233.898 426.699 233.732 426.864L228.076 421.208C227.046 422.237 226.428 423.613 226.428 425.156H234.428ZM233.732 426.864C233.567 427.03 233.32 427.219 232.987 427.36C232.65 427.503 232.315 427.56 232.024 427.56V419.56C230.481 419.56 229.105 420.178 228.076 421.208L233.732 426.864ZM232.024 427.56H244.512V419.56H232.024V427.56ZM244.512 427.56C244.221 427.56 243.886 427.503 243.549 427.36C243.216 427.219 242.969 427.03 242.804 426.864L248.46 421.208C247.431 420.178 246.055 419.56 244.512 419.56V427.56ZM242.804 426.864C242.638 426.699 242.449 426.452 242.308 426.119C242.165 425.782 242.108 425.447 242.108 425.156H250.108C250.108 423.613 249.49 422.237 248.46 421.208L242.804 426.864ZM242.108 425.156V425.912H250.108V425.156H242.108ZM242.108 425.912C242.108 425.621 242.165 425.286 242.308 424.949C242.449 424.616 242.638 424.369 242.804 424.204L248.46 429.86C249.49 428.831 250.108 427.455 250.108 425.912H242.108ZM242.804 424.204C242.969 424.038 243.216 423.849 243.549 423.708C243.886 423.565 244.221 423.508 244.512 423.508V431.508C246.055 431.508 247.431 430.89 248.46 429.86L242.804 424.204ZM244.512 423.508H240.928V431.508H244.512V423.508ZM240.928 423.508C240.237 423.508 238.984 423.684 237.932 424.736C236.88 425.788 236.704 427.041 236.704 427.732H244.704C244.704 428.274 244.566 429.415 243.588 430.392C242.611 431.37 241.47 431.508 240.928 431.508V423.508ZM236.704 427.732V442.404H244.704V427.732H236.704ZM236.704 442.404C236.704 442.113 236.761 441.778 236.904 441.441C237.045 441.108 237.234 440.861 237.4 440.696L243.056 446.352C244.086 445.323 244.704 443.947 244.704 442.404H236.704ZM237.4 440.696C237.565 440.53 237.812 440.341 238.145 440.2C238.482 440.057 238.817 440 239.108 440V448C240.651 448 242.027 447.382 243.056 446.352L237.4 440.696ZM239.108 440H237.428V448H239.108V440ZM237.428 440C237.719 440 238.054 440.057 238.391 440.2C238.724 440.341 238.971 440.53 239.136 440.696L233.48 446.352C234.509 447.382 235.885 448 237.428 448V440ZM239.136 440.696C239.302 440.861 239.491 441.108 239.632 441.441C239.775 441.778 239.832 442.113 239.832 442.404H231.832C231.832 443.947 232.45 445.323 233.48 446.352L239.136 440.696ZM239.832 442.404V427.732H231.832V442.404H239.832ZM239.832 427.732C239.832 427.041 239.656 425.788 238.604 424.736C237.552 423.684 236.299 423.508 235.608 423.508V431.508C235.066 431.508 233.925 431.37 232.948 430.392C231.97 429.415 231.832 428.274 231.832 427.732H239.832ZM235.608 423.508H232.024V431.508H235.608V423.508Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-245-outside-22_1_357)"
         id="path264" />
     <mask
@@ -2326,7 +2457,7 @@
         d="M230.904 427.032L228.783 429.153L228.783 429.153L230.904 427.032ZM230.904 424.036L228.783 421.915L228.783 421.915L230.904 424.036ZM245.632 424.036L247.753 421.915L247.753 421.915L245.632 424.036ZM245.632 427.032L247.753 429.153L247.753 429.153L245.632 427.032ZM240.228 443.524L242.349 445.645L242.349 445.645L240.228 443.524ZM236.308 443.524L234.187 445.645L234.187 445.645L236.308 443.524ZM232.024 424.508C232.189 424.508 232.39 424.541 232.595 424.628C232.799 424.714 232.941 424.826 233.025 424.911L228.783 429.153C229.634 430.005 230.76 430.508 232.024 430.508V424.508ZM233.025 424.911C233.11 424.995 233.222 425.137 233.308 425.341C233.395 425.546 233.428 425.747 233.428 425.912H227.428C227.428 427.176 227.931 428.302 228.783 429.153L233.025 424.911ZM233.428 425.912V425.156H227.428V425.912H233.428ZM233.428 425.156C233.428 425.321 233.395 425.522 233.308 425.727C233.222 425.931 233.11 426.073 233.025 426.157L228.783 421.915C227.931 422.766 227.428 423.892 227.428 425.156H233.428ZM233.025 426.157C232.941 426.242 232.799 426.354 232.595 426.44C232.39 426.527 232.189 426.56 232.024 426.56V420.56C230.76 420.56 229.634 421.063 228.783 421.915L233.025 426.157ZM232.024 426.56H244.512V420.56H232.024V426.56ZM244.512 426.56C244.347 426.56 244.146 426.527 243.941 426.44C243.737 426.354 243.595 426.242 243.511 426.157L247.753 421.915C246.902 421.063 245.776 420.56 244.512 420.56V426.56ZM243.511 426.157C243.426 426.073 243.314 425.931 243.228 425.727C243.141 425.522 243.108 425.321 243.108 425.156H249.108C249.108 423.892 248.605 422.766 247.753 421.915L243.511 426.157ZM243.108 425.156V425.912H249.108V425.156H243.108ZM243.108 425.912C243.108 425.747 243.141 425.546 243.228 425.341C243.314 425.137 243.426 424.995 243.511 424.911L247.753 429.153C248.605 428.302 249.108 427.176 249.108 425.912H243.108ZM243.511 424.911C243.595 424.826 243.737 424.714 243.941 424.628C244.146 424.541 244.347 424.508 244.512 424.508V430.508C245.776 430.508 246.902 430.005 247.753 429.153L243.511 424.911ZM244.512 424.508H240.928V430.508H244.512V424.508ZM240.928 424.508C240.391 424.508 239.437 424.644 238.639 425.443C237.84 426.241 237.704 427.195 237.704 427.732H243.704C243.704 428.12 243.605 428.962 242.881 429.685C242.158 430.409 241.316 430.508 240.928 430.508V424.508ZM237.704 427.732V442.404H243.704V427.732H237.704ZM237.704 442.404C237.704 442.239 237.737 442.038 237.824 441.833C237.91 441.629 238.022 441.487 238.107 441.403L242.349 445.645C243.201 444.794 243.704 443.668 243.704 442.404H237.704ZM238.107 441.403C238.191 441.318 238.333 441.206 238.537 441.12C238.742 441.033 238.943 441 239.108 441V447C240.372 447 241.498 446.497 242.349 445.645L238.107 441.403ZM239.108 441H237.428V447H239.108V441ZM237.428 441C237.593 441 237.794 441.033 237.999 441.12C238.203 441.206 238.345 441.318 238.429 441.403L234.187 445.645C235.038 446.497 236.164 447 237.428 447V441ZM238.429 441.403C238.514 441.487 238.626 441.629 238.712 441.833C238.799 442.038 238.832 442.239 238.832 442.404H232.832C232.832 443.668 233.335 444.794 234.187 445.645L238.429 441.403ZM238.832 442.404V427.732H232.832V442.404H238.832ZM238.832 427.732C238.832 427.195 238.696 426.241 237.897 425.443C237.099 424.644 236.145 424.508 235.608 424.508V430.508C235.22 430.508 234.378 430.409 233.655 429.685C232.931 428.962 232.832 428.12 232.832 427.732H238.832ZM235.608 424.508H232.024V430.508H235.608V424.508Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-247-outside-23_1_357)"
         id="path267" />
     <mask
@@ -2356,7 +2487,7 @@
         d="M230.904 427.032L229.49 428.446L229.49 428.446L230.904 427.032ZM230.904 424.036L229.49 422.622L229.49 422.622L230.904 424.036ZM245.632 424.036L247.046 422.622L247.046 422.622L245.632 424.036ZM245.632 427.032L247.046 428.446L247.046 428.446L245.632 427.032ZM240.228 443.524L241.642 444.938L241.642 444.938L240.228 443.524ZM236.308 443.524L234.894 444.938L234.894 444.938L236.308 443.524ZM232.024 425.508C232.062 425.508 232.129 425.516 232.204 425.548C232.278 425.579 232.315 425.614 232.318 425.618L229.49 428.446C230.163 429.12 231.038 429.508 232.024 429.508V425.508ZM232.318 425.618C232.322 425.621 232.357 425.658 232.388 425.732C232.42 425.807 232.428 425.874 232.428 425.912H228.428C228.428 426.898 228.816 427.773 229.49 428.446L232.318 425.618ZM232.428 425.912V425.156H228.428V425.912H232.428ZM232.428 425.156C232.428 425.194 232.42 425.261 232.388 425.336C232.357 425.41 232.322 425.447 232.318 425.45L229.49 422.622C228.816 423.295 228.428 424.17 228.428 425.156H232.428ZM232.318 425.45C232.315 425.454 232.278 425.489 232.204 425.52C232.129 425.552 232.062 425.56 232.024 425.56V421.56C231.038 421.56 230.163 421.948 229.49 422.622L232.318 425.45ZM232.024 425.56H244.512V421.56H232.024V425.56ZM244.512 425.56C244.474 425.56 244.407 425.552 244.332 425.52C244.258 425.489 244.221 425.454 244.218 425.45L247.046 422.622C246.373 421.948 245.498 421.56 244.512 421.56V425.56ZM244.218 425.45C244.214 425.447 244.179 425.41 244.148 425.336C244.116 425.261 244.108 425.194 244.108 425.156H248.108C248.108 424.17 247.72 423.295 247.046 422.622L244.218 425.45ZM244.108 425.156V425.912H248.108V425.156H244.108ZM244.108 425.912C244.108 425.874 244.116 425.807 244.148 425.732C244.179 425.658 244.214 425.621 244.218 425.618L247.046 428.446C247.72 427.773 248.108 426.898 248.108 425.912H244.108ZM244.218 425.618C244.221 425.614 244.258 425.579 244.332 425.548C244.407 425.516 244.474 425.508 244.512 425.508V429.508C245.498 429.508 246.373 429.12 247.046 428.446L244.218 425.618ZM244.512 425.508H240.928V429.508H244.512V425.508ZM240.928 425.508C240.545 425.508 239.89 425.605 239.346 426.15C238.801 426.694 238.704 427.349 238.704 427.732H242.704C242.704 427.966 242.644 428.508 242.174 428.978C241.704 429.448 241.162 429.508 240.928 429.508V425.508ZM238.704 427.732V442.404H242.704V427.732H238.704ZM238.704 442.404C238.704 442.366 238.712 442.299 238.744 442.224C238.775 442.15 238.81 442.113 238.814 442.11L241.642 444.938C242.316 444.265 242.704 443.39 242.704 442.404H238.704ZM238.814 442.11C238.817 442.106 238.854 442.071 238.928 442.04C239.003 442.008 239.07 442 239.108 442V446C240.094 446 240.969 445.612 241.642 444.938L238.814 442.11ZM239.108 442H237.428V446H239.108V442ZM237.428 442C237.466 442 237.533 442.008 237.608 442.04C237.682 442.071 237.719 442.106 237.722 442.11L234.894 444.938C235.567 445.612 236.442 446 237.428 446V442ZM237.722 442.11C237.726 442.113 237.761 442.15 237.792 442.224C237.824 442.299 237.832 442.366 237.832 442.404H233.832C233.832 443.39 234.22 444.265 234.894 444.938L237.722 442.11ZM237.832 442.404V427.732H233.832V442.404H237.832ZM237.832 427.732C237.832 427.349 237.735 426.694 237.19 426.15C236.646 425.605 235.991 425.508 235.608 425.508V429.508C235.374 429.508 234.832 429.448 234.362 428.978C233.892 428.508 233.832 427.966 233.832 427.732H237.832ZM235.608 425.508H232.024V429.508H235.608V425.508Z"
         fill="#FF8F28"
         fill-opacity="0.33"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-249-outside-24_1_357)"
         id="path270" />
     <mask
@@ -2385,7 +2516,7 @@
     <path
         d="M230.904 427.032L230.197 427.739L230.197 427.739L230.904 427.032ZM230.904 424.036L230.197 423.329L230.197 423.329L230.904 424.036ZM245.632 424.036L246.339 423.329L246.339 423.329L245.632 424.036ZM245.632 427.032L246.339 427.739L246.339 427.739L245.632 427.032ZM240.228 443.524L240.935 444.231V444.231L240.228 443.524ZM236.308 443.524L235.601 444.231L235.601 444.231L236.308 443.524ZM232.024 426.508C231.873 426.508 231.75 426.464 231.611 426.325L230.197 427.739C230.692 428.235 231.316 428.508 232.024 428.508V426.508ZM231.611 426.325C231.472 426.186 231.428 426.063 231.428 425.912H229.428C229.428 426.62 229.701 427.244 230.197 427.739L231.611 426.325ZM231.428 425.912V425.156H229.428V425.912H231.428ZM231.428 425.156C231.428 425.005 231.472 424.882 231.611 424.743L230.197 423.329C229.701 423.824 229.428 424.448 229.428 425.156H231.428ZM231.611 424.743C231.75 424.604 231.873 424.56 232.024 424.56V422.56C231.316 422.56 230.692 422.833 230.197 423.329L231.611 424.743ZM232.024 424.56H244.512V422.56H232.024V424.56ZM244.512 424.56C244.663 424.56 244.786 424.604 244.925 424.743L246.339 423.329C245.844 422.833 245.22 422.56 244.512 422.56V424.56ZM244.925 424.743C245.064 424.882 245.108 425.005 245.108 425.156H247.108C247.108 424.448 246.835 423.824 246.339 423.329L244.925 424.743ZM245.108 425.156V425.912H247.108V425.156H245.108ZM245.108 425.912C245.108 426.063 245.064 426.186 244.925 426.325L246.339 427.739C246.835 427.244 247.108 426.62 247.108 425.912H245.108ZM244.925 426.325C244.786 426.464 244.663 426.508 244.512 426.508V428.508C245.22 428.508 245.844 428.235 246.339 427.739L244.925 426.325ZM244.512 426.508H240.928V428.508H244.512V426.508ZM240.928 426.508C240.699 426.508 240.344 426.566 240.053 426.857C239.762 427.148 239.704 427.503 239.704 427.732H241.704C241.704 427.811 241.683 428.055 241.467 428.271C241.251 428.487 241.007 428.508 240.928 428.508V426.508ZM239.704 427.732V442.404H241.704V427.732H239.704ZM239.704 442.404C239.704 442.555 239.66 442.678 239.521 442.817L240.935 444.231C241.431 443.736 241.704 443.112 241.704 442.404H239.704ZM239.521 442.817C239.382 442.956 239.259 443 239.108 443V445C239.816 445 240.44 444.727 240.935 444.231L239.521 442.817ZM239.108 443H237.428V445H239.108V443ZM237.428 443C237.277 443 237.154 442.956 237.015 442.817L235.601 444.231C236.096 444.727 236.72 445 237.428 445V443ZM237.015 442.817C236.876 442.678 236.832 442.555 236.832 442.404H234.832C234.832 443.112 235.105 443.736 235.601 444.231L237.015 442.817ZM236.832 442.404V427.732H234.832V442.404H236.832ZM236.832 427.732C236.832 427.503 236.774 427.148 236.483 426.857C236.192 426.566 235.837 426.508 235.608 426.508V428.508C235.529 428.508 235.285 428.487 235.069 428.271C234.853 428.055 234.832 427.811 234.832 427.732H236.832ZM235.608 426.508H232.024V428.508H235.608V426.508Z"
         fill="#FF8F28"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-251-outside-25_1_357)"
         id="path273" />
     <mask
@@ -2414,7 +2545,7 @@
     <path
         d="M319.576 441.524L318.848 442.209L318.858 442.22L318.869 442.231L319.576 441.524ZM319.576 422.036L318.869 421.329L318.858 421.34L318.848 421.351L319.576 422.036ZM331.7 422.036L330.972 422.721L330.982 422.732L330.993 422.743L331.7 422.036ZM331.7 424.92L330.993 424.213L330.982 424.224L330.972 424.235L331.7 424.92ZM331.14 430.044L330.412 430.729L330.422 430.74L330.433 430.751L331.14 430.044ZM331.14 432.704L330.433 431.997L330.422 432.008L330.412 432.019L331.14 432.704ZM331.7 438.64L330.972 439.325L330.982 439.336L330.993 439.347L331.7 438.64ZM331.7 441.524L330.993 440.817L330.982 440.828L330.972 440.839L331.7 441.524ZM320.696 441C320.545 441 320.422 440.956 320.283 440.817L318.869 442.231C319.364 442.727 319.988 443 320.696 443V441ZM320.304 440.839C320.177 440.704 320.128 440.574 320.128 440.404H318.128C318.128 441.092 318.377 441.71 318.848 442.209L320.304 440.839ZM320.128 440.404V423.156H318.128V440.404H320.128ZM320.128 423.156C320.128 422.986 320.177 422.856 320.304 422.721L318.848 421.351C318.377 421.85 318.128 422.468 318.128 423.156H320.128ZM320.283 422.743C320.422 422.604 320.545 422.56 320.696 422.56V420.56C319.988 420.56 319.364 420.833 318.869 421.329L320.283 422.743ZM320.696 422.56H330.608V420.56H320.696V422.56ZM330.608 422.56C330.757 422.56 330.859 422.601 330.972 422.721L332.428 421.351C331.944 420.836 331.318 420.56 330.608 420.56V422.56ZM330.993 422.743C331.132 422.882 331.176 423.005 331.176 423.156H333.176C333.176 422.448 332.903 421.824 332.407 421.329L330.993 422.743ZM331.176 423.156V423.8H333.176V423.156H331.176ZM331.176 423.8C331.176 423.951 331.132 424.074 330.993 424.213L332.407 425.627C332.903 425.132 333.176 424.508 333.176 423.8H331.176ZM330.972 424.235C330.859 424.355 330.757 424.396 330.608 424.396V426.396C331.318 426.396 331.944 426.12 332.428 425.605L330.972 424.235ZM330.608 424.396H324.112V426.396H330.608V424.396ZM324.112 424.396C323.883 424.396 323.528 424.454 323.237 424.745C322.946 425.036 322.888 425.391 322.888 425.62H324.888C324.888 425.699 324.867 425.943 324.651 426.159C324.435 426.375 324.191 426.396 324.112 426.396V424.396ZM322.888 425.62V429.316H324.888V425.62H322.888ZM322.888 429.316C322.888 429.527 322.932 429.872 323.197 430.169C323.481 430.489 323.851 430.568 324.112 430.568V428.568C324.224 428.568 324.482 428.605 324.691 428.841C324.881 429.054 324.888 429.273 324.888 429.316H322.888ZM324.112 430.568H330.048V428.568H324.112V430.568ZM330.048 430.568C330.197 430.568 330.299 430.609 330.412 430.729L331.868 429.359C331.384 428.844 330.758 428.568 330.048 428.568V430.568ZM330.433 430.751C330.572 430.89 330.616 431.013 330.616 431.164H332.616C332.616 430.456 332.343 429.832 331.847 429.337L330.433 430.751ZM330.616 431.164V431.584H332.616V431.164H330.616ZM330.616 431.584C330.616 431.735 330.572 431.858 330.433 431.997L331.847 433.411C332.343 432.916 332.616 432.292 332.616 431.584H330.616ZM330.412 432.019C330.299 432.139 330.197 432.18 330.048 432.18V434.18C330.758 434.18 331.384 433.904 331.868 433.389L330.412 432.019ZM330.048 432.18H324.112V434.18H330.048V432.18ZM324.112 432.18C323.883 432.18 323.528 432.238 323.237 432.529C322.946 432.82 322.888 433.175 322.888 433.404H324.888C324.888 433.483 324.867 433.727 324.651 433.943C324.435 434.159 324.191 434.18 324.112 434.18V432.18ZM322.888 433.404V437.94H324.888V433.404H322.888ZM322.888 437.94C322.888 438.169 322.946 438.524 323.237 438.815C323.528 439.106 323.883 439.164 324.112 439.164V437.164C324.191 437.164 324.435 437.185 324.651 437.401C324.867 437.617 324.888 437.861 324.888 437.94H322.888ZM324.112 439.164H330.608V437.164H324.112V439.164ZM330.608 439.164C330.757 439.164 330.859 439.205 330.972 439.325L332.428 437.955C331.944 437.44 331.318 437.164 330.608 437.164V439.164ZM330.993 439.347C331.132 439.486 331.176 439.609 331.176 439.76H333.176C333.176 439.052 332.903 438.428 332.407 437.933L330.993 439.347ZM331.176 439.76V440.404H333.176V439.76H331.176ZM331.176 440.404C331.176 440.555 331.132 440.678 330.993 440.817L332.407 442.231C332.903 441.736 333.176 441.112 333.176 440.404H331.176ZM330.972 440.839C330.859 440.959 330.757 441 330.608 441V443C331.318 443 331.944 442.724 332.428 442.209L330.972 440.839ZM330.608 441H320.696V443H330.608V441Z"
         fill="#FF8F28"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-253-outside-26_1_357)"
         id="path276" />
     <mask
@@ -2443,7 +2574,7 @@
     <path
         d="M274.604 453.524L273.897 454.231L273.897 454.231L274.604 453.524ZM274.604 434.036L273.897 433.329L273.897 433.329L274.604 434.036ZM278.412 434.036L277.684 434.721L277.694 434.732L277.705 434.743L278.412 434.036ZM285.608 434.036L284.901 433.329L284.89 433.34L284.88 433.351L285.608 434.036ZM289.444 434.036L290.151 433.329L290.151 433.329L289.444 434.036ZM285.608 453.524L284.88 454.209L284.89 454.22L284.901 454.231L285.608 453.524ZM278.412 453.524L277.705 452.817L277.694 452.828L277.684 452.839L278.412 453.524ZM275.724 453C275.573 453 275.45 452.956 275.311 452.817L273.897 454.231C274.392 454.727 275.016 455 275.724 455V453ZM275.311 452.817C275.172 452.678 275.128 452.555 275.128 452.404H273.128C273.128 453.112 273.401 453.736 273.897 454.231L275.311 452.817ZM275.128 452.404V435.156H273.128V452.404H275.128ZM275.128 435.156C275.128 435.005 275.172 434.882 275.311 434.743L273.897 433.329C273.401 433.824 273.128 434.448 273.128 435.156H275.128ZM275.311 434.743C275.45 434.604 275.573 434.56 275.724 434.56V432.56C275.016 432.56 274.392 432.833 273.897 433.329L275.311 434.743ZM275.724 434.56H277.32V432.56H275.724V434.56ZM277.32 434.56C277.469 434.56 277.571 434.601 277.684 434.721L279.14 433.351C278.656 432.836 278.03 432.56 277.32 432.56V434.56ZM277.705 434.743C277.844 434.882 277.888 435.005 277.888 435.156H279.888C279.888 434.448 279.615 433.824 279.119 433.329L277.705 434.743ZM277.888 435.156V441.316H279.888V435.156H277.888ZM277.888 441.316C277.888 441.554 277.948 441.916 278.244 442.212C278.54 442.508 278.902 442.568 279.14 442.568V440.568C279.21 440.568 279.446 440.586 279.658 440.798C279.87 441.01 279.888 441.246 279.888 441.316H277.888ZM279.14 442.568H284.908V440.568H279.14V442.568ZM284.908 442.568C285.146 442.568 285.508 442.508 285.804 442.212C286.1 441.916 286.16 441.554 286.16 441.316H284.16C284.16 441.246 284.178 441.01 284.39 440.798C284.602 440.586 284.838 440.568 284.908 440.568V442.568ZM286.16 441.316V435.156H284.16V441.316H286.16ZM286.16 435.156C286.16 434.986 286.209 434.856 286.336 434.721L284.88 433.351C284.409 433.85 284.16 434.468 284.16 435.156H286.16ZM286.315 434.743C286.454 434.604 286.577 434.56 286.728 434.56V432.56C286.02 432.56 285.396 432.833 284.901 433.329L286.315 434.743ZM286.728 434.56H288.324V432.56H286.728V434.56ZM288.324 434.56C288.475 434.56 288.598 434.604 288.737 434.743L290.151 433.329C289.656 432.833 289.032 432.56 288.324 432.56V434.56ZM288.737 434.743C288.876 434.882 288.92 435.005 288.92 435.156H290.92C290.92 434.448 290.647 433.824 290.151 433.329L288.737 434.743ZM288.92 435.156V452.404H290.92V435.156H288.92ZM288.92 452.404C288.92 452.555 288.876 452.678 288.737 452.817L290.151 454.231C290.647 453.736 290.92 453.112 290.92 452.404H288.92ZM288.737 452.817C288.598 452.956 288.475 453 288.324 453V455C289.032 455 289.656 454.727 290.151 454.231L288.737 452.817ZM288.324 453H286.728V455H288.324V453ZM286.728 453C286.577 453 286.454 452.956 286.315 452.817L284.901 454.231C285.396 454.727 286.02 455 286.728 455V453ZM286.336 452.839C286.209 452.704 286.16 452.574 286.16 452.404H284.16C284.16 453.092 284.409 453.71 284.88 454.209L286.336 452.839ZM286.16 452.404V445.404H284.16V452.404H286.16ZM286.16 445.404C286.16 445.143 286.081 444.773 285.761 444.489C285.464 444.224 285.119 444.18 284.908 444.18V446.18C284.865 446.18 284.646 446.173 284.433 445.983C284.197 445.774 284.16 445.516 284.16 445.404H286.16ZM284.908 444.18H279.14V446.18H284.908V444.18ZM279.14 444.18C278.929 444.18 278.584 444.224 278.287 444.489C277.967 444.773 277.888 445.143 277.888 445.404H279.888C279.888 445.516 279.851 445.774 279.615 445.983C279.402 446.173 279.183 446.18 279.14 446.18V444.18ZM277.888 445.404V452.404H279.888V445.404H277.888ZM277.888 452.404C277.888 452.555 277.844 452.678 277.705 452.817L279.119 454.231C279.615 453.736 279.888 453.112 279.888 452.404H277.888ZM277.684 452.839C277.571 452.959 277.469 453 277.32 453V455C278.03 455 278.656 454.724 279.14 454.209L277.684 452.839ZM277.32 453H275.724V455H277.32V453Z"
         fill="#FF8F28"
-        style="mix-b.end-0.3s-mode:hard-light"
+        style="mix-b.end-mode:hard-light"
         mask="url(#path-255-outside-27_1_357)"
         id="path279" />
     <path

@@ -1,8 +1,11 @@
 <template>
   <div id="campfire-games" class="section">
     <div id="sign-info">
-
-      <img :src="signSrc" class="campfire-games" alt="Bitcamp sign" />
+      <img
+        class="campfire-games"
+        src="../assets/images/campfire-games/campfire_all.min.svg"
+        alt="Bitcamp sign"
+      />
 
       <p id="cfg-blurb">
         The Campfire Games is a way to learn, grow, and build with the Bitcamp
@@ -19,7 +22,11 @@
 
     <div id="teams-div">
       <div class="team-section">
-        <img class="team-picture red-marshie" src="../assets/images/marshies/red-marshie.svg" alt="Red marshie" />
+        <img
+          class="team-picture red-marshie"
+          src="../assets/images/marshies/red-marshie.svg"
+          alt="Red marshie"
+        />
         <h3 class="team-title red">Red Team</h3>
         <p class="team-blurb">
           The red team is <strong class="red">passionate</strong> and
@@ -28,7 +35,11 @@
         </p>
       </div>
       <div class="team-section">
-        <img class="team-picture" src="../assets/images/marshies/blue-marshie.svg" alt="Blue marshie" />
+        <img
+          class="team-picture"
+          src="../assets/images/marshies/blue-marshie.svg"
+          alt="Blue marshie"
+        />
         <h3 class="team-title blue">Blue Team</h3>
         <p class="team-blurb">
           The blue team is <strong class="blue">rational</strong> and
@@ -38,7 +49,11 @@
         </p>
       </div>
       <div class="team-section">
-        <img class="team-picture" src="../assets/images/marshies/green-marshie.svg" alt="Green marshie" />
+        <img
+          class="team-picture"
+          src="../assets/images/marshies/green-marshie.svg"
+          alt="Green marshie"
+        />
         <h3 class="team-title green">Green Team</h3>
         <p class="team-blurb">
           The green team is
@@ -50,43 +65,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import sign_1 from '../assets/images/campfire-games/campfire_1.webp';
-import sign_2 from '../assets/images/campfire-games/campfire_2.webp';
-import sign_3 from '../assets/images/campfire-games/campfire_3.webp';
-import sign_4 from '../assets/images/campfire-games/campfire_4.webp';
-import sign_5 from '../assets/images/campfire-games/campfire_5.webp';
-import sign_6 from '../assets/images/campfire-games/campfire_6.webp';
-import sign_empty from '../assets/images/campfire-games/campfire_none.webp';
-import sign_all from '../assets/images/campfire-games/campfire_all.webp';
-
-import { ref } from 'vue';
-
-const counter = ref(0);
-function incrementCounter() {
-  counter.value++;
-}
-setInterval(incrementCounter, 315);
-
-let imagesList = [
-  sign_1,
-  sign_2,
-  sign_3,
-  sign_4,
-  sign_5,
-  sign_6,
-  sign_all,
-  sign_all,
-  sign_empty,
-  sign_empty,
-  sign_all,
-  sign_all,
-];
-
-const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
-</script>
-
 
 <style scoped lang="scss">
 #campfire-games {
@@ -273,7 +251,7 @@ const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
   }
 
   .campfire-games {
-    width: 100%
+    width: 100%;
   }
 
   .team-picture {
