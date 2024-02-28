@@ -2,9 +2,11 @@
   <div class="hero-wrapper">
     <div class="container">
       <div class="column column-1">
-        <img v-for="(image, index) in preloadedImages" :src="image.src" class="svgStyle"
-         :style="{ display: index === currentFrame ? 'inline-block' : 'none' }"
-         alt="Bitcamp sign" />
+        <img :src="imagesList[0]" class="sign-filler" alt="Bitcamp sign" />
+        <img v-for="(image, i) in imagesList" :src="image" class="svgStyle"
+        :style="{ opacity: i === currentFrame ? '100%' : '0%'  }"  
+        alt="Bitcamp sign" />
+        <!-- <img :src="imagesList[0]" class="svgStyle" alt="Bitcamp sign" /> -->
       </div>
       <div class="column column-2">
         <responsive-text v-if="!isMobile"></responsive-text>
@@ -78,18 +80,6 @@ let imagesList = [
 
 // const signSrc = computed(() => imagesList[counter.value % imagesList.length]);
 const currentFrame = computed(() => counter.value % imagesList.length);
-
-let preloadedImages: HTMLElement[] = [];
-
-const preloadImages = () => {
-  // Map over imagesList and preload each image
-  preloadedImages = imagesList.map(imageURL => {
-    const img = new Image();
-    img.src = imageURL;
-    return img;
-  });
-}
-onMounted(preloadImages);
   
 </script>
 
@@ -174,7 +164,7 @@ export default {
   flex: 1;
   min-width: 300px;
   margin: 10px;
-  display: flex;
+  position: relative;
   z-index: 1;
 }
 
@@ -193,11 +183,22 @@ export default {
 }
 
 .svgStyle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   // display: block; 
   // position: absolute;
+}
+
+.sign-filler {
+  width: 100%;
+  display: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .foilage-large {
