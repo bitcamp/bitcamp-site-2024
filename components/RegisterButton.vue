@@ -36,12 +36,13 @@ withDefaults(defineProps<Props>(), {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
-.button-container {
+.button-container {    
     display: flex;
     justify-content: center;
 }
 
 .button-link {
+    
     text-decoration: none;
 }
 
@@ -134,13 +135,14 @@ withDefaults(defineProps<Props>(), {
     height: 120%;
     bottom: -2px;
     right: -10px;
-    border-radius: 6px;
+    border-radius: 6px;    
     border: 3.5px #fff9ed solid;
 }
 
 .neon:hover {
     padding-left: 0%;
-    padding-top: 1%;
+    padding-top: 1.5%;
+    margin-bottom: -1.5%;
 }
 
 .neon:hover:before {
