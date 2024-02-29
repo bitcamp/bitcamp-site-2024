@@ -81,38 +81,14 @@ withDefaults(defineProps<Props>(), {
 
 .neon {
   position: relative;
-  background: #d8a84a;
+  background: #DD9A17;
   border-radius: 10px;
-  border: 10px #d8a84a solid;
+  border: 10px #DD9A17 solid;
   color: #fff;
   padding: auto;
   text-align: center;
   font-family: 'M PLUS Rounded 1c';
   font-weight: 500;
-  text-shadow: 0px 3.75px 0.0075px #f7b73a, 3.675px 0.7875px 0.0075px #f7b73a,
-    1.575px -3.4125px 0.0075px #f7b73a, -3px -2.25px 0.0075px #f7b73a,
-    -2.85px 2.4375px 0.0075px #f7b73a, 1.8px 3.3px 0.0075px #f7b73a,
-    3.6px -1.05px 0.0075px #f7b73a, -0.2625px -3.75px 0.0075px #f7b73a,
-    -3.7125px -0.5625px 0.0075px #f7b73a, -1.3125px 3.525px 0.0075px #f7b73a,
-    3.15px 2.025px 0.0075px #f7b73a, 2.6625px -2.625px 0.0075px #f7b73a,
-    -2.025px -3.15px 0.0075px #f7b73a, -3.525px 1.3125px 0.0075px #f7b73a,
-    0.525px 3.7125px 0.0075px #f7b73a, 3.75px 0.3px 0.0075px #f7b73a,
-    1.0875px -3.6px 0.0075px #f7b73a, -3.2625px -1.8px 0.0075px #f7b73a,
-    -2.475px 2.8125px 0.0075px #f7b73a, 2.2125px 3px 0.0075px #f7b73a,
-    3.4125px -1.5375px 0.0075px #f7b73a, -0.7875px -3.675px 0.0075px #f7b73a,
-    -3.75px -0.0375px 0.0075px #f7b73a, -0.825px 3.675px 0.0075px #f7b73a,
-    3.4125px 1.575px 0.0075px #f7b73a, 2.2875px -3px 0.0075px #f7b73a,
-    -2.4375px -2.85px 0.0075px #f7b73a, -3.3px 1.7625px 0.0075px #f7b73a,
-    1.0125px 3.6px 0.0075px #f7b73a, 3.75px -0.225px 0.0075px #f7b73a,
-    0.5625px -3.7125px 0.0075px #f7b73a, -3.4875px -1.35px 0.0075px #f7b73a,
-    -2.0625px 3.15px 0.0075px #f7b73a, 2.625px 2.7px 0.0075px #f7b73a,
-    3.1875px -1.9875px 0.0075px #f7b73a, -1.275px -3.525px 0.0075px #f7b73a,
-    -3.7125px 0.4875px 0.0075px #f7b73a, -0.3px 3.75px 0.0075px #f7b73a,
-    3.6px 1.0875px 0.0075px #f7b73a, 1.8375px -3.2625px 0.0075px #f7b73a,
-    -2.8125px -2.5125px 0.0075px #f7b73a, -3.0375px 2.2125px 0.0075px #f7b73a,
-    1.5px 3.45px 0.0075px #f7b73a, 3.675px -0.75px 0.0075px #f7b73a,
-    0.075px -3.75px 0.0075px #f7b73a, -3.6375px -0.8625px 0.0075px #f7b73a,
-    -1.6125px 3.375px 0.0075px #f7b73a, 2.9375px 2.2875px 0.0075px #f7b73a;
 }
 
 .neon:before {
@@ -123,7 +99,7 @@ withDefaults(defineProps<Props>(), {
   bottom: -5px;
   right: -12px;
   border-radius: 8px;
-  border: 8px #f7b73a solid;
+  border: 8px #DD9A17 solid;
 }
 
 .neon:after {
@@ -146,7 +122,7 @@ withDefaults(defineProps<Props>(), {
 .neon:hover:before {
   right: -9px;
   bottom: -8px;
-  border: 8px #ffcd6c solid;
+  border: 8px #DD9A17  solid;
 }
 
 .neon:hover:after {
@@ -155,31 +131,6 @@ withDefaults(defineProps<Props>(), {
 }
 
 .neon:hover {
-  text-shadow: 0px 3.75px 0.0075px #ffcd6c, 3.675px 0.7875px 0.0075px #ffcd6c,
-    1.575px -3.4125px 0.0075px #ffcd6c, -3px -2.25px 0.0075px #ffcd6c,
-    -2.85px 2.4375px 0.0075px #ffcd6c, 1.8px 3.3px 0.0075px #ffcd6c,
-    3.6px -1.05px 0.0075px #ffcd6c, -0.2625px -3.75px 0.0075px #ffcd6c,
-    -3.7125px -0.5625px 0.0075px #ffcd6c, -1.3125px 3.525px 0.0075px #ffcd6c,
-    3.15px 2.025px 0.0075px #ffcd6c, 2.6625px -2.625px 0.0075px #ffcd6c,
-    -2.025px -3.15px 0.0075px #ffcd6c, -3.525px 1.3125px 0.0075px #ffcd6c,
-    0.525px 3.7125px 0.0075px #ffcd6c, 3.75px 0.3px 0.0075px #ffcd6c,
-    1.0875px -3.6px 0.0075px #ffcd6c, -3.2625px -1.8px 0.0075px #ffcd6c,
-    -2.475px 2.8125px 0.0075px #ffcd6c, 2.2125px 3px 0.0075px #ffcd6c,
-    3.4125px -1.5375px 0.0075px #ffcd6c, -0.7875px -3.675px 0.0075px #ffcd6c,
-    -3.75px -0.0375px 0.0075px #ffcd6c, -0.825px 3.675px 0.0075px #ffcd6c,
-    3.4125px 1.575px 0.0075px #ffcd6c, 2.2875px -3px 0.0075px #ffcd6c,
-    -2.4375px -2.85px 0.0075px #ffcd6c, -3.3px 1.7625px 0.0075px #ffcd6c,
-    1.0125px 3.6px 0.0075px #ffcd6c, 3.75px -0.225px 0.0075px #ffcd6c,
-    0.5625px -3.7125px 0.0075px #ffcd6c, -3.4875px -1.35px 0.0075px #ffcd6c,
-    -2.0625px 3.15px 0.0075px #ffcd6c, 2.625px 2.7px 0.0075px #ffcd6c,
-    3.1875px -1.9875px 0.0075px #ffcd6c, -1.275px -3.525px 0.0075px #ffcd6c,
-    -3.7125px 0.4875px 0.0075px #ffcd6c, -0.3px 3.75px 0.0075px #ffcd6c,
-    3.6px 1.0875px 0.0075px #ffcd6c, 1.8375px -3.2625px 0.0075px #ffcd6c,
-    -2.8125px -2.5125px 0.0075px #ffcd6c, -3.0375px 2.2125px 0.0075px #ffcd6c,
-    1.5px 3.45px 0.0075px #ffcd6c, 3.675px -0.75px 0.0075px #ffcd6c,
-    0.075px -3.75px 0.0075px #ffcd6c, -3.6375px -0.8625px 0.0075px #ffcd6c,
-    -1.6125px 3.375px 0.0075px #ffcd6c, 2.9375px 2.2875px 0.0075px #ffcd6c;
-
   color: #fff9ed;
 }
 </style>
