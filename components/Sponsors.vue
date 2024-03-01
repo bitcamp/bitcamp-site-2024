@@ -78,17 +78,17 @@ const sponsors: Sponsor[] = [
   },
   {
     name: 'UMIACS',
-    amount: 13332,
+    amount: 40000,
     url: 'https://www.umiacs.umd.edu/'
   },
   {
     name: 'CMNS',
-    amount: 13333,
+    amount: 40000,
     url: 'https://cmns.umd.edu/'
   },
   {
     name: 'UMDCS',
-    amount: 13335,
+    amount: 40000,
     url: 'https://www.cs.umd.edu/'
   },
   {
