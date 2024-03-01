@@ -14,7 +14,7 @@
         <SlideshowCard path="slideshow/slide-3.svg" />
       </Slide>
       <Slide v-for="i in 17" :key="i+3">
-        <SlideshowCard :path="`slideshow/slide-${i+3}.jpg`" />
+        <SlideshowCard :path="`slideshow/slide-${i+3}.JPG`" />
       </Slide> 
 
       <template #addons>
