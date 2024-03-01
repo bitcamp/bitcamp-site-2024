@@ -101,6 +101,22 @@ const sponsors: Sponsor[] = [
     amount: 1500,
     url: 'https://bsos.umd.edu/' 
   },
+  {
+    name: 'ACES',
+    amount: 1500,
+    url: 'https://aces.umd.edu/'
+  },
+  {
+    name: 'Bloomberg Industry Group',
+    amount: 4000,
+    url: 'https://www.bloombergindustry.com/careers/'
+  },
+  {
+    name: 'SGA',
+    amount: 27000,
+    url: 'https://www.umdsga.com/'
+  },
+
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
