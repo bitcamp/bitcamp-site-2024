@@ -128,7 +128,7 @@ const questions = ref<FAQ[]>([
   },
   {
     question: "Does Bitcamp provide travel accomodations or reimbursement?",
-    answer: 'More information coming soon!',
+    answer: 'We are currently gauging interest for a new travel reimbursement application! If you’re interested, please fill out <a class="link" href="https://forms.gle/nX2NuooijXav2qgr6">this form</a>. In addition, feel free to contact <a class="link" href="mailto:travel@bit.camp">travel@bit.camp</a> with any additional questions!',
   },
   {
     question: 'Do I need to wear a mask?',
