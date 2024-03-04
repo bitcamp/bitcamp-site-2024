@@ -180,7 +180,7 @@
               'Giga',
               'Tera',
             ]" :args="['', '', '', '', 'check-w']"
-              :description="'Providing prizes is a powerful perk that can help companies reach out to their target hacker population, be it those interested in a specific field or those that have a specific skillset. This year, our Giga and -level sponsor can provide 2 prizes to ensure they get as much outreach as possible and are successful in identifying talent at the hackathon.'" />
+              :description="'Providing prizes is a powerful perk that can help companies reach out to their target hacker population, be it those interested in a specific field or those that have a specific skillset. This year, our Tera-level sponsor can provide 2 prizes to ensure they get as much outreach as possible and are successful in identifying talent at the hackathon.'" />
             <ProspectusEmptyRow :categoryName="'Recruiting'" />
             <ProspectusRow :categoryName="'Reserved Table'" :tierNames="[
               'Byte',
@@ -312,7 +312,7 @@
               'Giga',
               'Tera',
             ]" :args="['', '', '', '', 'check-w']"
-              :description="'Peta-level sponsors will be given special recognition in our marketing materials as a co-host. '" />
+              :description="'Tera-level sponsors will be given special recognition in our marketing materials as a co-host. '" />
 
             <ProspectusEmptyRow :categoryName="'Restricted Add-Ons'" />
             <ProspectusBottomRow :categoryName="'Podcast (by March 6th)'" :tierNames="[
