@@ -116,6 +116,11 @@ const sponsors: Sponsor[] = [
     amount: 27000,
     url: 'https://www.umdsga.com/'
   },
+  {
+    name: 'CapitalOne',
+    amount: 3500,
+    url: 'https://www.capitalone.com/'
+  },
 
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
