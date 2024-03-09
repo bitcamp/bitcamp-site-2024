@@ -4,13 +4,24 @@
       <div class="non-pages">
         <div id="logo-container">
           <a tag="img" href="/">
-            <img id="logo-with-text" src="~/public/bitcamp-brand/logos/logotype.png" />
-            <img id="logo-image" src="~/public/bitcamp-brand/logos/bitcamp.png" />
+            <img
+              id="logo-with-text"
+              src="~/public/bitcamp-brand/logos/logotype.png"
+            />
+            <img
+              id="logo-image"
+              src="~/public/bitcamp-brand/logos/bitcamp.png"
+            />
           </a>
         </div>
         <div class="hamburgerContainer">
-          <button class="hamburger hamburger--spin" type="button" style="color: #ffffff"
-            :class="{ 'is-active': showDropdown }" @click="toggleDropdown">
+          <button
+            class="hamburger hamburger--spin"
+            type="button"
+            style="color: #ffffff"
+            :class="{ 'is-active': showDropdown }"
+            @click="toggleDropdown"
+          >
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
@@ -41,7 +52,9 @@
           <a href="#sponsors" class="page-type">Sponsors</a>
         </li>
         <template v-if="bigScreen">
-          <a id="mlh-trust-badge" style="
+          <a
+            id="mlh-trust-badge"
+            style="
               display: block;
               height: 32px;
               width: 32px;
@@ -53,9 +66,14 @@
               margin-top: -1.5rem;
             "
             href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
-            target="_blank"><img
+            target="_blank"
+          >
+            <img
               src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
-              alt="Major League Hacking 2024 Hackathon Season" style="width: 100%" /></a>
+              alt="Major League Hacking 2024 Hackathon Season"
+              style="width: 100%"
+            />
+          </a>
         </template>
       </ul>
     </nav>
@@ -73,7 +91,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted} from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const showDropdown = ref(false);
 const bigScreen = ref(false);
@@ -113,16 +131,16 @@ function setColorAndOpacity() {
     const navbarHeight = header.offsetHeight;
     const scrollPosition = window.scrollY;
     // roughly scaled so it is opaque after registration section
-    const opacity = Math.min(scrollPosition / (6*navbarHeight), 1);
+    const opacity = Math.min(scrollPosition / (6 * navbarHeight), 1);
     header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
   } else {
-    if(showDropdown.value) {
+    if (showDropdown.value) {
       header.style.backgroundColor = `rgba(82, 27, 29, 1)`;
     } else {
       const navbarHeight = header.offsetHeight;
-    const scrollPosition = window.scrollY;
-    const opacity = Math.min(scrollPosition / (10*navbarHeight), 1);
-    header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
+      const scrollPosition = window.scrollY;
+      const opacity = Math.min(scrollPosition / (10 * navbarHeight), 1);
+      header.style.backgroundColor = `rgba(82, 27, 29, ${opacity})`;
     }
   }
 }
@@ -173,7 +191,7 @@ nav {
 }
 
 .page-type {
-  color: #FFF7E2;
+  color: #fff7e2;
   -webkit-text-stroke-width: 0.4px;
   -webkit-text-stroke-color: #ff3700;
   font-family: Aleo;
@@ -345,7 +363,7 @@ nav {
     position: absolute;
     padding: 1rem 0;
     font-size: 32px;
-    background-color: #521B1D;
+    background-color: #521b1d;
     flex-direction: column;
     align-items: center;
   }

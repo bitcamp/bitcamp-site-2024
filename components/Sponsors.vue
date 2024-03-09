@@ -9,19 +9,39 @@
     <div class="footer-text">
       <div class="social-icons">
         <a href="https://www.facebook.com/bitcmp">
-          <img class="icon" src="~/assets/images/social/facebook.svg" alt="Facebook">
+          <img
+            class="icon"
+            src="~/assets/images/social/facebook.svg"
+            alt="Facebook"
+          />
         </a>
         <a href="https://instagram.com/bitcamp">
-          <img class="icon" src="~/assets/images/social/instagram.svg" alt="Instagram">
+          <img
+            class="icon"
+            src="~/assets/images/social/instagram.svg"
+            alt="Instagram"
+          />
         </a>
         <a href="https://www.youtube.com/channel/UC_F_7Hv3SAUcQBubYWD-2BA">
-          <img class="icon" src="~/assets/images/social/youtube.svg" alt="Youtube">
+          <img
+            class="icon"
+            src="~/assets/images/social/youtube.svg"
+            alt="Youtube"
+          />
         </a>
         <a href="https://twitter.com/bitcmp">
-          <img class="icon" src="~/assets/images/social/twitter.svg" alt="Twitter">
+          <img
+            class="icon"
+            src="~/assets/images/social/twitter.svg"
+            alt="Twitter"
+          />
         </a>
         <a href="https://snapchat.com/add/bitcamp">
-          <img class="icon" src="~/assets/images/social/snapchat.svg" alt="Snapchat">
+          <img
+            class="icon"
+            src="~/assets/images/social/snapchat.svg"
+            alt="Snapchat"
+          />
         </a>
       </div>
       <div class="links">
@@ -42,9 +62,15 @@
       </div>
     </div>
     <div id="pagetop" class="fixed right-0 bottom-0" @click="toTop">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-            stroke-width="2" stroke-linecap="square" stroke-linejoin="round">
-        <path d="M18 15l-6-6-6 6"/>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke-linecap="square"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
       </svg>
     </div>
   </div>
@@ -79,52 +105,52 @@ const sponsors: Sponsor[] = [
   {
     name: 'UMIACS',
     amount: 40000,
-    url: 'https://www.umiacs.umd.edu/'
+    url: 'https://www.umiacs.umd.edu/',
   },
   {
     name: 'CMNS',
     amount: 40000,
-    url: 'https://cmns.umd.edu/'
+    url: 'https://cmns.umd.edu/',
   },
   {
     name: 'UMDCS',
     amount: 40000,
-    url: 'https://www.cs.umd.edu/'
+    url: 'https://www.cs.umd.edu/',
   },
   {
     name: 'LTS',
     amount: 3500,
-    url: 'https://www.ltsnet.net/'
+    url: 'https://www.ltsnet.net/',
   },
   {
     name: 'BSOS',
     amount: 1500,
-    url: 'https://bsos.umd.edu/' 
+    url: 'https://bsos.umd.edu/',
   },
   {
     name: 'ACES',
     amount: 1500,
-    url: 'https://aces.umd.edu/'
+    url: 'https://aces.umd.edu/',
   },
   {
     name: 'Bloomberg Industry Group',
     amount: 4000,
-    url: 'https://www.bloombergindustry.com/careers/'
+    url: 'https://www.bloombergindustry.com/careers/',
   },
   {
     name: 'SGA',
     amount: 27000,
-    url: 'https://www.umdsga.com/'
+    url: 'https://www.umdsga.com/',
   },
   {
     name: 'CapitalOne',
     amount: 3500,
-    url: 'https://www.capitalone.com/'
+    url: 'https://www.capitalone.com/',
   },
   {
     name: 'CoStar',
     amount: 1500,
-    url: 'https://www.costargroup.com/'
+    url: 'https://www.costargroup.com/',
   },
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
@@ -136,7 +162,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
-})
+});
 
 const handleScroll = () => {
   if (scTimer.value) return;
@@ -153,10 +179,9 @@ const handleScroll = () => {
 const toTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: 'smooth',
   });
 };
-
 </script>
 
 <style scoped lang="scss">
@@ -174,14 +199,14 @@ const toTop = () => {
   left: 27%;
 }
 
-#pagetop{
+#pagetop {
   position: fixed !important;
   bottom: 2rem !important;
   right: 2rem !important;
   z-index: 99;
   pointer-events: auto;
   border-radius: 10px;
-  background-color: #FF6F3F;
+  background-color: #ff6f3f;
   opacity: 0.5;
   transition: opacity 0.3s ease;
   width: 60px;
@@ -197,7 +222,7 @@ const toTop = () => {
   width: 100%;
   height: 100%;
 }
-  
+
 .footer-text {
   margin-top: 50px;
   margin-bottom: -30px;
@@ -248,7 +273,7 @@ const toTop = () => {
     }
   }
 
-  .sponsor-image{
+  .sponsor-image {
     width: 35vw;
     max-width: 100%;
     margin-bottom: 10px;
@@ -284,7 +309,7 @@ const toTop = () => {
   }
 
   #pagetop {
-    transform: scale(0.8); 
+    transform: scale(0.8);
   }
 }
 
@@ -295,15 +320,15 @@ const toTop = () => {
     padding-right: 2rem;
   }
 
-  .sponsor-image{
+  .sponsor-image {
     width: 70vw;
     max-width: 100%;
     left: 8%;
     margin-bottom: 20px;
   }
 
-  #pagetop{
-    transform: scale(0.65); 
+  #pagetop {
+    transform: scale(0.65);
     bottom: 1.5rem !important;
     right: 1.5rem !important;
   }
@@ -333,7 +358,8 @@ const toTop = () => {
   transition: -webkit-transform var(--transition-timing);
   -o-transition: transform var(--transition-timing);
   transition: transform var(--transition-timing);
-  transition: transform var(--transition-timing), -webkit-transform var(--transition-timing);
+  transition: transform var(--transition-timing),
+    -webkit-transform var(--transition-timing);
 }
 
 @media only screen and (max-width: 575px) {
