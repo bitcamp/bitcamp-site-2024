@@ -65,11 +65,11 @@
               margin-right: -1.5rem;
               margin-top: -1.5rem;
             "
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
             target="_blank"
           >
             <img
-              src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
+              src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-red.svg"
               alt="Major League Hacking 2024 Hackathon Season"
               style="width: 100%"
             />
