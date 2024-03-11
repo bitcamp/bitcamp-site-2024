@@ -156,7 +156,12 @@ const sponsors: Sponsor[] = [
     name: 'FannieMae',
     amount: 6000,
     url: 'https://www.fanniemae.com/careers/campus',
-  }
+  },
+  {
+    name: 'CipherTech',
+    amount: 7250,
+    url: 'https://www.ciphertechsolutions.com/',
+  },
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
