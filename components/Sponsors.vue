@@ -162,6 +162,16 @@ const sponsors: Sponsor[] = [
     amount: 7250,
     url: 'https://www.ciphertechsolutions.com/',
   },
+  {
+    name: 'Bloomberg',
+    amount: 7500,
+    url: 'https://www.bloomberg.com/',
+  },
+  {
+    name: 'AJC',
+    amount: 10000,
+    url: 'https://eng.umd.edu/',
+  },
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
