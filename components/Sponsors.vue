@@ -165,7 +165,7 @@ const sponsors: Sponsor[] = [
   {
     name: 'Bloomberg',
     amount: 7500,
-    url: 'https://www.bloomberg.com/',
+    url: 'https://www.bloomberg.com/company/careers/working-here/engineering/?utm_medium=eng-re[…]s54ey-6LwgYfKyk7AHerXJpeHrxi3g_ZaX8cslneSZ3lOeEaAh0NEALw_wcB?',
   },
   {
     name: 'AJC',
