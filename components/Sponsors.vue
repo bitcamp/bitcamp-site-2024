@@ -172,6 +172,16 @@ const sponsors: Sponsor[] = [
     amount: 10000,
     url: 'https://eng.umd.edu/',
   },
+  {
+    name: 'FM Global',
+    amount: 1250,
+    url: 'https://www.fmglobal.com/',
+  },
+  {
+    name: 'Dingman',
+    amount: 1500,
+    url: 'https://www.rhsmith.umd.edu/centers-initiatives/dingman-center',
+  },
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
