@@ -3,7 +3,7 @@
     <main class="row justify-content-center">
       <section class="col-lg-7">
         <section class="SupportSection">
-          <a href="./" class="home-link">
+          <a href="/" class="home-link">
             <img src="../assets/images/icons/go-back.svg" alt="Go Back" />
             <span>Home</span>
           </a>
