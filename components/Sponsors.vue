@@ -210,7 +210,7 @@ const sponsors: Sponsor[] = [
   {
     name: "GDIT",
     amount: 1000,
-    url: "https://www.gdit.com/"
+    url: "https://www.gdit.com"
   }
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
