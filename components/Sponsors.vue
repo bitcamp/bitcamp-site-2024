@@ -182,6 +182,36 @@ const sponsors: Sponsor[] = [
     amount: 1500,
     url: 'https://www.rhsmith.umd.edu/centers-initiatives/dingman-center',
   },
+  {
+    name: 'Smith School',
+    amount: 1000,
+    url: 'https://www.rhsmith.umd.edu/programs/undergraduate'
+  },
+  {
+    name: "JHUAPL",
+    amount: 3000,
+    url: "https://www.jhuapl.edu/"
+  },
+  {
+    name: "Geico",
+    amount: 1500,
+    url: "https://geico.wd1.myworkdayjobs.com/External/page/aa938d5e68f01000f4935a5ffc3c0000"
+  },
+  {
+    name: "IONQ",
+    amount: 1500,
+    url: "https://ionq.com/"
+  },
+  {
+    name: "Cloudforce",
+    amount: 12_500,
+    url: "https://gocloudforce.com"
+  },
+  {
+    name: "GDIT",
+    amount: 1000,
+    url: "https://www.gdit.com/"
+  }
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
