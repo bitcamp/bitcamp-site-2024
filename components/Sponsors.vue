@@ -211,6 +211,11 @@ const sponsors: Sponsor[] = [
     name: "GDIT",
     amount: 1000,
     url: "https://www.gdit.com"
+  },
+  {
+    name: "StandOutStickers",
+    amount: 225,
+    url: "http://hackp.ac/mlh-StandOutStickers-hackathons"
   }
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
