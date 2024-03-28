@@ -185,38 +185,43 @@ const sponsors: Sponsor[] = [
   {
     name: 'Smith School',
     amount: 1000,
-    url: 'https://www.rhsmith.umd.edu/programs/undergraduate'
+    url: 'https://www.rhsmith.umd.edu/programs/undergraduate',
   },
   {
     name: "JHUAPL",
     amount: 3000,
-    url: "https://www.jhuapl.edu/"
+    url: "https://www.jhuapl.edu/",
   },
   {
     name: "Geico",
     amount: 1500,
-    url: "https://geico.wd1.myworkdayjobs.com/External/page/aa938d5e68f01000f4935a5ffc3c0000"
+    url: "https://geico.wd1.myworkdayjobs.com/External/page/aa938d5e68f01000f4935a5ffc3c0000",
   },
   {
     name: "IONQ",
     amount: 1500,
-    url: "https://ionq.com/"
+    url: "https://ionq.com/",
   },
   {
     name: "Cloudforce",
     amount: 12_500,
-    url: "https://gocloudforce.com"
+    url: "https://gocloudforce.com",
   },
   {
     name: "GDIT",
     amount: 1000,
-    url: "https://www.gdit.com"
+    url: "https://www.gdit.com",
   },
   {
     name: "StandOutStickers",
     amount: 225,
-    url: "http://hackp.ac/mlh-StandOutStickers-hackathons"
-  }
+    url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+  },
+  {
+    name: "GranolaFactory",
+    amount: 750,
+    url: "http://www.thegranolafactory.com/",
+  },
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
