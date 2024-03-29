@@ -1,5 +1,5 @@
 <template>
-  <a class="logo-sponsor" :href="url">
+  <a :class="{ 'logo-sponsor-big': isBig, 'logo-sponsor': !isBig }" :href="url">
     <img :src="`sponsor-logos/${name}.png`" :alt="name" />
   </a>
 </template>
@@ -8,6 +8,7 @@
 defineProps<{ 
   name: string;
   url?: string;
+  isBig: boolean;
 }>();
 </script>
 
@@ -26,6 +27,14 @@ defineProps<{
   transition: transform 300ms ease-in-out;
 }
 
+.logo-sponsor-big img {
+  padding: 2rem;
+  max-width: min(80vw, 28rem);
+  // height: 15rem;
+  object-fit: contain;
+  transition: transform 300ms ease-in-out;
+}
+
 .logo-sponsor:hover img {
   transform: scale(1.1);
   backface-visibility: hidden;
@@ -35,11 +44,19 @@ defineProps<{
   .logo-sponsor img {
     height: 7.5rem;
   }
+
+  .logo-sponsor-big img {
+    height: 10rem;
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .logo-sponsor img {
     height: 5rem;
+  }
+
+  .logo-sponsor-big img {
+    height: 7.5rem;
   }
 }
 </style>

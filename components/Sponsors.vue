@@ -1,6 +1,18 @@
 <template>
   <div id="sponsors" class="section">
     <img class="sponsor-image" src="~/assets/images/background/sponsors.svg" />
+    <div class="">
+      <h1 class="cohost-text">
+        Bitcamp 2024 is proudly co-hosted by
+      </h1>
+      <div class="cohost">
+        <SponsorCard isBig :name="cohostSponsor.name" :url="cohostSponsor.url" />
+      </div>
+
+      <div class="sponsor-separator">
+        <hr>
+      </div>
+    </div>
     <div class="sponsor-container">
       <template v-for="sponsor in sponsors" :key="sponsor.name">
         <SponsorCard :name="sponsor.name" :url="sponsor.url" />
@@ -89,6 +101,12 @@ interface Sponsor {
   name: string;
   amount: number;
   url: string;
+}
+
+const cohostSponsor: Sponsor = {
+  name: "Cloudforce",
+  amount: 12_500,
+  url: "https://gocloudforce.com",
 }
 
 const sponsors: Sponsor[] = [
@@ -202,11 +220,11 @@ const sponsors: Sponsor[] = [
     amount: 1500,
     url: "https://ionq.com/",
   },
-  {
-    name: "Cloudforce",
-    amount: 12_500,
-    url: "https://gocloudforce.com",
-  },
+  // {
+  //   name: "Cloudforce",
+  //   amount: 12_500,
+  //   url: "https://gocloudforce.com",
+  // },
   {
     name: "GDIT",
     amount: 1000,
@@ -322,6 +340,10 @@ const toTop = () => {
   max-width: 60rem;
   border-radius: 20px;
   // padding: 4rem;
+}
+
+.cohost-text {
+  color:#ff6f3f;
 }
 
 @media only screen and (min-width: 992px) {
@@ -442,6 +464,29 @@ const toTop = () => {
     width: 2.25rem;
     padding: 0.125rem;
   }
+
+}
+
+@media only screen and (max-width: 776px) {
+  // .cohost {
+  //   margin-bottom: 8rem;
+  // }
+  .sponsor-separator {
+    opacity: 100%;
+
+  }
+}
+
+@media only screen and (min-width: 777px) {
+  .sponsor-separator {
+    opacity: 0; 
+  }
+}
+
+.sponsor-separator {
+  padding-bottom: 2rem;
+  width: 50%;
+  margin: auto;
 }
 
 .social-icons {
@@ -461,4 +506,5 @@ const toTop = () => {
   -ms-transform: scale(1.25);
   transform: scale(1.25);
 }
+
 </style>
