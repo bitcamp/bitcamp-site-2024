@@ -6,7 +6,7 @@
     <!--<img class="cloud-1" src="~/assets/images/background/cloud1.png" />-->
     <MiniEvents />
     <CampfireGames />
-    <Schedule />
+    <Schedule :styles="{ height: '80vh', minHeight: '60rem' }" /> "/>
     <!--<img class="cloud-2" src="~/assets/images/background/cloud2.png" />-->
     <FAQ />
     <Sponsors />

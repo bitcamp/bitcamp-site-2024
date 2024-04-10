@@ -1,6 +1,6 @@
 <!-- An events calendar that pulls events from DynamoDB -->
 <template>
-  <div id="schedule" class="section">
+  <div id="schedule" class="section" :style="styles">
     <img
       src="~/assets/images/signs/schedule.svg"
       alt=""
@@ -335,6 +335,13 @@ function closeEventModal() {
 <script lang="ts">
 export default {
   name: 'SchedulePage',
+  props: {
+    styles: {
+      type: String,
+      required: false,
+      default: '',
+    },
+  },
 };
 </script>
 
@@ -368,7 +375,9 @@ export default {
   }
 
   position: relative;
-  min-height: 10rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
@@ -385,6 +394,7 @@ export default {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    height: 100%;
 
     &::after {
       content: '';
@@ -405,7 +415,6 @@ export default {
 
   .schedule-icon {
     width: 30rem;
-    height: 100%;
     margin: 0 auto -2rem auto;
     display: block;
     position: relative;
@@ -422,8 +431,7 @@ export default {
     position: relative;
     overflow-x: auto;
     overflow-y: auto;
-    height: 80vh;
-    height: calc(100vh - 10rem);
+    height: 100%;
     padding: 0;
     padding-top: 1rem;
   }
@@ -455,6 +463,8 @@ export default {
     grid-auto-rows: 1.6rem;
     min-width: 100%;
     width: fit-content;
+
+    padding-right: 1rem;
 
     @media screen and (max-width: 767.8px) {
       grid-template-columns: [time] 4rem repeat(auto-fit, minmax(8rem, 1fr));
