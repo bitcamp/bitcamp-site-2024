@@ -71,13 +71,13 @@
           >
             <div>
               <p class="name">{{ event.event_name }}</p>
-              <p>
+              <!-- <p>
                 {{ formatAMPM(new Date(event.start_time)) }} -
                 {{ formatAMPM(new Date(event.end_time)) }}
-              </p>
+              </p> -->
               <p>{{ event.location }}</p>
             </div>
-            <span>{{ event.displayCategory }}</span>
+            <!-- <span>{{ event.displayCategory }}</span> -->
           </div>
         </div>
       </div>
@@ -362,6 +362,22 @@ export default {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 15px;
+      height: 100%;
+      background: linear-gradient(
+        to left,
+        rgba(66, 56, 16, 0.3) 0%,
+        transparent 100%
+      );
+      z-index: 2;
+    }
   }
 
   .schedule-icon {
@@ -388,6 +404,7 @@ export default {
     padding: 0;
     padding-top: 1rem;
   }
+
   .left-cover {
     position: absolute;
     background: #c7c0ac;
@@ -415,7 +432,7 @@ export default {
     width: fit-content;
 
     @media screen and (max-width: 767.8px) {
-      grid-template-columns: [time] 4rem repeat(auto-fit, minmax(15rem, 1fr));
+      grid-template-columns: [time] 4rem repeat(auto-fit, minmax(8rem, 1fr));
     }
 
     .bar {
@@ -458,6 +475,7 @@ export default {
 
       @media screen and (max-width: 767.8px) {
         padding: 0.5rem;
+        min-width: 8rem;
       }
 
       p {
