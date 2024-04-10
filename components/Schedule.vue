@@ -343,6 +343,30 @@ export default {
 @import '../assets/css/schedule.scss';
 
 #schedule {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+
+    opacity: 0.8;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.557);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888888a3;
+    border-radius: 999px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   position: relative;
   min-height: 10rem;
   width: 100%;
@@ -355,24 +379,23 @@ export default {
     margin: 0;
   }
 
-  @media screen and (max-width: 767.8px) {
-    padding: 2.5rem;
-  }
+  padding: 2.5rem;
+
   .schedule-container {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
 
-    &::before {
+    &::after {
       content: '';
       position: absolute;
-      top: 0;
+      top: 4.8rem;
       right: 0;
-      bottom: 0;
-      width: 15px;
-      height: 100%;
+      left: 0;
+      width: 100%;
+      height: 15px;
       background: linear-gradient(
-        to left,
+        to bottom,
         rgba(66, 56, 16, 0.3) 0%,
         transparent 100%
       );
@@ -415,6 +438,8 @@ export default {
     bottom: 0;
     height: 100%;
     z-index: 2;
+
+    box-shadow: 0 0 1rem 0.5rem rgba(66, 56, 16, 0.1);
 
     @media screen and (max-width: 767.8px) {
       width: 4em;
@@ -460,6 +485,7 @@ export default {
       }
     }
     .event-container {
+      font-size: 0.8rem;
       min-width: 15rem;
       border-radius: 10px;
       padding: 1rem;
