@@ -37,9 +37,9 @@
             :key="idx"
             class="bar"
             :style="{
-              // add top padding (1rem) and 1.2rem for each 15 minute interval
+              // add top padding (1rem) and 1.7rem for each 15 minute interval
               // subtract 1px to align bar in middle of grid row
-              top: `calc(1rem + ${idx * (60 / INTERVAL_M) * 1.6}rem - 1px)`,
+              top: `calc(1rem + ${idx * (60 / INTERVAL_M) * 1.7}rem - 1px)`,
             }"
           ></span>
           <div
@@ -360,7 +360,7 @@ export default {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    // background: rgba(241, 241, 241, 0.557);
+    background: rgba(241, 241, 241, 0.557);
   }
 
   /* Handle */
@@ -395,6 +395,8 @@ export default {
     border-radius: 10px;
     overflow: hidden;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 
     &::after {
       content: '';
@@ -460,7 +462,7 @@ export default {
     column-gap: 0.2rem;
     position: relative;
     // change grid-row height with the white hour-line bar layout
-    grid-auto-rows: 1.6rem;
+    grid-auto-rows: 1.7rem;
     min-width: 100%;
     width: fit-content;
 
@@ -495,6 +497,8 @@ export default {
       }
     }
     .event-container {
+      // ENFORCE MINIMUM HEIGHT (for events that are less than 30 minutes long)
+      min-height: 3.3rem;
       font-size: 0.8rem;
       min-width: 15rem;
       border-radius: 10px;
