@@ -360,18 +360,18 @@ export default {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: rgba(241, 241, 241, 0.557);
+    // background: rgba(241, 241, 241, 0.557);
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888888a3;
+    background: #ffffffb3;
     border-radius: 999px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #ffff;
   }
 
   position: relative;
