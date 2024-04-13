@@ -3,11 +3,9 @@
     <Navbar />
     <Hero />
     <Tracks />
-    <!--<img class="cloud-1" src="~/assets/images/background/cloud1.png" />-->
     <MiniEvents />
     <CampfireGames />
-    <!-- <Schedule /> -->
-    <!--<img class="cloud-2" src="~/assets/images/background/cloud2.png" />-->
+    <Schedule :styles="{ height: '80vh', minHeight: '60rem' }" />
     <FAQ />
     <Sponsors />
     <Footer />
@@ -115,7 +113,7 @@ export default {
   position: relative;
   background-color: #f6ebcc;
 
-  &>.section {
+  & > .section {
     margin-bottom: 5rem !important;
   }
 }

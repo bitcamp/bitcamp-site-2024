@@ -1,6 +1,7 @@
 <!-- An events calendar that pulls events from DynamoDB -->
+
 <template>
-  <div id="schedule" class="section">
+  <div id="schedule" class="section" :style="styles">
     <img
       src="~/assets/images/signs/schedule.svg"
       alt=""
@@ -37,9 +38,9 @@
             :key="idx"
             class="bar"
             :style="{
-              // add top padding (1rem) and 1.2rem for each 15 minute interval
+              // add top padding (1rem) and 2.1rem for each 15 minute interval
               // subtract 1px to align bar in middle of grid row
-              top: `calc(1rem + ${idx * (60 / INTERVAL_M) * 1.6}rem - 1px)`,
+              top: `calc(1rem + ${idx * (60 / INTERVAL_M) * 2.1}rem - 1px)`,
             }"
           ></span>
           <div
@@ -71,22 +72,17 @@
           >
             <div>
               <p class="name">{{ event.event_name }}</p>
-              <p>
+              <!-- <p>
                 {{ formatAMPM(new Date(event.start_time)) }} -
                 {{ formatAMPM(new Date(event.end_time)) }}
-              </p>
+              </p> -->
               <p>{{ event.location }}</p>
             </div>
-            <span>{{ event.displayCategory }}</span>
+            <!-- <span>{{ event.displayCategory }}</span> -->
           </div>
         </div>
       </div>
     </div>
-    <img
-      src="~/assets/images/icons/register-now.svg"
-      alt=""
-      class="register-icon"
-    />
   </div>
   <ModalsContainer />
   <EventModal
@@ -239,6 +235,8 @@ function mapEvents(events: ParsedEvent[]): AllSchedules {
     [key: number]: BareDaySchedule;
   };
 
+  console.log(events);
+
   // holds the number of events in each time window
   // map uses numbers instead of dates because of how JS handles Map keys (no hashing)
   const allTimeWindows = new Map<number, Map<number, number>>();
@@ -305,16 +303,28 @@ function mapEvents(events: ParsedEvent[]): AllSchedules {
 
     const firstEntry = timeWindows?.entries().next().value ?? 0;
 
-    const dayStart = new Date(parseInt(firstEntry)).getTime();
+    let dayStart = new Date(parseInt(firstEntry)).getTime();
+    // round day start to nearest one hour interval
+    dayStart = dayStart - (dayStart % (60 * MINUTES_TO_MS));
 
     (data.events as CalculatedEvent[]) = data.events.map(
       (event): CalculatedEvent => {
+        let rowSpan = (event.end_time - event.start_time) / INTERVAL_MS;
+        // if an event has the same start and end time, give it a rowSpan of 2 (30 min)
+        if (rowSpan === 0) {
+          rowSpan = 2;
+        }
+        // this one is optional, but if an event is only 15 minutes, give it a rowSpan of 2 (30 min)
+        if (rowSpan < 2) {
+          rowSpan = 2;
+        }
+
         // timeWindows.
         return {
           ...event,
           colSpan: 1,
           startRow: (event.start_time - dayStart) / INTERVAL_MS + 1,
-          rowSpan: (event.end_time - event.start_time) / INTERVAL_MS,
+          rowSpan: rowSpan,
         };
       }
     );
@@ -340,6 +350,13 @@ function closeEventModal() {
 <script lang="ts">
 export default {
   name: 'SchedulePage',
+  props: {
+    styles: {
+      type: String,
+      required: false,
+      default: '',
+    },
+  },
 };
 </script>
 
@@ -348,8 +365,34 @@ export default {
 @import '../assets/css/schedule.scss';
 
 #schedule {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+
+    opacity: 0.8;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.557);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffffb3;
+    border-radius: 999px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffff;
+  }
+
   position: relative;
-  min-height: 10rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
@@ -360,18 +403,35 @@ export default {
     margin: 0;
   }
 
-  @media screen and (max-width: 767.8px) {
-    padding: 2.5rem;
-  }
+  padding: 2.5rem;
+
   .schedule-container {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4.8rem;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background: linear-gradient(
+        to bottom,
+        rgba(66, 56, 16, 0.3) 0%,
+        transparent 100%
+      );
+      z-index: 2;
+    }
   }
 
   .schedule-icon {
     width: 30rem;
-    height: 100%;
     margin: 0 auto -2rem auto;
     display: block;
     position: relative;
@@ -383,24 +443,16 @@ export default {
     }
   }
 
-  .register-icon {
-    width: 10rem;
-    margin: -0.2rem auto;
-    z-index: 4;
-    position: relative;
-    display: block;
-  }
-
   .event-list-container {
     background: #c7c0ac;
     position: relative;
     overflow-x: auto;
     overflow-y: auto;
-    height: 80vh;
-    height: calc(100vh - 10rem);
+    height: 100%;
     padding: 0;
     padding-top: 1rem;
   }
+
   .left-cover {
     position: absolute;
     background: #c7c0ac;
@@ -411,6 +463,8 @@ export default {
     bottom: 0;
     height: 100%;
     z-index: 2;
+
+    box-shadow: 0 0 1rem 0.5rem rgba(66, 56, 16, 0.1);
 
     @media screen and (max-width: 767.8px) {
       width: 4em;
@@ -423,12 +477,14 @@ export default {
     column-gap: 0.2rem;
     position: relative;
     // change grid-row height with the white hour-line bar layout
-    grid-auto-rows: 1.6rem;
+    grid-auto-rows: 2.1rem;
     min-width: 100%;
     width: fit-content;
 
+    padding-right: 1rem;
+
     @media screen and (max-width: 767.8px) {
-      grid-template-columns: [time] 4rem repeat(auto-fit, minmax(15rem, 1fr));
+      grid-template-columns: [time] 4rem repeat(auto-fit, minmax(8rem, 1fr));
     }
 
     .bar {
@@ -456,10 +512,11 @@ export default {
       }
     }
     .event-container {
+      font-size: 0.8rem;
       min-width: 15rem;
       border-radius: 10px;
-      padding: 1rem;
-      margin: 0.1rem;
+      padding: 0.75rem;
+      margin: 0.15rem;
       overflow: hidden;
       z-index: 1;
       display: flex;
@@ -471,6 +528,7 @@ export default {
 
       @media screen and (max-width: 767.8px) {
         padding: 0.5rem;
+        min-width: 8rem;
       }
 
       p {
