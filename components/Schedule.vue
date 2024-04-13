@@ -234,6 +234,8 @@ function mapEvents(events: ParsedEvent[]): AllSchedules {
     [key: number]: BareDaySchedule;
   };
 
+  console.log(events);
+
   // holds the number of events in each time window
   // map uses numbers instead of dates because of how JS handles Map keys (no hashing)
   const allTimeWindows = new Map<number, Map<number, number>>();
@@ -306,12 +308,22 @@ function mapEvents(events: ParsedEvent[]): AllSchedules {
 
     (data.events as CalculatedEvent[]) = data.events.map(
       (event): CalculatedEvent => {
+        let rowSpan = (event.end_time - event.start_time) / INTERVAL_MS;
+        // if an event has the same start and end time, give it a rowSpan of 2 (30 min)
+        if (rowSpan === 0) {
+          rowSpan = 2;
+        }
+        // this one is optional, but if an event is only 15 minutes, give it a rowSpan of 2 (30 min)
+        if (rowSpan < 2) {
+          rowSpan = 2;
+        }
+
         // timeWindows.
         return {
           ...event,
           colSpan: 1,
           startRow: (event.start_time - dayStart) / INTERVAL_MS + 1,
-          rowSpan: (event.end_time - event.start_time) / INTERVAL_MS,
+          rowSpan: rowSpan,
         };
       }
     );
@@ -499,8 +511,6 @@ export default {
       }
     }
     .event-container {
-      // ENFORCE MINIMUM HEIGHT (for events that are less than 30 minutes long)
-      min-height: 3.3rem;
       font-size: 0.8rem;
       min-width: 15rem;
       border-radius: 10px;
