@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Schedule - Bitcamp',
+  title: 'Bitcamp - Schedule',
   meta: [
     {
       name: 'description',

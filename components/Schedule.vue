@@ -1,4 +1,5 @@
 <!-- An events calendar that pulls events from DynamoDB -->
+
 <template>
   <div id="schedule" class="section" :style="styles">
     <img
@@ -514,8 +515,8 @@ export default {
       font-size: 0.8rem;
       min-width: 15rem;
       border-radius: 10px;
-      padding: 1rem;
-      margin: 0.1rem;
+      padding: 0.75rem;
+      margin: 0.15rem;
       overflow: hidden;
       z-index: 1;
       display: flex;
