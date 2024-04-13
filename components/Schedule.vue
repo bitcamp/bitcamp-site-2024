@@ -37,9 +37,9 @@
             :key="idx"
             class="bar"
             :style="{
-              // add top padding (1rem) and 1.7rem for each 15 minute interval
+              // add top padding (1rem) and 2.1rem for each 15 minute interval
               // subtract 1px to align bar in middle of grid row
-              top: `calc(1rem + ${idx * (60 / INTERVAL_M) * 1.7}rem - 1px)`,
+              top: `calc(1rem + ${idx * (60 / INTERVAL_M) * 2.1}rem - 1px)`,
             }"
           ></span>
           <div
@@ -300,7 +300,9 @@ function mapEvents(events: ParsedEvent[]): AllSchedules {
 
     const firstEntry = timeWindows?.entries().next().value ?? 0;
 
-    const dayStart = new Date(parseInt(firstEntry)).getTime();
+    let dayStart = new Date(parseInt(firstEntry)).getTime();
+    // round day start to nearest one hour interval
+    dayStart = dayStart - (dayStart % (60 * MINUTES_TO_MS));
 
     (data.events as CalculatedEvent[]) = data.events.map(
       (event): CalculatedEvent => {
@@ -462,7 +464,7 @@ export default {
     column-gap: 0.2rem;
     position: relative;
     // change grid-row height with the white hour-line bar layout
-    grid-auto-rows: 1.7rem;
+    grid-auto-rows: 2.1rem;
     min-width: 100%;
     width: fit-content;
 
