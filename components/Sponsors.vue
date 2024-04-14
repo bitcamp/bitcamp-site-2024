@@ -240,6 +240,11 @@ const sponsors: Sponsor[] = [
     amount: 750,
     url: "http://www.thegranolafactory.com/",
   },
+  {
+    name: "Xficient",
+    amount: 2500,
+    url: "https://xficient.com/"
+  }
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
 const scTimer = ref(0);
