@@ -244,6 +244,11 @@ const sponsors: Sponsor[] = [
     name: "Xficient",
     amount: 2500,
     url: "https://xficient.com/"
+  },
+  {
+    name: "DoGood",
+    amount: 5000,
+    url: "http://dogood.umd.edu/"
   }
 ].sort((a: Sponsor, b: Sponsor) => b.amount - a.amount);
 
