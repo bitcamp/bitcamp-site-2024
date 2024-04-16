@@ -8,8 +8,7 @@
         <span style="line-height: 2.5;">Bitcamp is a place for exploration...</span>
         <br>
         <div>
-          You have 36 hours to explore, learn, and create with world-
-          class mentors and over 1,000 participants. Whether you're a 
+          You have 36 hours to explore, learn, and create with world-class mentors and over 1,000 participants. Whether you're a 
           seasoned hacker or new to it all, there's something for everyone.
         </div>
         <br>
