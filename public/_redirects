@@ -1,4 +1,4 @@
-# Netlify redirects
+# Netlify redirects (have to do this in the console if you're using Amplify)
 /mentor                         https://register.bit.camp/mentor                                                                                            302
 /volunteer                      https://register.bit.camp/volunteer                                                                                         302
 /hacker                         https://register.bit.camp/hacker                                                                                            302
