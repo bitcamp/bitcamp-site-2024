@@ -1,21 +1,29 @@
 <template>
   <div v-if="showText" class="responsive-text">
-    <img class="registerSign" src="~/assets/images/background/applications-open.svg" alt="Applications Now Open!" />
+    <!-- <img class="registerSign" src="~/assets/images/background/applications-open.svg" alt="Applications Now Open!" /> -->
     <div class="header-text">
-      <p class="special-text">Come celebrate Bitcamp’s 10th anniversary with us on</p>
-      <p class="conference-date">April 19-21, 2024</p>
+      
+      <!-- <p class="special-text">Come celebrate Bitcamp’s 10th anniversary with us on</p>
+      <p class="conference-date">April 19-21, 2024</p> -->
       <div class="body-text">
-        <span style="line-height: 2.5;">Bitcamp is a place for exploration...</span>
+        <div class="video-container">
+          <iframe v-if = "timeToSwitch > 0" src="https://www.youtube.com/embed/FjA5MnqMjsc?autoplay=1&mute=1" frameborder="0"></iframe>
+          <iframe v-else src="https://www.youtube.com/embed/dsejpmSpyQs?autoplay=1&mute=1"></iframe>
+        </div>
+        <!-- <span style="line-height: 2.5;">Bitcamp is a place for exploration...</span>
         <br>
         <div>
           You have 36 hours to explore, learn, and create with world-class mentors and over 1,000 participants. Whether you're a 
           seasoned hacker or new to it all, there's something for everyone.
         </div>
         <br>
-        <span>If you're ready for an adventure, we'll see you by the campfire!</span>
+        <span>If you're ready for an adventure, we'll see you by the campfire!</span> -->
       </div>
     </div>
-    <RegisterButton text="REGISTER" link="https://register.bit.camp/" />
+    <!-- <RegisterButton text="REGISTER" link="https://register.bit.camp/" /> -->
+
+    
+    
     <div id="mission" class="slideshow-wrapper">
       <Slideshow class="r-slide" />
     </div>
@@ -29,8 +37,13 @@
       slideshow: Boolean,
     },
     data() {
+
+      const now = new Date();
+      const closing = new Date("2024-04-21T14:00:00.000Z");
+
       return {
-        showText: true
+        showText: true,
+        timeToSwitch: closing.getTime() - now.getTime(),
       };
     },
   }
@@ -44,7 +57,30 @@
   @media (max-width: 776px) {
     margin-bottom: 20rem;
   }
+
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 40vw;
+      height: 23vw;
+
+      @media (max-width: 776px) {
+        width: 90vw;
+        height: 48vw
+      }
+
+  }
+
+  .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+  }
+
 }
+
+
+
 .header-text {
   font-size: 1.2rem;
   position: relative;
