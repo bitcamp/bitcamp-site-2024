@@ -6,11 +6,11 @@
           <a tag="img" href="/">
             <img
               id="logo-with-text"
-              src="~/public/bitcamp-brand/logos/logotype.png"
+              src="/bitcamp-brand/logos/logotype.png"
             />
             <img
               id="logo-image"
-              src="~/public/bitcamp-brand/logos/bitcamp.png"
+              src="/bitcamp-brand/logos/bitcamp.png"
             />
           </a>
         </div>
